@@ -1,0 +1,82 @@
+:root {
+	--main-text-color: #535558;
+	--second-text-color: #2b2d31;
+	--main-text-color-hover: #2b2d31;
+	--second-text-color-hover: #606265;
+	--main-bg-color: #f5f6f6;
+	--main-bg-ui-color: #F95759;
+	--second-bg-ui-color: #2b2d31;
+	--separate-line-ui-color: #d5d5d5;
+}
+body,
+table {
+  font-family: $mainFont;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  color: $textColor;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s linear;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+svg {
+  transition: fill .3s linear;
+}
+
+html.uk-touch {
+	body {
+		*.uk-invisible {
+			display: block !important;
+			opacity: 1 !important;
+			animation: none !important;
+			visibility: visible !important;
+		}
+		[class*=uk-animation-] {
+			@media (min-width: $mob-xs) {
+				animation: none;
+			};
+		}
+	}
+}
+
+.uk-container {
+  margin: 0 auto;
+  max-width: $containerWidth;
+  box-sizing: border-box;
+  &--large {
+  	max-width: $containerLargeWidth;
+  }
+  @media (min-width: $mob-xs) {
+  	padding: 0 15px;
+  };
+  @media (min-width: $tablet-w) {
+  	padding: 0 30px;
+  };
+}
+
+.uk-grid {
+	@media (min-width: $mob-xs) {
+		margin-left: -15px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-left: -30px;
+	};
+	&>* {
+		@media (min-width: $mob-xs) {
+			padding-left: 15px;
+		};
+		@media (min-width: $tablet-w) {
+			padding-left: 30px;
+		};
+	}
+}

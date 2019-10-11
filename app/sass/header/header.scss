@@ -1,0 +1,298 @@
+/*______ HEADER ______*/
+
+.header {
+	&__top-bar {
+		padding: 8px 0;
+		background-color: $bgUIBlack;
+		color: #ffffff;
+		font-size: 12px;
+		a {
+			color: #ffffff;
+			font-size: 12px;
+		}
+	}
+	&__bottom-bar {
+		border-bottom: 1px solid $bgUIGray;
+	}
+}
+
+.top-bar {
+	&__info {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.geo {
+	@include icomoon;
+	position: relative;
+	margin-right: 4%;
+	padding-left: 23px;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.contacts {
+	position: relative;
+	@include icomoon;
+	padding-left: 28px;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		@media (min-width: 1250px) {
+			display: block;
+		}
+	}
+}
+
+.top-bar {
+	&__links {
+		width: 56%;
+		display: flex;
+		align-items: center;
+		a {
+			margin-right: 4%;
+			white-space: nowrap;
+			letter-spacing: .2px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		a[class^="icon-"] {
+			position: relative;
+			@include icomoon;
+			padding-left: 31px;
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	&__contacts {
+		a {
+			&:first-child {
+				position: relative;
+				padding-right: 15px;
+				&:after {
+					content: '';
+					position: absolute;
+					top: 1px;
+					right: 0;
+					width: 1px;
+					height: 12px;
+					display: block;
+					background: #ffffff;
+				}
+			}
+			&:last-child {
+				padding-left: 14px;
+			}
+		}
+	}
+}
+
+
+.auth {
+	&__enter {
+		@include icomoon;
+		position: relative;
+		padding-left: 22px;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	a {
+		display: block;
+		letter-spacing: .2px;
+	}
+}
+
+.bottom-bar {
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.main-nav {
+	margin-right: 7%;
+	width: 67%;
+	&>ul {
+		@include list-reset;
+		font-size: 0;
+		&>li {
+			margin-right: 5.3%;
+			display: inline-block;
+			vertical-align: top;
+			&:last-child {
+				margin-right: 0;
+			}
+			&.nav-item {
+				&>a {
+					position: relative;
+					padding: 28px 0;
+					display: block;
+					color: $textSColor;
+					font-size: 13px;
+					line-height: 19px;
+					letter-spacing: .5px;
+					text-transform: uppercase;
+					font-weight: 500;
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 10px;
+						left: 0;
+						display: block;
+						width: 100%;
+						height: 2px;
+						background: $bgUIBlack;
+						opacity: 0;
+						transition: opacity .3s, bottom .3s ease;
+					}
+					&:hover {
+						color: $textSHColor;
+						&:after {
+							bottom: 0;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.tool-bar {
+	width: 26%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	a {
+		position: relative;
+		padding: 4px 0 4px 31px;
+		display: flex;
+		align-items: center;
+		font-family: $mainFont !important;
+		&:before {
+			position: absolute;
+			top: 3px;
+			left: 0;
+			color: $textColor;
+			font-family: 'icomoon' !important;
+		}
+	}
+	.text {
+		font-size: 12px;
+		letter-spacing: .2px;
+		color: $textSColor;
+	}
+	.search {
+		a {
+			&:before {
+				top: 1px;
+			}
+		}
+	}
+	.favorite {
+		a {
+			&:before {
+				top: 0;
+			}
+		}
+	}
+}
+
+.basket {
+	&__icon {
+		position: absolute;
+		top: 5px;
+		left: 0;
+		&:before {
+			color: $textColor;
+		}
+	}
+	&__count {
+		position: absolute;
+		top: -8px;
+		right: -8px;
+		width: 16px;
+		height: 16px;
+		display: block;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 16px;
+		background: $bgUIRed;
+		color: #ffffff;
+		font-size: 13px;
+		letter-spacing: .2px;
+	}
+	a {
+		position: relative;
+		padding-left: 29px;
+		display: block;
+		@include icomoon;
+		&:before {
+			color: $textSColor;
+		}
+	}
+}
+
+.logo-wrapper {
+	margin-top: -25px;
+	width: 100px;
+	height: 100px;
+	background: #ffffff;
+	border-radius: 50% 50% 0 0;
+	.logo {
+		width: 100%;
+		height: 100%;
+	}
+	a {
+		padding: 15px 10px 10px;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+.menu-section {
+	&__title {
+		margin-bottom: 30px;
+		font-size: 14px;
+		font-weight: 500;
+		letter-spacing: .54px;
+		text-transform: uppercase;
+		color: $textSColor;
+	}
+	&__links {
+		@include list-reset;
+		li {
+			margin-bottom: 10px;
+			display: block;
+			a {
+				font-size: 12px;
+				line-height: 19px;
+				letter-spacing: .09px;
+				color: $textColor;
+				&:hover {
+					color: $textSColor;
+				}
+			}
+		}
+	}
+}
+
+/*______ END HEADER ______*/

@@ -1,0 +1,27 @@
+$mob-xs: 0px;
+$mob-s: 640px;
+$tablet-w: 960px;
+$desk-w: 1200px;
+
+$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
+
+$retina-dpi: (min-resolution: 144dpi);
+$retina-ppx: (min-resolution: 1.5dppx);
+
+$mainFont: "SF";
+$secondFont: "Cormorant";
+$fontSize: 18px;
+$lineHeight: 26px;
+$fontWeight: 400;
+
+$containerWidth: 1200px;
+$containerLargeWidth: 1340px;
+
+$textColor: var(--main-text-color);
+$textHColor: var(--main-text-color-hover);
+$textSColor: var(--second-text-color);
+$textSHColor: var(--second-text-color-hover);
+$bgColor: var(--main-bg-color);
+$bgUIRed: var(--main-bg-ui-color);
+$bgUIBlack: var(--second-bg-ui-color);
+$bgUIGray: var(--separate-line-ui-color);

@@ -1,0 +1,174 @@
+{% set menu = ["Мужчинам", "Женщинам", "Детям", "В Путешествие", "Коллекции", "Распродажа"]%}
+{% block content %}
+<!-- begin header -->
+<header class="header">
+	
+	<!-- begin header-desk -->
+	<div class="header-desk uk-visible@l">
+		
+		<!-- begin header-top-bar -->
+		<div class="header__top-bar">
+			<div class="uk-container uk-container--large">
+				<div class="uk-grid">
+					<div class="uk-width-1-6"></div>
+					<div class="uk-width-5-6">
+						<div class="top-bar__info">
+
+							<div class="top-bar__links">
+								<div class="geo icon-pin">
+									<span class="geo-city">Москвы</span>
+								</div>
+								<a href="" class="icon-pack">Бесплатная доставка</a>
+								<a href="">История бренда</a>
+								<a href="">Доставка и оплата</a>
+								<a href="">Контакты</a>
+							</div>
+
+							<div class="top-bar__contacts">
+								<div class="contacts icon-phone">
+									<a href="tel:+74951172233">+7 (495) 117-22-33</a>
+									<a href="tel:+78001233344">8-800-123-33-44</a>
+								</div>
+							</div>
+							
+							<div class="auth">
+								<div class="auth__enter icon-user">
+									<a href="">Войти</a>	
+								</div>
+								<div class="auth__exit icon-user uk-hidden@l">
+									<a href="">Иванов Иван</a>
+								</div>
+							</div>	
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- end header-top-bar -->
+
+		<!-- begin header-bottom-bar -->
+		<div class="header__bottom-bar">
+			<div class="uk-container uk-container--large">
+				<div class="uk-grid" id="dropdown-menu-width">
+					<div class="uk-width-1-6">
+						<div class="logo-wrapper">
+							<div class="logo">
+								<a href="/">
+									<img src="img/media/logo-black.svg" alt="Herschel">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-5-6">
+						<div class="bottom-bar__inner">
+							<nav class="main-nav">
+								<ul>
+									{% for i in 0..5 %}
+									    {% if loop.last == false %}
+									    	<li class="parent nav-item">
+									    		<a href="">{{ menu[i] }}</a>
+									    		<div class="dropdown-menu" uk-dropdown="pos: bottom-justify; offset: 2; boundary: #dropdown-menu-width; boundary-align: true; delay-show: 150; delay-hide: 0;">
+									    			<div class="uk-container uk-container--large">
+									    				<div class="dropdown-menu-wrapper">
+										    				<div class="uk-grid uk-child-width-1-4" uk-grid>
+										    					{% for i in 0..3 %}
+										    					    {% if loop.last == false %}
+																				<div class="menu-section">
+																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																					<ul class="menu-section__links">
+																						<li>
+																							<a href="">Рюкзаки</a>
+																						</li>
+																						<li>
+																							<a href="">Сумки спортивные</a>
+																						</li>
+																						<li>
+																							<a href="">Сумки городские</a>
+																						</li>
+																						<li>
+																							<a href="">Сумки на пояс</a>
+																						</li>
+																						<li>
+																							<a href="">Сумки через плечо</a>
+																						</li>
+																					</ul>
+																				</div>
+																			{% else %}
+																			  <div class="sections-image">
+																			  	<img src="img/media/section-img-350x370.png" alt="">
+																			  </div>
+										    					    {% endif %}
+										    					{% endfor %}
+										    				</div>
+									    				</div>
+									    			</div>
+									    		</div>
+									    	</li>
+											{% else %}
+												<li class="nav-item stock-item">
+													<a href="">{{ menu[i] }}</a>
+												</li>
+									    {% endif %}
+									{% endfor %}
+<!-- 									<li class="parent">
+	<a href="">Мужчинам</a>
+	<div class="dropdown-menu" uk-dropdown="pos: bottom-justify; offset: 0; boundary: #dropdown-menu-width; boundary-align: true; delay-show: 150; delay-hide: 0;">
+		<div class="uk-container uk-container-small">
+			<ul class="uk-grid dropdown-list uk-grid-collapse">
+				<li class="uk-width-1-5">
+					<a href="">test</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</li>
+<li>
+	<a href="">Женщинам</a>
+</li>
+<li>
+	<a href="">Детям</a>
+</li>
+<li>
+	<a href="">В путешествие</a>
+</li>
+<li>
+	<a href="">Коллекции</a>
+</li>
+<li class="stock">
+	<a href="">Распродажа</a>
+</li> -->
+								</ul>
+							</nav>
+
+							<div class="tool-bar">
+								<div class="search">
+									<a href="" class="icon-search js__toggle-search"><span class="text">Поиск</span></a>
+								</div>
+								<div class="favorite">
+									<a href="" class="icon-star"><span class="text">Отложено</span></a>
+								</div>
+								<div class="basket">
+									<a href="">
+										<span class="basket__icon icon-basket">
+											<span class="basket__count">2</span>
+										</span>
+										<span class="text">Корзина</span>
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- end header-bottom-bar -->
+
+	</div><!-- end header-desk -->
+
+	<!-- begin header-mobile -->
+	<div class="header-mobile uk-hidden@l">
+		
+	</div><!-- end header-mobile -->
+
+</header><!-- end header -->
+{% endblock %}
