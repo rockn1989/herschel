@@ -25,6 +25,21 @@
 	}
 }
 
+.header-desk {
+	position: relative;
+}
+
+.header-custom-grid {
+	display: flex;
+	.left-column {
+		
+	}
+	.right-column {
+		margin-left: auto;
+		width: calc(100% - 171px);
+	}
+}
+
 .geo {
 	@include icomoon;
 	position: relative;
@@ -130,12 +145,36 @@
 	&>ul {
 		@include list-reset;
 		font-size: 0;
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
 		&>li {
 			margin-right: 5.3%;
 			display: inline-block;
 			vertical-align: top;
 			&:last-child {
 				margin-right: 0;
+			}
+			&.stock-item {
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: -15px;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					background: $bgUIRed;
+					transform: translateY(-50%);
+				}
+				&:hover {
+					a {
+						&:after {
+							display: none;
+						}
+					}
+				}
 			}
 			&.nav-item {
 				&>a {
@@ -148,6 +187,7 @@
 					letter-spacing: .5px;
 					text-transform: uppercase;
 					font-weight: 500;
+					white-space: nowrap;
 					&:after {
 						content: '';
 						position: absolute;
@@ -160,7 +200,7 @@
 						opacity: 0;
 						transition: opacity .3s, bottom .3s ease;
 					}
-					&:hover {
+					&:hover,&.uk-open {
 						color: $textSHColor;
 						&:after {
 							bottom: 0;
@@ -205,6 +245,13 @@
 		}
 	}
 	.favorite {
+		&.is-added {
+			a {
+				&:before {
+					color: $bgUIRed;
+				}
+			}
+		}
 		a {
 			&:before {
 				top: 0;
@@ -267,20 +314,43 @@
 	}
 }
 
-
+.menu-section-wrapper {
+	.menu-section {
+		padding-left: 62px;
+	}
+	&.uk-first-column {
+		.menu-section {
+			padding-left: 0;
+		}
+	}
+	&:nth-child(3) {
+		.menu-section {
+			border: none;
+		}
+	}
+}
 .menu-section {
+	height: 100%;
+	border-right: 1px solid $bgUIGray;
+	padding-left: 92px;
 	&__title {
 		margin-bottom: 30px;
 		font-size: 14px;
 		font-weight: 500;
 		letter-spacing: .54px;
 		text-transform: uppercase;
-		color: $textSColor;
+		
+		a {
+			color: $textSColor;
+			&:hover {
+				color: $textSHColor;
+			}
+		}
 	}
 	&__links {
 		@include list-reset;
 		li {
-			margin-bottom: 10px;
+			margin-bottom: 8px;
 			display: block;
 			a {
 				font-size: 12px;

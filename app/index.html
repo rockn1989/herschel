@@ -23,6 +23,9 @@
 	<![endif]-->
 </head>
 <body>
+
+
+
 <!-- begin header -->
 <header class="header">
 	
@@ -32,9 +35,9 @@
 		<!-- begin header-top-bar -->
 		<div class="header__top-bar">
 			<div class="uk-container uk-container--large">
-				<div class="uk-grid">
-					<div class="uk-width-1-6"></div>
-					<div class="uk-width-5-6">
+				<div class="header-custom-grid">
+					<div class="left-column"></div>
+					<div class="right-column">
 						<div class="top-bar__info">
 
 							<div class="top-bar__links">
@@ -72,8 +75,8 @@
 		<!-- begin header-bottom-bar -->
 		<div class="header__bottom-bar">
 			<div class="uk-container uk-container--large">
-				<div class="uk-grid" id="dropdown-menu-width">
-					<div class="uk-width-1-6">
+				<div class="header-custom-grid" id="dropdown-menu-width">
+					<div class="left-column">
 						<div class="logo-wrapper">
 							<div class="logo">
 								<a href="/">
@@ -82,7 +85,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="uk-width-5-6">
+					<div class="right-column">
 						<div class="bottom-bar__inner">
 							<nav class="main-nav">
 								<ul>
@@ -92,68 +95,46 @@
 									    			<div class="uk-container uk-container--large">
 									    				<div class="dropdown-menu-wrapper">
 										    				<div class="uk-grid uk-child-width-1-4" uk-grid>
-										    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+										    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Рюкзаки и сумки</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																				    <li><a href="">Рюкзаки</a></li>
+																																														    <li><a href="">Сумки спортивные</a></li>
+																																														    <li><a href="">Сумки городские</a></li>
+																																														    <li><a href="">Сумки на пояс</a></li>
+																																														    <li><a href="">Сумки через плечо</a></li>
+																																																																																																														</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Одежда</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																											    <li><a href="">Куртка</a></li>
+																																															    <li><a href="">Ветровка</a></li>
+																																															    <li><a href="">Толстовка</a></li>
+																																															    <li><a href="">Свитер</a></li>
+																																															    <li><a href="">Футболка с длинным рукавом</a></li>
+																																															    <li><a href="">Футболка</a></li>
+																																															    <li><a href="">Штаны</a></li>
+																																																																																									</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Аксессуары</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																																																	    <li><a href="">Головные уборы</a></li>
+																																															    <li><a href="">Кошельки</a></li>
+																																															    <li><a href="">Чехлы для гаджетов</a></li>
+																																															    <li><a href="">Пеналы</a></li>
+																																															    <li><a href="">Для путешествий</a></li>
+																																																																			</ul>
 																				</div>
+																			</div>
 																													    															    					    																			  <div class="sections-image">
-																			  	<img src="img/media/section-img-350x370.png" alt="">
+																			  	<img data-src="img/media/section-img-350x370.png" alt="" uk-img>
 																			  </div>
 										    					    										    															    				</div>
 									    				</div>
@@ -166,68 +147,46 @@
 									    			<div class="uk-container uk-container--large">
 									    				<div class="dropdown-menu-wrapper">
 										    				<div class="uk-grid uk-child-width-1-4" uk-grid>
-										    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+										    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Рюкзаки и сумки</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																				    <li><a href="">Рюкзаки</a></li>
+																																														    <li><a href="">Сумки спортивные</a></li>
+																																														    <li><a href="">Сумки городские</a></li>
+																																														    <li><a href="">Сумки на пояс</a></li>
+																																														    <li><a href="">Сумки через плечо</a></li>
+																																																																																																														</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Одежда</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																											    <li><a href="">Куртка</a></li>
+																																															    <li><a href="">Ветровка</a></li>
+																																															    <li><a href="">Толстовка</a></li>
+																																															    <li><a href="">Свитер</a></li>
+																																															    <li><a href="">Футболка с длинным рукавом</a></li>
+																																															    <li><a href="">Футболка</a></li>
+																																															    <li><a href="">Штаны</a></li>
+																																																																																									</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Аксессуары</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																																																	    <li><a href="">Головные уборы</a></li>
+																																															    <li><a href="">Кошельки</a></li>
+																																															    <li><a href="">Чехлы для гаджетов</a></li>
+																																															    <li><a href="">Пеналы</a></li>
+																																															    <li><a href="">Для путешествий</a></li>
+																																																																			</ul>
 																				</div>
+																			</div>
 																													    															    					    																			  <div class="sections-image">
-																			  	<img src="img/media/section-img-350x370.png" alt="">
+																			  	<img data-src="img/media/section-img-350x370.png" alt="" uk-img>
 																			  </div>
 										    					    										    															    				</div>
 									    				</div>
@@ -240,68 +199,46 @@
 									    			<div class="uk-container uk-container--large">
 									    				<div class="dropdown-menu-wrapper">
 										    				<div class="uk-grid uk-child-width-1-4" uk-grid>
-										    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+										    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Рюкзаки и сумки</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																				    <li><a href="">Рюкзаки</a></li>
+																																														    <li><a href="">Сумки спортивные</a></li>
+																																														    <li><a href="">Сумки городские</a></li>
+																																														    <li><a href="">Сумки на пояс</a></li>
+																																														    <li><a href="">Сумки через плечо</a></li>
+																																																																																																														</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Одежда</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																											    <li><a href="">Куртка</a></li>
+																																															    <li><a href="">Ветровка</a></li>
+																																															    <li><a href="">Толстовка</a></li>
+																																															    <li><a href="">Свитер</a></li>
+																																															    <li><a href="">Футболка с длинным рукавом</a></li>
+																																															    <li><a href="">Футболка</a></li>
+																																															    <li><a href="">Штаны</a></li>
+																																																																																									</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Аксессуары</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																																																	    <li><a href="">Головные уборы</a></li>
+																																															    <li><a href="">Кошельки</a></li>
+																																															    <li><a href="">Чехлы для гаджетов</a></li>
+																																															    <li><a href="">Пеналы</a></li>
+																																															    <li><a href="">Для путешествий</a></li>
+																																																																			</ul>
 																				</div>
+																			</div>
 																													    															    					    																			  <div class="sections-image">
-																			  	<img src="img/media/section-img-350x370.png" alt="">
+																			  	<img data-src="img/media/section-img-350x370.png" alt="" uk-img>
 																			  </div>
 										    					    										    															    				</div>
 									    				</div>
@@ -314,68 +251,46 @@
 									    			<div class="uk-container uk-container--large">
 									    				<div class="dropdown-menu-wrapper">
 										    				<div class="uk-grid uk-child-width-1-4" uk-grid>
-										    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+										    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Рюкзаки и сумки</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																				    <li><a href="">Рюкзаки</a></li>
+																																														    <li><a href="">Сумки спортивные</a></li>
+																																														    <li><a href="">Сумки городские</a></li>
+																																														    <li><a href="">Сумки на пояс</a></li>
+																																														    <li><a href="">Сумки через плечо</a></li>
+																																																																																																														</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Одежда</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																											    <li><a href="">Куртка</a></li>
+																																															    <li><a href="">Ветровка</a></li>
+																																															    <li><a href="">Толстовка</a></li>
+																																															    <li><a href="">Свитер</a></li>
+																																															    <li><a href="">Футболка с длинным рукавом</a></li>
+																																															    <li><a href="">Футболка</a></li>
+																																															    <li><a href="">Штаны</a></li>
+																																																																																									</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Аксессуары</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																																																	    <li><a href="">Головные уборы</a></li>
+																																															    <li><a href="">Кошельки</a></li>
+																																															    <li><a href="">Чехлы для гаджетов</a></li>
+																																															    <li><a href="">Пеналы</a></li>
+																																															    <li><a href="">Для путешествий</a></li>
+																																																																			</ul>
 																				</div>
+																			</div>
 																													    															    					    																			  <div class="sections-image">
-																			  	<img src="img/media/section-img-350x370.png" alt="">
+																			  	<img data-src="img/media/section-img-350x370.png" alt="" uk-img>
 																			  </div>
 										    					    										    															    				</div>
 									    				</div>
@@ -388,68 +303,46 @@
 									    			<div class="uk-container uk-container--large">
 									    				<div class="dropdown-menu-wrapper">
 										    				<div class="uk-grid uk-child-width-1-4" uk-grid>
-										    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+										    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Рюкзаки и сумки</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																				    <li><a href="">Рюкзаки</a></li>
+																																														    <li><a href="">Сумки спортивные</a></li>
+																																														    <li><a href="">Сумки городские</a></li>
+																																														    <li><a href="">Сумки на пояс</a></li>
+																																														    <li><a href="">Сумки через плечо</a></li>
+																																																																																																														</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Одежда</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																											    <li><a href="">Куртка</a></li>
+																																															    <li><a href="">Ветровка</a></li>
+																																															    <li><a href="">Толстовка</a></li>
+																																															    <li><a href="">Свитер</a></li>
+																																															    <li><a href="">Футболка с длинным рукавом</a></li>
+																																															    <li><a href="">Футболка</a></li>
+																																															    <li><a href="">Штаны</a></li>
+																																																																																									</ul>
 																				</div>
-																													    															    					    																				<div class="menu-section">
-																					<div class="menu-section__title">Рюкзаки и сумки</div>
+																			</div>
+																													    															    					    																			<div class="menu-section-wrapper">
+																				<div class="menu-section">
+																					<div class="menu-section__title"><a href="">Аксессуары</a></div>
 																					<ul class="menu-section__links">
-																						<li>
-																							<a href="">Рюкзаки</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки спортивные</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки городские</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки на пояс</a>
-																						</li>
-																						<li>
-																							<a href="">Сумки через плечо</a>
-																						</li>
-																					</ul>
+																																																																																																																	    <li><a href="">Головные уборы</a></li>
+																																															    <li><a href="">Кошельки</a></li>
+																																															    <li><a href="">Чехлы для гаджетов</a></li>
+																																															    <li><a href="">Пеналы</a></li>
+																																															    <li><a href="">Для путешествий</a></li>
+																																																																			</ul>
 																				</div>
+																			</div>
 																													    															    					    																			  <div class="sections-image">
-																			  	<img src="img/media/section-img-350x370.png" alt="">
+																			  	<img data-src="img/media/section-img-350x370.png" alt="" uk-img>
 																			  </div>
 										    					    										    															    				</div>
 									    				</div>
@@ -459,33 +352,7 @@
 																													    												<li class="nav-item stock-item">
 													<a href="">Распродажа</a>
 												</li>
-									    									<!-- 									<li class="parent">
-	<a href="">Мужчинам</a>
-	<div class="dropdown-menu" uk-dropdown="pos: bottom-justify; offset: 0; boundary: #dropdown-menu-width; boundary-align: true; delay-show: 150; delay-hide: 0;">
-		<div class="uk-container uk-container-small">
-			<ul class="uk-grid dropdown-list uk-grid-collapse">
-				<li class="uk-width-1-5">
-					<a href="">test</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</li>
-<li>
-	<a href="">Женщинам</a>
-</li>
-<li>
-	<a href="">Детям</a>
-</li>
-<li>
-	<a href="">В путешествие</a>
-</li>
-<li>
-	<a href="">Коллекции</a>
-</li>
-<li class="stock">
-	<a href="">Распродажа</a>
-</li> -->
+									    									
 								</ul>
 							</nav>
 
@@ -493,8 +360,8 @@
 								<div class="search">
 									<a href="" class="icon-search js__toggle-search"><span class="text">Поиск</span></a>
 								</div>
-								<div class="favorite">
-									<a href="" class="icon-star"><span class="text">Отложено</span></a>
+								<div class="favorite is-added">
+									<a href="" class="icon-star icon-star-fill"><span class="text">Отложено</span></a>
 								</div>
 								<div class="basket">
 									<a href="">
@@ -511,6 +378,111 @@
 				</div>
 			</div>
 		</div><!-- end header-bottom-bar -->
+	
+		<!-- begin search-desktop -->
+		<div class="search-desktop">
+
+			<!-- begin search-wrapper -->
+			<div class="search-wrapper">
+				<div class="uk-container">
+					<form action="" class="form search-form">
+						<input type="text" placeholder="Введите поисковый запрос" class="js__send-ajax">
+						<button class="btn">Найти</button>
+					</form>
+					<a href="#" class="close-form icon-close js__close-search-result"></a>
+				</div>
+			</div><!-- end search-wrapper -->
+		
+			<!-- begin search-result-wrapper -->
+			<div class="search-result-wrapper">
+					<div class="uk-container">
+						<div class="search-result__title">Товаров не найдено, но посмотрите что у нас есть</div>
+						<div class="search-result uk-child-width-1-6@m" uk-grid>
+														<div class="item-wrapper">
+								<div class="item">
+									<div class="item__img">
+										<!-- <a href=""><img data-src="img/media/result-img-78x81.png" alt="" uk-img></a> -->
+										<a href=""><img data-src="img/media/catalog-img.png" alt="" uk-img></a>
+									</div>
+									<div class="item__name"><a href="">Daypack | Santa Cruz</a></div>
+									<div class="item__price">
+										<div class="price__old"></div>
+										<div class="price__current">5860 Р.</div>
+									</div>
+								</div>
+							</div>
+														<div class="item-wrapper">
+								<div class="item">
+									<div class="item__img">
+										<!-- <a href=""><img data-src="img/media/result-img-78x81.png" alt="" uk-img></a> -->
+										<a href=""><img data-src="img/media/catalog-img.png" alt="" uk-img></a>
+									</div>
+									<div class="item__name"><a href="">Daypack | Santa Cruz</a></div>
+									<div class="item__price">
+										<div class="price__old"></div>
+										<div class="price__current">5860 Р.</div>
+									</div>
+								</div>
+							</div>
+														<div class="item-wrapper">
+								<div class="item">
+									<div class="item__img">
+										<!-- <a href=""><img data-src="img/media/result-img-78x81.png" alt="" uk-img></a> -->
+										<a href=""><img data-src="img/media/catalog-img.png" alt="" uk-img></a>
+									</div>
+									<div class="item__name"><a href="">Daypack | Santa Cruz</a></div>
+									<div class="item__price">
+										<div class="price__old"></div>
+										<div class="price__current">5860 Р.</div>
+									</div>
+								</div>
+							</div>
+														<div class="item-wrapper">
+								<div class="item">
+									<div class="item__img">
+										<!-- <a href=""><img data-src="img/media/result-img-78x81.png" alt="" uk-img></a> -->
+										<a href=""><img data-src="img/media/catalog-img.png" alt="" uk-img></a>
+									</div>
+									<div class="item__name"><a href="">Daypack | Santa Cruz</a></div>
+									<div class="item__price">
+										<div class="price__old"></div>
+										<div class="price__current">5860 Р.</div>
+									</div>
+								</div>
+							</div>
+														<div class="item-wrapper">
+								<div class="item">
+									<div class="item__img">
+										<!-- <a href=""><img data-src="img/media/result-img-78x81.png" alt="" uk-img></a> -->
+										<a href=""><img data-src="img/media/catalog-img.png" alt="" uk-img></a>
+									</div>
+									<div class="item__name"><a href="">Daypack | Santa Cruz</a></div>
+									<div class="item__price">
+										<div class="price__old"></div>
+										<div class="price__current">5860 Р.</div>
+									</div>
+								</div>
+							</div>
+														<div class="item-wrapper">
+								<div class="item">
+									<div class="item__img">
+										<!-- <a href=""><img data-src="img/media/result-img-78x81.png" alt="" uk-img></a> -->
+										<a href=""><img data-src="img/media/catalog-img.png" alt="" uk-img></a>
+									</div>
+									<div class="item__name"><a href="">Daypack | Santa Cruz</a></div>
+									<div class="item__price">
+										<div class="price__old"></div>
+										<div class="price__current">5860 Р.</div>
+									</div>
+								</div>
+							</div>
+													</div>
+						<a href="" class="show-all icon-small-arrow">Показать все товары</a>	
+					</div>
+					
+			</div><!-- end search-result-wrapper -->
+
+		</div><!-- end search-desktop -->
 
 	</div><!-- end header-desk -->
 
@@ -520,6 +492,31 @@
 	</div><!-- end header-mobile -->
 
 </header><!-- end header -->
+
+<!-- begin promo -->
+<div class="promo-panel">
+	<div class="uk-container">
+		<div class="promo-panel__inner">
+			<div class="promo-panel__text">
+				Дарим скидку 10% на первую покупку за подписку на выгодные предложения
+			</div>
+			<form action="" class="promo-form default-form">
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-expand">
+						<input type="email" name="email" placeholder="Ваш email">
+					</div>
+					<div class="uk-width-expand">
+						<button class="btn">Получить скидку</button>
+					</div>
+				</div>
+				
+				
+			</form>
+			<a href="#" class="close-form icon-close js__close-promo"></a>
+		</div>
+	</div>
+</div><!-- end promo -->
+
 	
 	<section>
 		test	
@@ -542,6 +539,7 @@
 <script src="libs/svg4everybody.min.js" defer></script>
 <script src="libs/ofi.min.js" defer></script>
 <script src="libs/ie11CustomProperties/ie11CustomProperties.js" defer></script>
+<script src="libs/jquery.validate.min.js" defer></script>
 <script src="js/main.js" defer></script>
 
 </body>

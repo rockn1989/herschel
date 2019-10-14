@@ -2,6 +2,45 @@
 
 $(function() {	
 
+	/*______ Форма поиска декстоп ______*/
+
+	$('.js__toggle-search').on('click', function (e) {
+		e.preventDefault();
+		$('.search-desktop').slideToggle('250', function () {
+			$('.search-desktop').find('input[type="text"]').focus();
+		});
+
+	});
+
+	/*______ Результат поиска ______*/
+
+	$('.js__send-ajax').on('keydown keyup', function (e) {
+		if($(this).val().length >= 3) {
+			$('body').addClass('mask');
+			$('.search-result-wrapper').addClass('visible');
+		} else {
+			$('body').removeClass('mask');
+			$('.search-result-wrapper').removeClass('visible');
+		};
+	})
+
+	/*______ Закрыть и очистить результаты поиска ______*/
+
+	$('.js__close-search-result').on('click', function (e) {
+		e.preventDefault();
+		$('body').removeClass('mask');
+		$('.search-result-wrapper').removeClass('visible');
+		$('.search-desktop').find('input[type="text"]').val('');
+		$('.search-desktop').css('display', 'none');
+	});
+
+	/*______ Закрыть Форму с акциями ______*/
+
+	$('.js__close-promo').on('click', function (e) {
+		e.preventDefault();
+		$('.promo-panel').css('display', 'none');
+	})
+
 	/*______ Показывать форму на мобильных устройствах ______*/
 
 	var $mobileForm = $('.mobile-form');
@@ -33,7 +72,7 @@ $(function() {
 				}
 			},
 			messages: {
-				email: "Обязательноe поле",
+				email: "Некорректное имя почты",
 			},
 		});
 	};
@@ -72,15 +111,6 @@ $(function() {
 		self.toggleClass('open');
 		siblingsList.stop().slideToggle('350');
 	});
-
-
-	/*______ Отключение UIKIT анимации для мобильных устройств ______*/
-
-/*	UIkit.on('beforeready.uk.dom', function () {
-		if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
-			UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
-		};
-	});*/
 
 
 	/*______ Полифил для Object-fit ______*/

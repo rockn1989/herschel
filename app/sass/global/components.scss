@@ -1,6 +1,67 @@
 /*______ COMPONENTS ______*/
 
 
+
+/*______ Buttons ______*/
+
+.btn {
+	padding: 0 32px;
+	display: inline-block;
+	min-width: 174px;
+	height: 48px;
+	color: $textColor;
+	font-size: 14px;
+	letter-spacing: .1px;
+	text-align: center;
+	outline: none;
+	border: 1px solid $bgUIBlack;
+	cursor: pointer;
+	background-color: #ffffff;
+	transition: background-color .45s, color .45s ease;
+	@media (min-width: $mob-xs) {
+		min-width: 100px;
+	};
+	@media (min-width: $tablet-w) {
+		min-width: 174px;
+	};
+	&:hover {
+		color: #ffffff;
+		background-color: $bgUIBlack;
+	}
+}
+
+.show-all {
+	position: relative;
+	padding-right: 42px;
+	display: inline-block;
+	@include icomoon;
+	color: $textColor;
+	font-size: 18px;
+	&:before {
+		position: absolute;
+		top: 6px;
+		right: 0;
+		font-size: 9px;
+		transition: transform .3s ease;
+	}
+	&:hover {
+		color: $textColor;
+		&:before {
+			transform: translateX(7px);
+		}
+	}
+}
+
+.close-form {
+	position: absolute;
+	top: 50%;
+	font-size: 24px;
+	transform: translateY(-50%);
+}
+
+/*______ End Buttons ______*/
+
+
 /*______ UK-DROPDOWN ______*/
 
 .uk-dropdown {
@@ -10,6 +71,61 @@
 
 /*______ End UK-DROPDOWN ______*/
 
+
+
+/*______ Promo ______*/
+
+	.promo-panel {
+		padding: 9px 0;
+		background: $bgColor;
+		&__inner {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@media (min-width: $mob-xs) {
+				flex-wrap: wrap;
+			};
+			@media (min-width: $tablet-w) {
+				flex-wrap: nowrap;
+			};
+			.close-form {
+				right: 0;
+				@media (min-width: $mob-xs) {
+					top: 10px;
+					right: 0;
+				};
+				@media (min-width: $tablet-w) {
+					right: -25px;
+					top: 24px;
+				};
+				@media (min-width: $desk-w) {
+					right: -20px;
+				};
+				@media (min-width: 1400px) {
+					right: -68px	;
+				}
+			}
+		}
+		&__text {
+			margin-right: 20px;
+			font-family: $secondFont;
+			@media (min-width: $mob-xs) {
+				margin-bottom: 20px;
+				font-size: 20px;
+				line-height: 26px;
+			};
+			@media (min-width: $tablet-w) {
+				margin-bottom: 0;
+			};
+			@media (min-width: $desk-w) {
+				font-size: 24px;
+				line-height: 30px;
+			};
+		}
+	}
+
+/*______ End Promo ______*/
 
 
 /*______ END COMPONENTS ______*/

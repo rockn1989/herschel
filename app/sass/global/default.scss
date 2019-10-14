@@ -17,6 +17,28 @@ table {
   color: $textColor;
 }
 
+body {
+	&.mask {
+		position: relative;
+		height: 100vh;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, .75);
+			z-index: 998;
+		}
+		header.header {
+			position: relative;
+			background: #ffffff;
+			z-index: 999;
+		}
+	}
+}
+
 * {
   box-sizing: border-box;
 }
@@ -78,5 +100,12 @@ html.uk-touch {
 		@media (min-width: $tablet-w) {
 			padding-left: 30px;
 		};
+	}
+}
+
+.uk-grid-collapse {
+	margin-left: 0 !important;
+	&>* {
+		padding-left: 0 !important;
 	}
 }
