@@ -51,6 +51,24 @@ $(function() {
 	})
 
 
+	/*______ Навигация на мобильном ______*/
+
+	$('.navbar-close').on('click', function (e) {
+		e.preventDefault();
+		var $parent = $(this).closest('.uk-nav__inner');
+		$parent.addClass('hidden')
+	})
+
+	/*______ Открытие мобильного подменю ______*/
+
+	$('.js__menu-sublist-toggle').on('click', function (e) {
+		e.preventDefault();
+		var self = $(this),
+			blockParent = self.closest('a'),
+			siblingsList = blockParent.siblings('.uk-nav__inner.hidden');
+			siblingsList.removeClass('hidden');
+	});
+
 	/*______ Маска формы ______*/
 
 	$('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(function (e) {

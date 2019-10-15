@@ -27,8 +27,7 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.eot?m1ohhs");
-  src: url("../fonts/icomoon/icomoon.eot?m1ohhs#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?m1ohhs") format("truetype"), url("../fonts/icomoon/icomoon.woff?m1ohhs") format("woff"), url("../fonts/icomoon/icomoon.svg?m1ohhs#icomoon") format("svg");
+  src: url("../fonts/icomoon/icomoon.ttf?b81ezj") format("truetype"), url("../fonts/icomoon/icomoon.woff?b81ezj") format("woff"), url("../fonts/icomoon/icomoon.svg?b81ezj#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -112,6 +111,18 @@
 
 .icon-star-fill:before {
   content: "\e90e";
+}
+
+.icon-menu:before {
+  content: "\e90f";
+}
+
+.icon-chevron-right:before {
+  content: "\e910";
+}
+
+.icon-chevron-left:before {
+  content: "\e911";
 }
 
 /*______ COMPONENTS ______*/
@@ -726,7 +737,7 @@ html.uk-touch body *.uk-invisible {
 
 .basket__icon {
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 0;
 }
 
@@ -864,6 +875,271 @@ html.uk-touch body *.uk-invisible {
   color: var(--second-text-color);
 }
 
+/*______ Mobile header ______*/
+
+.header-mobile {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--separate-line-ui-color);
+}
+
+.header-mobile:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #000000;
+  z-index: 89;
+}
+
+.header-mobile .mobile-logo {
+  margin-top: -10px;
+}
+
+.header-mobile .mobile-logo a {
+  padding: 15px 10px 10px;
+  position: relative;
+  display: inline-block;
+  z-index: 90;
+  background: #ffffff;
+  border-radius: 50% 50% 0 0;
+}
+
+.header-mobile .mobile-logo a img {
+  width: 100%;
+}
+
+.mobile-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 12px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0;
+}
+
+.mobile-menu li {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.mobile-menu li a {
+  display: inline-block;
+  color: var(--main-text-color);
+  font-size: 20px;
+}
+
+.mobile-menu li a.icon-search {
+  margin-top: 1px;
+}
+
+.mobile-menu li .icon-menu {
+  margin-top: 2.5px;
+}
+
+.mobile-menu .basket a {
+  display: block;
+}
+
+.mobile-menu .basket__icon {
+  top: 1px;
+}
+
+.mobile-menu .basket .text {
+  display: none;
+}
+
+.uk-offcanvas-bar {
+  padding: 0;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.uk-offcanvas-bar li {
+  position: relative;
+  padding: 5px 10px 5px 15px;
+  border-bottom: 1px solid var(--separate-line-ui-color);
+}
+
+.uk-offcanvas-bar i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 10px;
+  font-size: 14px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.uk-offcanvas-bar a {
+  position: relative;
+  padding: 5px 0;
+  color: var(--main-text-color);
+}
+
+.uk-offcanvas-bar a:hover,
+.uk-offcanvas-bar a:focus,
+.uk-offcanvas-bar a:active {
+  color: var(--main-text-color);
+}
+
+.uk-offcanvas-bar .uk-nav {
+  overflow: hidden;
+}
+
+.uk-offcanvas-bar .uk-panel__top {
+  padding: 10px 0;
+  border-bottom: 2px solid var(--separate-line-ui-color);
+}
+
+.uk-offcanvas-bar .contacts {
+  padding-left: 36px;
+}
+
+.uk-offcanvas-bar .contacts:before {
+  top: 5px;
+  left: 15px;
+  display: block;
+  color: var(--main-text-color);
+}
+
+.uk-offcanvas-bar .contacts a {
+  display: block;
+  width: 100%;
+}
+
+.uk-offcanvas-bar .auth {
+  margin-top: 5px;
+}
+
+.uk-offcanvas-bar .auth > div {
+  padding-left: 36px;
+}
+
+.uk-offcanvas-bar .auth > div:before {
+  top: 5px;
+  left: 15px;
+  display: block;
+  color: var(--main-text-color);
+}
+
+.uk-panel__bottom ul {
+  padding-left: 0;
+}
+
+.uk-panel__bottom ul li {
+  padding: 5px 10px 5px 15px;
+}
+
+.uk-panel__bottom ul li a {
+  padding: 5px 0;
+  font-weight: 500;
+  display: block;
+}
+
+.uk-nav__inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  overflow: hidden;
+}
+
+.uk-nav__inner .navbar-close {
+  font-size: 20px;
+  font-family: "SF" !important;
+  color: var(--main-text-color);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.uk-nav__inner .navbar-close:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uk-nav__inner .navbar-close span {
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+.uk-nav__inner.hidden {
+  left: -100%;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.uk-nav__inner ul.menu-sublist {
+  margin-top: 10px;
+  border-top: 2px solid var(--separate-line-ui-color);
+}
+
+.uk-nav__inner .navbar-close {
+  position: static;
+  padding-top: 0;
+  top: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.uk-nav__inner .navbar-close:before {
+  font-size: 14px;
+}
+
+/*______ End Mobile header ______*/
+
 /*______ END HEADER ______*/
 
 /*______ MAIN CONTENT ______*/
@@ -930,7 +1206,6 @@ html.uk-touch body *.uk-invisible {
 }
 
 .search-wrapper .uk-container .close-form {
-  right: -50px;
   font-size: 24px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -1060,6 +1335,42 @@ html.uk-touch body *.uk-invisible {
 
 /*______ End Search Form ______*/
 
+/*______ Mobile Form ______*/
+
+.mobile-form {
+  margin: 15px 0 15px;
+  display: none;
+}
+
+.mobile-form form {
+  position: relative;
+}
+
+.mobile-form form input[type="text"] {
+  padding: 0 40px 0 17px;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+}
+
+.mobile-form form .mobile-search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border: none;
+  background: none;
+  text-align: center;
+}
+
+.mobile-form form .mobile-search-btn:before {
+  font-size: 16px;
+}
+
+/*______ End Mobile Form ______*/
+
 /*______ Promo Form ______*/
 
 .promo-form {
@@ -1086,8 +1397,9 @@ html.uk-touch body *.uk-invisible {
   }
 
   .promo-panel__inner .close-form {
-    top: 10px;
+    top: 15px;
     right: 0;
+    font-size: 16px;
   }
 
   .promo-panel__text {
@@ -1113,6 +1425,46 @@ html.uk-touch body *.uk-invisible {
   .uk-grid > * {
     padding-left: 15px;
   }
+
+  .mobile-menu li {
+    margin-left: 15px;
+  }
+
+  .search-wrapper .uk-container .close-form {
+    right: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .mobile-menu li {
+    margin-left: 7%;
+  }
+
+  .mobile-menu li a {
+    font-size: 24px;
+  }
+
+  .mobile-menu li .icon-menu {
+    margin-top: 3px;
+  }
+}
+
+@media (min-width: 768px) {
+  .promo-panel__inner .close-form {
+    font-size: 24px;
+  }
+
+  .header-mobile:before {
+    height: 42px;
+  }
+
+  .header-mobile .mobile-logo a {
+    width: 120px;
+  }
+
+  .mobile-menu {
+    margin-top: 16px;
+  }
 }
 
 @media (min-width: 960px) {
@@ -1129,6 +1481,7 @@ html.uk-touch body *.uk-invisible {
   .promo-panel__inner .close-form {
     right: -25px;
     top: 24px;
+    font-size: 20px;
   }
 
   .promo-panel__text {
@@ -1151,6 +1504,7 @@ html.uk-touch body *.uk-invisible {
 @media (min-width: 1200px) {
   .promo-panel__inner .close-form {
     right: -20px;
+    font-size: 30px;
   }
 
   .promo-panel__text {
@@ -1165,8 +1519,20 @@ html.uk-touch body *.uk-invisible {
   }
 }
 
+@media (min-width: 1300px) {
+  .search-wrapper .uk-container .close-form {
+    right: -25px;
+  }
+}
+
 @media (min-width: 1400px) {
   .promo-panel__inner .close-form {
     right: -68px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .search-wrapper .uk-container .close-form {
+    right: -50px;
   }
 }

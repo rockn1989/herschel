@@ -195,8 +195,7 @@
 							<div class="item-wrapper">
 								<div class="item">
 									<div class="item__img">
-										<!-- <a href=""><img data-src="img/media/result-img-78x81.png" alt="" uk-img></a> -->
-										<a href=""><img data-src="img/media/catalog-img.png" alt="" uk-img></a>
+										<a href=""><img src="img/media/catalog-img.png" alt=""></a>
 									</div>
 									<div class="item__name"><a href="">Daypack | Santa Cruz</a></div>
 									<div class="item__price">
@@ -218,8 +217,118 @@
 
 	<!-- begin header-mobile -->
 	<div class="header-mobile uk-hidden@l">
-		
+		<div class="uk-container">
+
+			<div class="uk-grid">
+				<div class="uk-width-1-2">
+					<div class="mobile-logo">
+						<a href=""><img src="img/media/logo-black.svg" alt=""></a>
+					</div>
+				</div>
+				<div class="uk-width-1-2">
+					<ul class="mobile-menu">
+						<li><a href="#" class="icon-search js__show-form"></a></li>
+						<li><a href="#" class="icon-star"></a></li>
+						<li>
+							<div class="basket">
+								<a href="">
+									<span class="basket__icon icon-basket">
+										<span class="basket__count">2</span>
+									</span>
+									<span class="text">Корзина</span>
+								</a>
+							</div>
+						</li>
+						<li><a href="#" class="icon-menu" uk-toggle="target: #offcanvas-menu"></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
 	</div><!-- end header-mobile -->
+
+	<!-- begin offcanvas-menu -->
+	<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+		<div class="uk-offcanvas-bar">
+			<div class="uk-panel">
+				<div class="uk-panel__top">
+					<div class="contacts icon-phone">
+						<a href="tel:+74951172233">7 (495) 117-22-33</a>
+						<a href="tel:+78001233344">8-800-123-33-44</a>
+					</div>
+					<div class="auth">
+						<div class="auth__enter icon-user">
+							<a href="">Войти</a>	
+						</div>
+					</div>
+				</div>
+				<ul class="uk-nav">
+					<li>
+						<a href="">Мужчинам <i class="icon icon-chevron-right js__menu-sublist-toggle"></i></a>
+						<div class="uk-nav__inner hidden">
+							<i class="icon-chevron-left navbar-close"><span>Мужчинам</span></i>
+							<ul class="menu-sublist">
+								<li>
+									<a href="">Рюкзаки <i class="icon-chevron-right js__menu-sublist-toggle"></i></a>
+									<div class="uk-nav__inner hidden">
+										<i class="icon-chevron-left navbar-close"><span>Рюкзаки</span></i>
+										<ul class="menu-sublist">
+											<li><a href=""> Подвид рюкзаков</a></li>
+											<li><a href=""> Подвид рюкзаков</a></li>
+											<li><a href=""> Подвид рюкзаков</a></li>
+											<li><a href=""> Подвид рюкзаков</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<a href="">Женщинам <i class="icon icon-chevron-right js__menu-sublist-toggle"></i></a>
+						<div class="uk-nav__inner hidden">
+							<i class="icon-chevron-left navbar-close"><span>Женщинам</span></i>
+							<ul class="menu-sublist">
+								<li>
+									<a href="">Рюкзаки <i class="icon-chevron-right js__menu-sublist-toggle"></i></a>
+									<div class="uk-nav__inner hidden">
+										<i class="icon-chevron-left navbar-close"><span>Рюкзаки</span></i>
+										<ul class="menu-sublist">
+											<li><a href=""> Подвид рюкзаков</a></li>
+											<li><a href=""> Подвид рюкзаков</a></li>
+											<li><a href=""> Подвид рюкзаков</a></li>
+											<li><a href=""> Подвид рюкзаков</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="">Детям</a></li>
+					<li><a href="">В путешествие</a></li>
+					<li><a href="">Коллекции</a></li>
+					<li><a href="">Распродажа</a></li>
+				</ul>
+				<div class="uk-panel__bottom">
+					<ul>
+						<li><a href="">История бренда</a></li>
+						<li><a href="">Доставка и оплата</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div><!-- end offcanvas-menu -->
+
+	<!-- begin mobile-form -->
+	<div class="mobile-form uk-hidden@l">
+		<div class="uk-container">
+			<form action="" class="default-form">
+				<input type="text">
+				<button type="submit" class="mobile-search-btn icon-search"></button>
+			</form>
+		</div>
+	</div><!-- end mobile-form -->
 
 </header><!-- end header -->
 
@@ -239,7 +348,6 @@
 						<button class="btn">Получить скидку</button>
 					</div>
 				</div>
-				
 				
 			</form>
 			<a href="#" class="close-form icon-close js__close-promo"></a>

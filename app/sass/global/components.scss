@@ -92,15 +92,21 @@
 			.close-form {
 				right: 0;
 				@media (min-width: $mob-xs) {
-					top: 10px;
+					top: 15px;
 					right: 0;
+					font-size: 16px;
+				};
+				@media (min-width: 768px) {
+					font-size: 24px;
 				};
 				@media (min-width: $tablet-w) {
 					right: -25px;
 					top: 24px;
+					font-size: 20px;
 				};
 				@media (min-width: $desk-w) {
 					right: -20px;
+					font-size: 30px;
 				};
 				@media (min-width: 1400px) {
 					right: -68px	;

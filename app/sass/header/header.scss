@@ -263,7 +263,7 @@
 .basket {
 	&__icon {
 		position: absolute;
-		top: 5px;
+		top: 7px;
 		left: 0;
 		&:before {
 			color: $textColor;
@@ -364,5 +364,218 @@
 		}
 	}
 }
+
+
+/*______ Mobile header ______*/
+
+.header-mobile {
+	position: relative;
+	padding: 20px 0;
+	border-bottom: 1px solid $bgUIGray;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		background-color: #000000;
+		z-index: 89;
+		@media (min-width: 768px) {
+			height: 42px;
+		};
+	}
+	.mobile-logo {
+		margin-top: -10px;
+		a {
+			padding: 15px 10px 10px;
+			position: relative;
+			display: inline-block;
+			z-index: 90;
+			background: #ffffff;
+			border-radius: 50% 50% 0 0;
+			@media (min-width:768px) {
+				width: 120px;
+			};
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.mobile-menu {
+	@include list-reset;
+	margin-top: 12px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 0;
+	@media (min-width: 768px) {
+		margin-top: 16px;
+	};
+	li {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		@media (min-width: $mob-xs) {
+			margin-left: 15px;
+		};
+		@media (min-width: $mob-s) {
+			margin-left: 7%;
+		};
+		a {
+			display: inline-block;
+			color: $textColor;
+			font-size: 20px;
+			&.icon-search {
+				margin-top: 1px;
+			}
+			@media (min-width: $mob-s) {
+				font-size: 24px;
+			};
+		}
+		.icon-menu {
+			margin-top: 2.5px;
+			@media (min-width: $mob-s) {
+				margin-top: 3px;
+			};
+		}
+	}
+	.basket {
+		a {
+			display: block;
+		}
+		&__icon {
+			top: 1px;
+		}
+		.text {
+			display: none;
+		}
+	}
+}
+
+.uk-offcanvas-bar {
+	padding: 0;
+	font-size: 14px;
+	background: #ffffff;
+	li {
+		position: relative;
+		padding: 5px 10px 5px 15px;
+		border-bottom: 1px solid $bgUIGray;
+	}
+	i {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		padding: 10px;
+		font-size: 14px;
+		transform: translateY(-50%);
+	}
+	a {
+		position: relative;
+		padding: 5px 0;
+		color: $textColor;
+		&:hover,&:focus,&:active {
+			color: $textColor;
+		}
+	}
+	.uk-nav {
+		overflow: hidden;
+	}
+	.uk-panel__top {
+		padding: 10px 0;
+		border-bottom: 2px solid $bgUIGray;
+	}
+	.contacts {
+		padding-left: 36px;
+		&:before {
+			top: 5px;
+			left: 15px;
+			display: block;
+			color: $textColor;
+		}
+		a {
+			display: block;
+			width: 100%
+		}
+	}
+	.auth {
+		margin-top: 5px;
+		&>div {
+			padding-left: 36px;
+			&:before {
+				top: 5px;
+				left: 15px;
+				display: block;
+				color: $textColor;
+			}
+		}
+	}
+}
+
+.uk-panel__bottom {
+	ul {
+		padding-left: 0;
+		li {
+			padding: 5px 10px 5px 15px;
+			a {
+				padding: 5px 0;
+				font-weight: 500;
+				display: block;
+			}
+		}
+	}
+}
+
+.uk-nav__inner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #ffffff;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	padding: 20px 0;
+	transition: all .2s linear;
+	overflow: hidden;
+	.navbar-close {
+		font-size: 20px;
+		@include icomoon;
+		color: $textColor;
+		display: flex;
+		align-items: center;
+		span {
+			padding-left: 15px;
+			font-size: 18px;
+		}
+	}
+	&.hidden {
+		left: -100%;
+		z-index: -1;
+		opacity: 0;
+		visibility: hidden;
+	}
+	ul.menu-sublist {
+		margin-top: 10px;
+		border-top: 2px solid $bgUIGray;
+	} 
+	.navbar-close {
+		position: static;
+		padding-top: 0;
+		top: 0;
+		transform: none;
+		&:before {
+			font-size: 14px;
+		}
+	}
+}
+
+/*______ End Mobile header ______*/
 
 /*______ END HEADER ______*/
