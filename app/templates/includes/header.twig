@@ -80,9 +80,9 @@
 		</div><!-- end header-top-bar -->
 
 		<!-- begin header-bottom-bar -->
-		<div class="header__bottom-bar">
+		<div id="dropdown-menu-width" class="header__bottom-bar">
 			<div class="uk-container uk-container--large">
-				<div class="header-custom-grid" id="dropdown-menu-width">
+				<div class="header-custom-grid">
 					<div class="left-column">
 						<div class="logo-wrapper">
 							<div class="logo">
@@ -102,6 +102,7 @@
 									    		<a href="">{{ menu[i] }}</a>
 									    		<div class="dropdown-menu" uk-dropdown="pos: bottom-justify; offset: 2; boundary: #dropdown-menu-width; boundary-align: true; delay-show: 150; delay-hide: 0;">
 									    			<div class="uk-container uk-container--large">
+									    				
 									    				<div class="dropdown-menu-wrapper">
 										    				<div class="uk-grid uk-child-width-1-4" uk-grid>
 										    					{% for i in 0..3 %}

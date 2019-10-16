@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?b81ezj') format('truetype'),
-    url('fonts/icomoon.woff?b81ezj') format('woff'),
-    url('fonts/icomoon.svg?b81ezj#icomoon') format('svg');
+    url('fonts/icomoon.ttf?me3tc8') format('truetype'),
+    url('fonts/icomoon.woff?me3tc8') format('woff'),
+    url('fonts/icomoon.svg?me3tc8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -82,4 +82,7 @@
 }
 .icon-chevron-left:before {
   content: "\e911";
+}
+.icon-ae:before {
+  content: "\e912";
 }

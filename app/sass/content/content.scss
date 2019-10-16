@@ -1,3 +1,9 @@
 /*______ MAIN CONTENT ______*/
 
+main.main {
+	@media (min-width: $tablet-w) {
+		min-height: calc(100vh - 531px);
+	};
+}
+
 /*______ END MAIN CONTENT ______*/
