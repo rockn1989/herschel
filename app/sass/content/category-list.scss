@@ -1,0 +1,158 @@
+/*______ Category-list ______*/
+
+.category-list {
+	margin-bottom: 128px;
+	.custom-row {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 0;
+		};
+		@media (min-width: $mob-s) {
+			margin-bottom: 60px;
+		};
+		@media (min-width: $tablet-w) {
+			margin-bottom: 108px;
+		};
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.uk-flex-row-reverse {
+			.item-6-10 {
+				.img-wrapper {
+					margin-top: 39px;
+					margin-bottom: 0;
+					order: 2;
+				}
+				.item__desc {
+					order: 1;
+				}
+				@media (max-width: 639px) {
+					.img-wrapper {
+						margin-top: 0;
+						margin-bottom: 15px;
+						order: 1;
+					}
+					.item__desc {
+						order: 2;
+					}
+				};
+			}
+			.item-4-10 {
+				.img-wrapper {
+					margin-top: 0;
+					margin-bottom: 39px;
+					order: 1;
+				}
+				.item__desc {
+					order: 2;
+				}
+				@media (max-width: 639px) {
+					.img-wrapper {
+						margin-top: 0;
+						margin-bottom: 15px;
+						order: 1;
+					}
+					.item__desc {
+						order: 2;
+					}
+				};
+			}
+		}
+	}
+	.item {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: 639px) {
+			margin-bottom: 45px;
+			width: 100% !important;
+			&.item-6-10 {
+				.img-wrapper {
+					order: 1;
+					margin-bottom: 15px;
+				}
+				.item__title {
+					margin-bottom: 5px;
+				}
+				.item__desc{
+					order: 2;
+				}
+			}
+			&.item-4-10 {
+				.img-wrapper {
+					margin-top: 0;
+					margin-bottom: 15px;
+					order: 1;
+				}
+				.item__desc{
+					order: 2;
+				}
+			}
+		};
+		.img-wrapper {
+			position: relative;
+			width: 100%;
+		}
+		&__desc {
+			width: 100%;
+		}
+		&__link {
+			position: absolute;
+			width: 73px;
+			height: 73px;
+			line-height: 73px;
+			color: #ffffff;
+			font-size: 10px;
+			text-align: center;
+			border-radius: 50%;
+			border: 1px solid #ffffff;
+			&:hover {
+				background: $bgUIBlack;
+				border-color: $bgUIBlack;
+			}
+	    bottom: 19%;
+	    right: 17.2%;
+		}
+		&__title {
+			margin-bottom: 22px;
+			color: $textHColor;
+			@media (min-width: $mob-xs) {
+				font-size: 22px;
+				line-height: 28px;
+			};
+			@media (min-width: $mob-s) {
+				font-size: 30px;
+				line-height: 36px;
+			};
+			@media (min-width: $tablet-w) {
+				font-size: 42px;
+				line-height: 44px;
+			};
+			a {
+				color: $textHColor;
+				&:hover {
+					color: $textColor;
+				}
+			}
+		}
+		&__subtitle {
+			font-size: 24px;
+			line-height: 30px;
+			font-family: $secondFont;
+		}
+		&.item-6-10 {
+			width: 48.8%;
+			.img-wrapper {
+				margin-bottom: 39px;
+			}
+		}
+		&.item-4-10 {
+			width: 40.3%;
+			.img-wrapper {
+				margin-top: 39px;
+			}
+		}
+	}
+}
+
+/*______ End Category-list ______*/

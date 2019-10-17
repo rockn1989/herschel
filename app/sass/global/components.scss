@@ -1,32 +1,103 @@
 /*______ COMPONENTS ______*/
 
-
+.separate-title {
+	position: relative;
+	margin-bottom: 85px;
+	color: $textColor;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+	&>* {
+		position: relative;
+		z-index: 3;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		display: block;
+		height: 1px;
+		background: $textColor;
+		transform: translateY(-50%);
+		z-index: 1;
+		@media (min-width: $mob-xs) {
+			display: none;	
+		};
+		@media (min-width: $mob-s) {
+			display: block;
+		};
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		display: block;
+		height: 100%;
+		background: #ffffff;
+		z-index: 2;
+		transform: translateX(-50%);
+		@media (min-width: $mob-s) {
+			width: 40%;
+		};
+		@media (min-width: $tablet-w) {
+			width: 37%;
+		};
+	}
+}
 
 /*______ Buttons ______*/
 
 .btn {
-	padding: 0 32px;
+	padding: 16px 15px;
 	display: inline-block;
-	min-width: 174px;
-	height: 48px;
+	width: 100%;
+	max-width: 174px;
+	/* height: 48px; */
+	/* line-height: 48px; */
 	color: $textColor;
 	font-size: 14px;
+	line-height: 14px;
 	letter-spacing: .1px;
 	text-align: center;
 	outline: none;
 	border: 1px solid $bgUIBlack;
 	cursor: pointer;
 	background-color: #ffffff;
-	transition: background-color .45s, color .45s ease;
-	@media (min-width: $mob-xs) {
-		min-width: 100px;
-	};
-	@media (min-width: $tablet-w) {
-		min-width: 174px;
-	};
+	transition: all .45s ease;
 	&:hover {
 		color: #ffffff;
 		background-color: $bgUIBlack;
+	}
+	&--light {
+		background: transparent;
+		border-color: #ffffff;
+		color: #ffffff;
+		&:hover {
+			border-color: $bgUIBlack;
+		}
+	}
+	&--dark {
+		background: $bgUIBlack;
+		border-color: $bgUIBlack;
+		color: #ffffff;
+		&:hover {
+			background: $textColor;
+			border-color: $textColor;
+		}
+	}
+	&--medium {
+		max-width: 243px;
+	}
+	&--big {
+		@media (min-width: $tablet-w) {
+			max-width: 277px;
+			padding: 24px 34px;
+			/* height: 64px; */
+		};
 	}
 }
 
@@ -63,6 +134,10 @@
 
 
 /*______ UK-DROPDOWN ______*/
+
+.dropdown-menu {
+	display: none;
+}
 
 .uk-dropdown {
 	box-shadow: none;
@@ -135,3 +210,44 @@
 
 
 /*______ END COMPONENTS ______*/
+
+
+
+/*______ Animation ______*/
+
+.slide-up-content {
+	animation: slide-up 1.3s ease forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+	animation: slide-left 1.3s ease forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+		transform: translateX(0);
+  }
+}
+
+/*______ End Animation ______*/

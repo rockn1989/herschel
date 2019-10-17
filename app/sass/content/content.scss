@@ -6,4 +6,42 @@ main.main {
 	};
 }
 
+.products-list {
+	margin-bottom: 104px;
+	&__inner {
+		margin-bottom: 20px;
+	}
+}
+
+
+
+/*______ About company short ______*/
+
+.company-short {
+	&__title {
+		margin-bottom: -45px;
+		position: relative;
+		color: $textColor;
+		font-size: 64px;
+		line-height: 64px;
+		font-weight: 500;
+		z-index: 15;
+	}
+	figure {
+		position: relative;
+		margin-bottom: 36px;
+		display: block;
+		z-index: 14;
+		figcaption {
+			margin-top: 36px;
+			font-size: 24px;
+			line-height: 30px;
+			font-family: $secondFont;
+		}
+	}
+
+}
+
+/*______ End About company short ______*/
+
 /*______ END MAIN CONTENT ______*/

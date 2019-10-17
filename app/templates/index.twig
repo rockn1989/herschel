@@ -2,8 +2,177 @@
 {% set title="Главная" %}
 {% block content %}
 	<main class="main">
-		<div class="uk-container">
-			TEST
-		</div>	
+		
+		<!-- begin main-slider -->
+		<div class="main-slider">
+			<div class="uk-container uk-container--large">
+				<div class="slider">
+					<div class="slider">
+						<div class="slide">
+							<div class="slide__img"><img data-lazy="img/sliders/main-slider-img-1340x630.png" alt=""></div>
+							<div class="slide__desc">
+								<div class="title">Коллекция Осень/2020</div>
+								<div class="subtitle">Новые поступления и сезонная распродажа</div>
+								<a href="" class="btn btn--light btn--big">Посмотреть</a>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="slide__img"><img data-lazy="img/sliders/main-slider-img-2-1340x630.png" alt=""></div>
+							<div class="slide__desc">
+								<div class="title">Коллекция Лето/2020</div>
+								<div class="subtitle">Новые поступления и сезонная распродажа</div>
+								<a href="" class="btn btn--light btn--big">Посмотреть</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider__arrows">
+					<div class="slide-prev"><i class="icon-small-arrow-left"></i></div>
+					<div class="slide-next"><i class="icon-small-arrow-right"></i></div>
+				</div>
+			</div>
+		</div><!-- end main-slider -->
+
+		<!-- begin category-list -->
+		<section class="category-list">
+			<div class="uk-container">
+				<div class="category-list__inner" uk-scrollspy="target: .custom-row>.item; cls: slide-up-content; delay: 0; repeat: false">
+					<div class="custom-row uk-flex">
+
+						<div class="item item-6-10">
+							<div class="img-wrapper">
+								<div class="item__img">
+									<img data-src="img/media/category-list-img-1-585x432.png" class="lazy" alt="">
+								</div>
+								<a href="" class="item__link icon-small-arrow-right"></a>
+							</div>
+
+							<div class="item__desc">
+								<div class="item__title"><a href="">Мужчинам</a></div>
+								<div class="item__subtitle">Дорожные сумки, рюкзаки и кошельки</div>
+							</div>
+						</div>
+
+						<div class="item item-4-10">
+							<div class="item__desc">
+								<div class="item__title"><a href="">Детям</a></div>
+								<div class="item__subtitle">Специальные рюкзаки для школы и аксессуары</div>
+							</div>
+
+							<div class="img-wrapper">
+								<div class="item__img">
+									<img data-src="img/media/category-list-img-1-483x432.png" class="lazy" alt="">
+								</div>
+								<a href="" class="item__link icon-small-arrow-right"></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="custom-row uk-flex uk-flex-row-reverse">
+
+						<div class="item item-6-10">
+							<div class="img-wrapper">
+								<div class="item__img">
+									<img data-src="img/media/category-list-img-2-585x432.png" class="lazy" alt="">
+								</div>
+								<a href="" class="item__link icon-small-arrow-right"></a>
+							</div>
+
+							<div class="item__desc">
+								<div class="item__title"><a href="">Женщинам</a></div>
+								<div class="item__subtitle">Модные сумки, чемоданы и аксессуары</div>
+							</div>
+						</div>
+
+						<div class="item item-4-10">
+							<div class="item__desc">
+								<div class="item__title"><a href="">В путешествие</a></div>
+								<div class="item__subtitle">Cумки и чемоданы</div>
+							</div>
+
+							<div class="img-wrapper">
+								<div class="item__img">
+									<img data-src="img/media/category-list-img-2-483x432.png" class="lazy" alt="">
+								</div>
+								<a href="" class="item__link icon-small-arrow-right"></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- end category-list -->
+
+		<!-- begin products-list -->
+		<section class="products-list">
+			<div class="uk-container">
+				<div class="separate-title"><span>Популярные товары</span></div>
+				<div class="products-list__inner" uk-scrollspy="target: .card; cls: slide-up-content; delay: 0; repeat: false">
+					<div class="uk-grid">
+						{% for item in 1..6 %}
+						<div class="uk-width-1-2@s uk-width-1-3@m">
+							<div class="card">
+								<div class="card-wrapper">
+									<div class="card__inner">
+										<div class="card__img">
+											<a href=""><img data-src="img/media/product-img-{{item}}-380x424.png" alt="" class="lazy"></a>
+										</div>
+										<div class="stocks">
+											<div class="new">new</div>
+											<div class="discount">-50%</div>
+										</div>
+										<div class="card__product-name"><a href="">Рюкзак Settlement Backpack Settlement Backpack</a></div>
+										<div class="card__price">
+											<div class="old-price">12 889 Р.</div>
+											<div class="current-price">6 890 Р.</div>
+										</div>
+										<div class="card__bottom">
+											<div class="preview-slider">
+												<div class="slider">
+													{% for slide in 1..5 %}
+													    <div class="slide">
+													    	<img data-lazy="img/sliders/card-preview-img-{{slide}}-72x82.png" alt="">
+													    </div>
+													{% endfor %}
+												</div>
+											</div>
+											<a href="" class="btn btn--medium btn--dark">Быстрый просмотр</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="separate-title"><a href="" class="btn btn--big">Перейти в каталог</a></div>
+			</div>
+		</section><!-- end products-list -->
+
+		<!-- begin about-company-short -->
+		<div class="about-company-short">
+			<div class="uk-container">
+				<div class="company-short">
+					<div class="uk-grid">
+						<div class="uk-width-1-2@s">
+							<div class="company-short__title">
+								Рюкзаки с дизайном вне времени
+							</div>
+							<figure>
+								<img data-src="img/media/about-company.png" alt="" class="lazy">
+								<figcaption>Канадский город Хершэл в наше время</figcaption>
+							</figure>
+						</div>
+						<div class="uk-width-1-2@s">
+							<div class="company-short__desc">
+								Благодаря своим вместительным и универсальным формам и прочным материалам, рюкзаки и сумки Herschel Supply Co. подойдут и студентам, и офисным сотрудникам и даже тем, кто не никогда не сидит на одном месте. А огромное разнообразие принтов и фактур поможет подчеркнуть свою индивидуальность. Идеи новых рисунков и палитр для коллекций постоянно приходят в голову Джейми и Линдону в частых путешествиях и не только. Главное для них — не следовать слепо трендам, меняющимся со скоростью света. Все аксессуары Herschel Supply Co. не теряют своей актуальности с приходом нового сезона и смены коллекций. Не отрицают дизайнеры и своей любви к экспериментам с материалами и формами, которые находят воплощение в линейке Bad Hills. Нередко бренд сотрудничает с другими интересными марками стрит-вира, дизайнерами и художниками, чтобы воплотить в жизнь совместные идеи.
+							</div>
+							<a href="" class="show-all icon-small-arrow-right">Узнать больше</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- end about-company-short -->
+
 	</main>
 {% endblock %}
