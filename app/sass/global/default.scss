@@ -18,6 +18,7 @@ table {
 }
 
 body {
+	overflow-x: hidden;
 	&.mask {
 		position: relative;
 		height: 100vh;

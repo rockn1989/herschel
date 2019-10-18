@@ -126,6 +126,7 @@
 											<div class="old-price">12 889 Р.</div>
 											<div class="current-price">6 890 Р.</div>
 										</div>
+										<a href="" class="card__toggle-btn icon-chevron-right js__show-preview-slider">Посмотреть все цвета</a>
 										<div class="card__bottom">
 											<div class="preview-slider">
 												<div class="slider">
@@ -150,7 +151,7 @@
 		</section><!-- end products-list -->
 
 		<!-- begin about-company-short -->
-		<div class="about-company-short">
+		<section class="about-company-short">
 			<div class="uk-container">
 				<div class="company-short">
 					<div class="uk-grid">
@@ -164,15 +165,37 @@
 							</figure>
 						</div>
 						<div class="uk-width-1-2@s">
-							<div class="company-short__desc">
-								Благодаря своим вместительным и универсальным формам и прочным материалам, рюкзаки и сумки Herschel Supply Co. подойдут и студентам, и офисным сотрудникам и даже тем, кто не никогда не сидит на одном месте. А огромное разнообразие принтов и фактур поможет подчеркнуть свою индивидуальность. Идеи новых рисунков и палитр для коллекций постоянно приходят в голову Джейми и Линдону в частых путешествиях и не только. Главное для них — не следовать слепо трендам, меняющимся со скоростью света. Все аксессуары Herschel Supply Co. не теряют своей актуальности с приходом нового сезона и смены коллекций. Не отрицают дизайнеры и своей любви к экспериментам с материалами и формами, которые находят воплощение в линейке Bad Hills. Нередко бренд сотрудничает с другими интересными марками стрит-вира, дизайнерами и художниками, чтобы воплотить в жизнь совместные идеи.
+							<div class="company-short__desc-wrapper">
+								<div class="company-short__desc">
+									Благодаря своим вместительным и универсальным формам и прочным материалам, рюкзаки и сумки Herschel Supply Co. подойдут и студентам, и офисным сотрудникам и даже тем, кто не никогда не сидит на одном месте. А огромное разнообразие принтов и фактур поможет подчеркнуть свою индивидуальность. Идеи новых рисунков и палитр для коллекций постоянно приходят в голову Джейми и Линдону в частых путешествиях и не только. Главное для них — не следовать слепо трендам, меняющимся со скоростью света. Все аксессуары Herschel Supply Co. не теряют своей актуальности с приходом нового сезона и смены коллекций. Не отрицают дизайнеры и своей любви к экспериментам с материалами и формами, которые находят воплощение в линейке Bad Hills. Нередко бренд сотрудничает с другими интересными марками стрит-вира, дизайнерами и художниками, чтобы воплотить в жизнь совместные идеи.
+								</div>
+								<a href="" class="show-all icon-small-arrow-right">Узнать больше</a>
 							</div>
-							<a href="" class="show-all icon-small-arrow-right">Узнать больше</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!-- end about-company-short -->
+		</section><!-- end about-company-short -->
+
+		<!-- begin instagram-section -->
+		<section class="instagram-section">
+			<div class="uk-container">
+				<div class="separate-title"><span>Подпишись на нас в instagram</span></div>
+				<div class="instagram-section__photo-list uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+					{% for i in 1..4 %}
+					 <div class="item-wrapper">
+					 	<a href=""><img data-src="img/media/inst-img-{{i}}.png" alt="" uk-img></a>
+					 </div>
+					{% endfor %}
+				</div>
+				<div class="instagram-section__subtitle">
+					<a href="">
+						<i class="icon-insta"></i>
+						<span>@herschelsupply</span>
+					</a>
+				</div>
+			</div>
+		</section><!-- end instagram-section -->
 
 	</main>
 {% endblock %}

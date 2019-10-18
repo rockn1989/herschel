@@ -1,8 +1,17 @@
 /*______ MAIN CONTENT ______*/
 
 main.main {
+	@media (min-width: $mob-xs) {
+		padding-top: 30px;
+		padding-bottom: 60px;
+	};
 	@media (min-width: $tablet-w) {
+		padding-bottom: 90px;
 		min-height: calc(100vh - 531px);
+	};
+	@media (min-width: $desk-w) {
+		padding-bottom: 120px;
+		padding-top: 50px;
 	};
 }
 
@@ -17,31 +26,218 @@ main.main {
 
 /*______ About company short ______*/
 
+.about-company-short {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 50px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 110px;
+	};
+}
+
 .company-short {
 	&__title {
-		margin-bottom: -45px;
+		
 		position: relative;
 		color: $textColor;
-		font-size: 64px;
-		line-height: 64px;
+
 		font-weight: 500;
 		z-index: 15;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 0;
+			font-size: 26px;
+			line-height: 26px;
+			text-align: center;
+		};
+		@media (min-width: $tablet-w) {
+			margin-bottom: -47px;
+			font-size: 34px;
+			line-height: 34px;
+			text-align: left;
+		};
+		@media (min-width: $desk-w) {
+			font-size: 64px;
+			line-height: 64px;
+		};
+	}
+	&__desc-wrapper {
+		@media (min-width: $tablet-w) {
+			padding-left: 18%;
+		};
+	}
+	&__desc {
+		padding-top: 27px;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 20px;
+		};
+		@media (min-width: $tablet-w) {
+			margin-bottom: 56px;
+		};
 	}
 	figure {
 		position: relative;
-		margin-bottom: 36px;
+		margin-left: -71px;
 		display: block;
 		z-index: 14;
+		@media (min-width: $mob-xs) {
+			margin-left: 0;
+		};
+		@media (min-width: $tablet-w) {
+			margin-left: -71px;
+		};
 		figcaption {
-			margin-top: 36px;
-			font-size: 24px;
-			line-height: 30px;
+
+			text-align: center;
 			font-family: $secondFont;
+			@media (min-width: $mob-xs) {
+				margin-top: 10px;
+				font-size: 18px;
+				line-height: 24px;
+			};
+			@media (min-width: $tablet-w) {
+				margin-top: 36px;
+				font-size: 24px;
+				line-height: 30px;
+			};
 		}
 	}
-
+	
 }
 
 /*______ End About company short ______*/
+
+
+
+/*______ Instargram section ______*/
+
+.instagram-section {
+	&__photo-list {
+		margin-bottom: 60px;
+	}
+	&__subtitle {
+		color: $textColor;
+		text-align: center;
+		a {
+			
+			display: inline-block;
+			color: $textColor;
+			span {
+				margin-top: 5px;
+				display: block;
+				font-size: 18px;
+				line-height: 21px;
+				letter-spacing: .1px;
+			}
+		}
+	}
+}
+
+/*______ End Instargram section ______*/
+
+
+
+/*______ Catalog ______*/
+
+.tags-list {
+	@include list-reset;
+	margin-bottom: 35px;
+	font-size: 0;
+	line-height: 0;
+	li {
+		margin-right: 10px;
+		margin-bottom: 10px;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: .2px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.active {
+			a {
+				color: #ffffff;
+				background: $textColor;
+				i {
+					display: block;
+				}
+			}
+		}
+		a {
+			padding: 9px 12px;
+			display: flex;
+			align-items: center;
+			color: $textColor;
+			background: #ffffff;
+			border-radius: 16px;
+			border: 1px solid $bgUIGray;
+			&:hover {
+				color: #ffffff;
+				background: $textColor;
+			}
+			i {
+				margin-left: 12px;
+				display: none;
+			}
+		}
+	}
+}
+
+.catalog {
+	.separate-title {
+		margin-bottom: 30px;
+	}
+	&-body {
+		margin-bottom: 89px;
+		&__list {
+			@media (min-width: $mob-xs) {
+				margin-bottom: 40px;
+			};
+			@media (min-width: $tablet-w) {
+				margin-bottom: 0px;
+			};
+			@media (min-width: $desk-w) {
+				margin-bottom: 15px;
+			};
+		}
+	}
+	.card {
+		max-height: 390px;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 115px !important;
+		};
+		@media (min-width: $desk-w) {
+			margin-bottom: 86px !important;
+		};
+		&__img {
+			img[data-src] {
+				overflow: hidden;
+				@media (min-width: $tablet-w) {
+					height: 309px;
+				};
+				@media (min-width: $desk-w) {
+					height: 309px;
+				};
+			}
+		}
+	}
+	.uk-pagination {
+		@media (min-width: $mob-s) {
+			justify-content: center;
+		};
+		@media (min-width: $tablet-w) {
+			justify-content: flex-end;
+		};
+	}
+}
+
+/*______ End Catalog ______*/
+
+.seo-text {
+	.text {
+		margin-bottom: 38px;
+	}
+}
+
 
 /*______ END MAIN CONTENT ______*/

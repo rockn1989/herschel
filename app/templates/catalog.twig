@@ -1,0 +1,119 @@
+{% extends "layouts/default.twig" %}
+{% set title="Каталог" %}
+{% set bread = ["Главная", "Рюкзаки и сумки", "Рюкзаки"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-1-4@l">
+					<!-- begin filter -->
+					<div class="filter">
+						<img src="img/media/filter-img.png" alt="">
+					</div><!-- end filter -->
+				</div>
+				<div class="uk-width-3-4@l">
+					
+					<!-- begin catalog -->
+					<div class="catalog">
+						<!-- begin catalog-header -->
+						<div class="catalog-header">
+							<h1 class="title-h1">Мужские рюкзаки</h1>
+							
+							<!-- begin tags-list -->
+							<ul class="tags-list">
+								<li>
+									<a href="">Для ноутбука <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+								<li>
+									<a href="">Ранцы <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+								<li>
+									<a href="">Городской <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+								<li>
+									<a href="">С ремнями <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+								<li>
+									<a href="">Little America <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+								<li class="active">
+									<a href="">Для путешествий <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+								<li>
+									<a href="">С пряжками <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+								<li>
+									<a href="">Все теги <i class="icon-close js__toggle-activity"></i></a>
+								</li>
+							</ul><!-- end tags-list -->
+						</div><!-- begin catalog-header -->
+						
+						<!-- begin catalog-body -->
+						<div class="catalog-body">
+							
+							<div class="catalog-body__list">
+								<div class="uk-grid">
+									{% for item in 1..12 %}
+									<div class="uk-width-1-2@s uk-width-1-3@m">
+										<div class="card">
+											<div class="card-wrapper">
+												<div class="card__inner">
+													<div class="card__img">
+														<a href=""><img data-src="img/media/catalog/catalog-img-{{item}}-277x309.png" alt="" class="lazy"></a>
+													</div>
+													<div class="stocks">
+														<div class="new">new</div>
+														<div class="discount">-50%</div>
+													</div>
+													<div class="card__product-name"><a href="">Рюкзак Settlement Backpack Settlement Backpack</a></div>
+													<div class="card__price">
+														<div class="old-price">12 889 Р.</div>
+														<div class="current-price">6 890 Р.</div>
+													</div>
+													<a href="" class="card__toggle-btn icon-chevron-right js__show-preview-slider">Посмотреть все цвета</a>
+													<div class="card__bottom">
+														<div class="preview-slider">
+															<div class="slider">
+																{% for slide in 1..5 %}
+																    <div class="slide">
+																    	<img data-lazy="img/sliders/card-preview-img-{{slide}}-72x82.png" alt="">
+																    </div>
+																{% endfor %}
+															</div>
+														</div>
+														<a href="" class="btn btn--medium btn--dark">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+							<div class="separate-title">
+								<a href="" class="btn">Показать еще</a>
+							</div>
+							{% include "includes/pagination.twig" %}
+						</div><!-- end catalog-body -->
+						
+						<!-- begin seo-text -->
+						<div class="seo-text">
+							<h2 class="title-h2">Рюкзаки с дизайном вне времени</h2>
+							<div class="text">
+								<p>
+									Благодаря своим вместительным и универсальным формам и прочным материалам, рюкзаки и сумки Herschel Supply Co. подойдут и студентам, и офисным сотрудникам и даже тем, кто не никогда не сидит на одном месте. А огромное разнообразие принтов и фактур поможет подчеркнуть свою индивидуальность. Идеи новых рисунков и палитр для коллекций постоянно приходят в голову Джейми и Линдону в частых путешествиях и не только. Главное для них — не следовать слепо трендам, меняющимся со скоростью света. Все аксессуары Herschel Supply Co. не теряют своей актуальности с приходом нового сезона и смены коллекций. Не отрицают дизайнеры и своей любви к экспериментам с материалами и формами, которые находят воплощение в линейке Bad Hills. Нередко бренд сотрудничает с другими интересными марками стрит-вира, дизайнерами и художниками, чтобы воплотить в жизнь совместные идеи.
+								</p>
+							</div>
+							<a href="" class="show-all icon-small-arrow-right">Узнать больше</a>
+						</div><!-- end seo-text -->
+
+					</div><!-- end catalog -->
+
+				</div>
+			</div>
+		</div>
+
+	</main>
+{% endblock content %}

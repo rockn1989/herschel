@@ -3,7 +3,11 @@
 {% include "../includes/head.twig" %}
 <body>
 {% include "../includes/header.twig" %}
-	
+
+{% if main == false %}
+	{% include '../includes/breadcrumbs.twig' %}
+{% endif %}
+
 {% block content %}{% endblock %}
 
 {% include "../includes/footer.twig" %}

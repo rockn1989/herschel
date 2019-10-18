@@ -93,6 +93,21 @@
 			position: relative;
 			width: 100%;
 		}
+		&__img {
+			width: 100%;
+			@media (min-width: $mob-xs) {
+				height: 300px;
+			};
+			@media (min-width: $mob-s) {
+				height: 350px;
+			};
+			@media (min-width: $tablet-w) {
+				height: 432px;
+			};
+			img {
+				@include object-fit;
+			}
+		}
 		&__desc {
 			width: 100%;
 		}

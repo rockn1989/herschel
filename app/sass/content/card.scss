@@ -25,12 +25,19 @@
 	position: relative;
 	margin-bottom: 86px !important;
 	max-height: 520px;
+	@media (min-width: $mob-xs) {
+		padding: 10px;
+	};
+	@media (min-width: $tablet-w) {
+		padding: 0;
+	};
 	&:hover {
 		z-index: 800;
 	}
 	&-wrapper {
 		position: relative;
 		z-index: 4;
+		background: #ffffff;
 		.card__inner {
 			position: relative;
 			top: 0;
@@ -40,35 +47,59 @@
 		&:after {
 			content: '';
 			position: absolute;
-			top: -16px;
-			right: -16px;
-			bottom: -16px;
-			left: -16px;
 			display: block;
 			background: #ffffff;
 			border: 1px solid transparent;
 			transition: all .3s ease;
 			z-index: 1;
+			@media (min-width: $mob-xs) {
+				top: -10px;
+				right: -10px;
+				bottom: -10px;
+				left: -10px;
+				border-color: $bgUIGray;
+			};
+			@media (min-width: $tablet-w) {
+				top: -16px;
+				right: -16px;
+				bottom: -16px;
+				left: -16px;
+				border-color: transparent;
+			};
 		}
 		&:hover {
 			z-index: 50;
 			&:after {
 				border-color: $bgUIGray;
 			}
-			.card__bottom {
-				display: block;
-			}
 		}
 	}
 	&__bottom {
 		display: none;
+		@media (min-width: $mob-xs) {
+			padding-bottom: 15px;
+		};
+		@media (min-width: $tablet-w) {
+			padding-bottom: 0;
+			display: none;
+		};
 	}
 	&__img {
 		position: relative;
 		margin-bottom: 30px;
+		img[data-src] {
+			overflow: hidden;
+			@media (min-width: $tablet-w) {
+				height: 312px;
+			};
+			@media (min-width: $desk-w) {
+				height: 400px;
+			};
+		}
 		a {
 			position: relative;
 			display: block;
+			text-align: center;
 			&:after {
 				content: '';
 		    position: absolute;
@@ -119,6 +150,40 @@
 	.btn {
 		margin-top: 15px;
 		max-width: 100%;
+		@media (min-width: $mob-xs) {
+			display: none;
+		};
+		@media (min-width: $tablet-w) {
+			display: block;
+		};
+	}
+	&__toggle-btn {
+		position: relative;
+		margin-top: 10px;
+		padding-right: 20px;
+		display: inline-block;
+		color: $textColor;
+		font-size: 16px;
+		line-height: 20px;
+		@include icomoon;
+		&:before {
+			position: absolute;
+			top: 2px;
+			right: 0;
+			transform: rotate(90deg);
+			transition: transform .3s ease;
+		}
+		&:hover,&:active,&:focus {
+			color: $textHColor;
+		}
+		&.open {
+			&:before {
+				transform: rotate(-90deg);
+			}
+		}
+		@media (min-width: $tablet-w) {
+			display: none;
+		};
 	}
 }
 

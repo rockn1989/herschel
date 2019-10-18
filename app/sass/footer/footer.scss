@@ -283,6 +283,7 @@
 	position: relative;
 	padding-left: 20px;
 	display: inline-block;
+	line-height: 26px;
 	@include icomoon;
 	@media (min-width: $mob-xs) {
 		display: inline-block;
@@ -294,7 +295,7 @@
 	}
 	&:before {
 		position: absolute;
-		top: 0;
+		top: 5px;
 		left: 0;
 		color: $textSColor;
 		transition: color .3s linear;

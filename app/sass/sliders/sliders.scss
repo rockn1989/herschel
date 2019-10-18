@@ -8,10 +8,12 @@
 		}
 	}
 	@media (min-width: $mob-xs) {
-		margin: 30px 0 75px;
+		//margin: 30px 0 75px;
+		margin-bottom: 75px;
 	};
 	@media (min-width: $tablet-w) {
-		margin: 50px 0 120px;
+		//margin: 50px 0 120px;
+		margin-bottom: 120px;
 	};
 	.uk-container {
 		position: relative;
