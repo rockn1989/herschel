@@ -1,0 +1,133 @@
+/*______ Filter catalog ______*/
+
+.filter-form-wrapper {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	border: 1px solid $bgUIBlack;
+	border-top: none;
+	display: none;
+	background: #ffffff;
+	z-index: 980;
+	@media (min-width: $tablet-w) {
+		position: static;
+		padding: 0;
+		border: none;
+		display: block !important;
+	};
+}
+
+.filter {
+	position: relative;
+	&-btn {
+		margin-bottom: 20px;
+	}
+}
+
+.btn--filter {
+	position: relative;
+	display: block;
+	max-width: 100%;
+	text-transform: uppercase;
+	color: $bgUIBlack;
+	&:focus,&:active,&:hover {
+		background: #ffffff;
+		color: $bgUIBlack;
+	} 
+}
+
+.filter-icon {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	width: 30px;
+	height: 20px;
+	display: block;
+	span {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: $bgUIBlack;
+		&:before {
+			content: '';
+			position: absolute;
+			top: -3px;
+			display: block;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			border: 2px solid $bgUIBlack;
+			background: #ffffff;
+			transition: all .3s ease;
+		}
+		&.line-1 {
+			top: 0;
+			&:before {
+				left: 60%;
+			}
+		}
+		&.line-2 {
+			top: 50%;
+			transform: translateY(-50%);
+			&:before {
+				right: 50%;
+			}
+		}
+		&.line-3 {
+			bottom: 0;
+			&:before {
+				left: 50%;
+			}
+		}
+	}
+	&.active {
+		span {
+			&.line-1 {
+				top: 0;
+				&:before {
+					left: 20%;
+				}
+			}
+			&.line-2 {
+				top: 50%;
+				transform: translateY(-50%);
+				&:before {
+					right: 20%;
+				}
+			}
+			&.line-3 {
+				bottom: 0;
+				&:before {
+					left: 20%;
+				}
+			}
+		}
+	}
+	&.light {
+		&.active {
+			span {
+				background: #ffffff;
+				&:before {
+					background: $bgUIBlack;
+					border-color: #ffffff
+				}
+			}
+		}
+	}
+	&.dark {
+		&.active {
+			span {
+				background: $bgUIBlack;
+				&:before {
+					background: #ffffff;
+					border-color: $bgUIBlack;
+				}
+			}
+		}
+	}
+}
+
+/*______ End Filter catalog ______*/

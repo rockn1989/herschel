@@ -1,0 +1,118 @@
+/*______ Product detail ______*/
+
+.product-detail {
+	margin-top: -50px;
+	&__description {
+		padding-top: 72px;
+		padding-left: 15%;
+	}
+	&__text {
+		margin-bottom: 28px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	&__sizes {
+		margin-bottom: 30px;
+		table {
+			width: 100%;
+			thead {
+				th {
+					font-size: 14px;
+					letter-spacing: .1px;
+					font-weight: 400;
+				}
+			}
+			tbody {
+				td {
+					font-size: 12px;
+					letter-spacing: .09px;
+				}
+			}
+			th,td {
+				text-align: left;
+			}
+		}
+	}
+	&__small-title {
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 15px;
+		letter-spacing: .1px;
+	}
+	&__colors-list {
+		margin-bottom: 30px;
+		padding-bottom: 27px;
+		border-bottom: 1px solid $bgUIGray;
+	}
+}
+
+.colors-list {
+	&__inner-wrapper {
+		margin-bottom: 6px;
+		height: 91px;
+		overflow: hidden;
+	}
+	&__inner {
+    margin: 0 -10px 0 -10px;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+		font-size: 0;
+		.color {
+			position: relative;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			display: inline-block;
+			vertical-align: top;
+			border: 1px solid transparent;
+			cursor: pointer;
+			transition: border-color .3s ease;
+			&:after {
+				content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    display: block;
+		    background-color: rgba(131, 141, 155, 0.07);
+		    z-index: 999;
+		    transition: background-color .3s ease;
+			}
+			&.checked {
+				border-color: $textColor;
+			}
+			img[data-src] {
+				width: 72px;
+				height: 82px;
+			}
+		}
+	}
+	&__btn {
+		@include icomoon;
+		position: relative;
+		padding-right: 22px;
+		font-size: 12px;
+		line-height: 13px;
+		letter-spacing: .09px;
+		color: $textColor;
+		&:hover {
+			color: $textHColor;
+		}
+		&:before {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			font-size: 9px;
+			line-height: 9px;
+			transform: translateY(-50%) rotate(90deg);
+		}
+		&.open {
+			&:before {
+				transform: translateY(-50%) rotate(-90deg);
+			}
+		}
+	}
+}
+
+/*______ End Product detail ______*/

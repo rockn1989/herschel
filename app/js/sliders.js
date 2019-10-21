@@ -120,7 +120,67 @@ $(function () {
 		});
 	}
 
+	/*______ Слайдеры: Детальная продукта ______*/
 
+	$('.detail-product-slider .slider').slick({
+		arrows: true,
+		dots: false,
+		infinity: true,
+		lazyLoad: 'ondemand',
+		autoplay: false,
+		fade: true,
+		autoplaySpeed: 4000,
+		speed: 400,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: $(this).find('.slide-prev'),
+		nextArrow: $(this).find('.slide-next'),
+		asNavFor: '.detail-product-preview-slider .slider'
+	});
+
+
+	$('.detail-product-preview-slider .slider').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.detail-product-slider .slider',
+		dots: false,
+		arrows: true,
+		infinity: true,
+		centerMode: false,
+		lazyLoad: 'ondemand',
+		focusOnSelect: true,
+		vertical: true,
+		prevArrow: '<div class="btn-slide slick-prev"><i class="icon-chevron-left"></i></div>',
+		nextArrow: '<div class="btn-slide slick-next"><i class="icon-chevron-right"></i></div>',
+		responsive: [
+		{
+			breakpoint: 1245,
+			settings: {
+				slidesToShow: 5,
+			}
+		},
+		{
+			breakpoint: 1244,
+			settings: {
+				slidesToShow: 3,
+		}
+		},
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+	]
+	});
+
+
+	/*______ Добавить в избранное ______*/
+
+	$('.favorite-icon').on('click', function (e) {
+		e.preventDefault();
+		$(this).toggleClass('is-added');
+	});
 
 /*	var previewSliders = $('.preview-slider .slider');
 

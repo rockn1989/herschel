@@ -222,8 +222,11 @@ main.main {
 		}
 	}
 	.uk-pagination {
-		@media (min-width: $mob-s) {
+		@media (min-width: $mob-xs) {
 			justify-content: center;
+		};
+		@media (min-width: $mob-s) {
+			justify-content: flex-end;
 		};
 		@media (min-width: $tablet-w) {
 			justify-content: flex-end;

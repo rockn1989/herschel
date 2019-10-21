@@ -1,0 +1,122 @@
+{% extends "layouts/default.twig" %}
+{% set title="Детальная" %}
+{% set bread = ["Главная", "Рюкзаки и сумки", "Рюкзаки"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+		
+		<!-- begin product-detail -->
+		<div class="product-detail">
+			<div class="uk-container">
+				<div class="uk-grid">
+					<div class="uk-width-1-2@m">
+						<div class="sticky-block">
+							<div class="product-sliders-wrapper">
+								
+								<!-- begin detail-product-slider -->
+								<div class="detail-product-slider">
+									<div class="slider" uk-lightbox>
+										{% for i in 1..6 %}
+										<div class="slide">
+											<a href="img/sliders/product-slider-574x751.png">
+												<img data-lazy="img/sliders/product-slider-574x751.png" alt="">
+											</a>
+										</div>
+										{% endfor %}
+									</div>
+									<div class="slider__arrows">
+										<div class="slide-prev"><i class="icon-small-arrow-left"></i></div>
+										<div class="slide-next"><i class="icon-small-arrow-right"></i></div>
+									</div>
+								</div><!-- end detail-product-slider -->
+
+								<!-- begin detail-product-preview-slider -->
+								<div class="detail-product-preview-slider">
+									<div class="slider">
+										<div class="slide"><img src="img/sliders/product-preview-slide-1-73x90.png" alt=""></div>
+										<div class="slide"><img src="img/sliders/product-preview-slide-2-73x90.png" alt=""></div>
+										<div class="slide"><img src="img/sliders/product-preview-slide-3-73x90.png" alt=""></div>
+										<div class="slide"><img src="img/sliders/product-preview-slide-4-73x90.png" alt=""></div>
+										<div class="slide"><img src="img/sliders/product-preview-slide-5-73x90.png" alt=""></div>
+										<div class="slide"><img src="img/sliders/product-preview-slide-1-73x90.png" alt=""></div>
+									</div>
+								</div><!-- end detail-product-preview-slider -->
+
+								<div class="stocks">
+									<div class="discount">-50%</div>
+								</div>
+								<div class="favorite-icon">
+									<a href="" class="icon-star"></a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-2@m">
+						
+						<!-- begin product-description -->
+						<div class="product-detail__description">
+							<h1 class="title-h1">
+								Рюкзак Herschel Little America Backpack
+							</h1>
+
+							<div class="product-detail__text">
+								Рюкзак от спорт-бренда выполнен из прочного текстиля. Детали: застежка на магнит, затяжка на шнурок, 1 вместительный отсек, 1 внутренний карман для ноутбука, 1 внешний карман на магнитах и молнии, мягкие лямки и спинка.
+							</div>
+
+							<div class="product-detail__sizes">
+								<div class="sizes-backpack">
+									<table>
+										<thead>
+											<tr>
+												<th>Размер</th>
+												<th>Объем</th>
+												<th>Материалы</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>16.25"(H) x 11"(W) x 5.25"(D)</td>
+												<td>17 Литров</td>
+												<td>Хлопок 100%</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="product-detail__colors-list">
+								<div class="product-detail__small-title">Цвет</div>
+								<div class="colors-list__inner-wrapper">
+									<div class="colors-list__inner">
+										<div class="color checked"><img data-src="img/media/backpack-color-1-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-2-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-3-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-4-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-5-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-6-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-1-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-2-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-3-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-4-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-5-72x82.png" class="lazy" alt=""></div>
+										<div class="color"><img data-src="img/media/backpack-color-6-72x82.png" class="lazy" alt=""></div>
+									</div>
+								</div>
+								<a href="" class="colors-list__btn icon-chevron-right js__toggle-colors-list">Показать еще <span class="colors-count"></span></a>
+							</div>
+
+							<div class="product-detail__prices">
+								<div class="old-price">12 889 Р.</div>
+								<div class="current-price">4 889 Р.</div>
+							</div>
+
+						</div><!-- end product-description -->
+
+					</div>
+				</div>
+			</div>
+		</div><!-- end product-detail -->
+
+	</main>
+{% endblock content %}
