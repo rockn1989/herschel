@@ -17,6 +17,9 @@ main.main {
 
 .products-list {
 	margin-bottom: 104px;
+	&:last-child {
+		margin-bottom: 0;
+	}
 	&__inner {
 		margin-bottom: 20px;
 	}

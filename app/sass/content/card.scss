@@ -24,12 +24,19 @@
 .card {
 	position: relative;
 	margin-bottom: 86px !important;
-	max-height: 520px;
+	
 	@media (min-width: $mob-xs) {
+		max-height: none;
+		margin-bottom: 30px !important;
 		padding: 10px;
+	};
+	@media (min-width: $mob-s) {
+		margin-bottom: 46px !important;
+		max-height: 570px;
 	};
 	@media (min-width: $tablet-w) {
 		padding: 0;
+		max-height: 520px;
 	};
 	&:hover {
 		z-index: 800;

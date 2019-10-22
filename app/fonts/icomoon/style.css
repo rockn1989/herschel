@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?o9xbiu') format('truetype'),
-    url('fonts/icomoon.woff?o9xbiu') format('woff'),
-    url('fonts/icomoon.svg?o9xbiu#icomoon') format('svg');
+    url('fonts/icomoon.ttf?s2k6q6') format('truetype'),
+    url('fonts/icomoon.woff?s2k6q6') format('woff'),
+    url('fonts/icomoon.svg?s2k6q6#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -92,4 +92,13 @@
 }
 .icon-favorite-fill:before {
   content: "\e914";
+}
+.icon-courier:before {
+  content: "\e915";
+}
+.icon-location:before {
+  content: "\e916";
+}
+.icon-truck:before {
+  content: "\e917";
 }

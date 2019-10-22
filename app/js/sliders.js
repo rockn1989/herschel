@@ -98,7 +98,7 @@ $(function () {
 			}
 	};
 
-	if($(window).outerWidth() >= 960) {
+	if($(window).outerWidth()+17 >= 960) {
 		initSlickDesktop();
 	} else {
 		$('.js__show-preview-slider').on('click', function (e) {
@@ -160,15 +160,17 @@ $(function () {
 			}
 		},
 		{
-			breakpoint: 1244,
+			breakpoint: 1200,
 			settings: {
-				slidesToShow: 3,
+				slidesToShow: 5,
+				vertical: false,
 		}
 		},
 		{
 			breakpoint: 767,
 			settings: {
-				slidesToShow: 2,
+				slidesToShow: 4,
+				vertical: false,
 			}
 		},
 	]

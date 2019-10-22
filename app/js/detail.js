@@ -47,4 +47,60 @@ $(function () {
 
 	$('.colors-count').text($('.color').length);
 
+
+	/*______ Rating Star ______*/
+
+	var $reviews = $('.review');
+
+	$.each($reviews, function (i, el) {
+		var $rating = $(el).find('.rating'),
+			inputList = $(el).find('input[type="radio"]'),
+			inputLength = inputList.length,
+			j = inputLength-1,
+			k= 0;
+		for (j; j >= 0; j--,k++ ) {
+			$(inputList).eq(k).attr('id','star'+i+'-'+(j+1));
+			$(inputList).eq(k).prop('value',j+1);
+			$(inputList).eq(k).prop('name','rating'+i);
+			$(inputList).eq(k).next('label').attr('for','star'+i+'-'+(j+1));
+		}
+	});
+
+
+
+/*______ Video gallery ______*/
+
+/*			var videoGallery = $('.video-gallery .slider-wrapper .slider').on('init', function (event, slick) {
+
+				$.each(slick.$slides, function (i, el) {
+
+					var $youtube = $(el).find('.youtube'),
+						  source = "https://img.youtube.com/vi/"+ $youtube.data('embed') +"/0.jpg",
+						  image = new Image();
+
+					image.src = source;
+					image.addEventListener('load', function () {
+						$youtube.append(image);
+					});
+
+					$youtube.on('click', function (e) {
+						e.preventDefault();
+						if($youtube.parents('.slide').hasClass('slick-current')) {
+							var iframe = $('<iframe>', {
+								frameborder: 0,
+								allowfullscreen: '',
+								autoplay: true,
+								src: "https://www.youtube.com/embed/"+ $youtube.data('embed') +"?rel=0&showinfo=0&autoplay=1"
+							});
+							//$youtube.html('');
+							$youtube.find('.play-btn').fadeOut('350');
+							$youtube.find('.slide__title').fadeOut('350');
+							$youtube.find('img').fadeOut('350');
+							$youtube.append(iframe);
+						};
+
+					});
+				})
+			});*/
+
 });

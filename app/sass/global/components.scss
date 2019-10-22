@@ -19,24 +19,29 @@ h2, .title-h2 {
 	position: relative;
 	color: $textColor;
 	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 1px;
 	@media (min-width: $mob-xs) {
-		margin-bottom: 30px;
+		margin-bottom: 30px !important;
 	};
 	@media (min-width: $mob-s) {
-		margin-bottom: 45px;
+		margin-bottom: 45px !important;
 	};
 	@media (min-width: $tablet-w) {
-		margin-bottom: 65px;
+		margin-bottom: 65px !important;
 	};
 	@media (min-width: $desk-w) {
-		margin-bottom: 85px;
+		margin-bottom: 85px !important;
 	};
 	&>* {
 		position: relative;
 		z-index: 3;
+		display: inline-block;
+		max-width: 284px;
+		width: 100%;
 	}
 	&:before {
 		content: '';
@@ -78,12 +83,9 @@ h2, .title-h2 {
 /*______ Buttons ______*/
 
 .btn {
-	padding: 16px 15px;
 	display: inline-block;
 	width: 100%;
 	max-width: 174px;
-	/* height: 48px; */
-	/* line-height: 48px; */
 	color: $textColor;
 	font-size: 14px;
 	line-height: 14px;
@@ -94,6 +96,12 @@ h2, .title-h2 {
 	cursor: pointer;
 	background-color: #ffffff;
 	transition: all .45s ease;
+	@media (min-width: $mob-xs) {
+		padding: 16px 10px
+	};
+	@media (min-width: $mob-s) {
+		padding: 16px 15px;
+	};
 	&:hover {
 		color: #ffffff;
 		background-color: $bgUIBlack;
@@ -125,6 +133,16 @@ h2, .title-h2 {
 			padding: 24px 34px;
 			/* height: 64px; */
 		};
+	}
+	&--favorite {
+		padding: 19px 15px;
+		display: inline-block;
+		width: 73px;
+		height: 56px;
+		text-align: center;
+		font-size: 21px;
+		line-height: 21px;
+		border: 1px solid $bgUIBlack;
 	}
 }
 
@@ -330,6 +348,206 @@ h2, .title-h2 {
 }
 
 /*______ End Pagination ______*/
+
+
+
+
+/*______ Review ______*/
+
+.reviews-list {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 106px;
+	};
+	&-wrapper {
+		margin: 0 auto;
+		max-width: 786px;
+	}
+	&__inner {
+		margin-bottom: 66px;
+	}
+	.review {
+		margin-bottom: 30px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid $bgUIGray;
+		&:last-child {
+			margin-bottom: 0;
+			border: none;
+			padding-bottom: 0;
+		}
+	}
+	.reviews-btn-add {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.review {
+	&__top {
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: flex-start;
+		&>div {
+			position: relative;
+			margin-right: 3.45%;
+			padding-right: 3.82%;
+			&:last-child {
+				margin-right: 0;
+				padding-right: 0;
+				&:after {
+					display: none;
+				}
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 1px;
+				height: 14px;
+				display: block;
+				background: $bgUIGray;
+				transform: translateY(-50%);
+			}
+		}
+		@media (min-width: $mob-xs) {
+			flex-wrap: wrap;
+			&>div {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid $bgUIGray;
+				&:after {
+					display: none;
+				}
+			}
+			@media (min-width: $mob-s) {
+				flex-wrap: nowrap;
+				&>div {
+					width: auto;
+					margin-right: 3.45%;
+					margin-bottom: 0;
+					padding-bottom: 0;
+					border: none;
+					&:after {
+						display: block;
+					}
+				}
+			};
+		};
+	}
+	&__user {
+		display: flex;
+		align-items: center;
+	}
+	&__name {
+		margin-right: 17px;
+		font-size: 14px;
+		line-height: 15px;
+		letter-spacing: .1px;
+		color: $textHColor;
+	}
+	&__date {
+		font-size: 12px;
+		line-height: 13px;
+		letter-spacing: .09px;
+	}
+	&__label {
+		margin-right: 17px;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: .09px;
+	}
+	&__rating {
+		display: flex;
+		align-items: center;
+	}
+	&__target {
+		display: flex;
+		align-items: center;
+	}
+	&__color {
+		margin-right: 13px;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		overflow: hidden;
+		span {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__color-text {
+		position: relative;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: .9px;
+		@media (min-width: $mob-s) {
+			display: none;
+		};
+		@media (min-width: 768px) {
+			display: block;
+		};
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: $bgUIGray;
+		}
+	}
+	&__text {
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	&__read-more {
+		font-size: 14px;
+		line-height: 15px;
+		letter-spacing: .1px;
+		color: $textHColor;
+		&:hover {
+			color: $textColor;
+		}
+	}
+}
+
+.rating {
+	max-width: 75px;
+	input[type="radio"] {
+		position: absolute;
+		margin: 0;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		line-height: 0;
+		&:checked ~ label {
+			&:before {
+				content: '\e914';
+			}
+		}
+	}
+	label {
+		cursor: pointer;
+		float: right;
+		font-size: 14px;
+		line-height: 14px;
+		&:before {
+			line-height: 0;
+			font-size: 14px;
+			transition: color .3s ease;
+		}
+	}
+}
+
+/*______ End Review ______*/
 
 
 /*______ END COMPONENTS ______*/
