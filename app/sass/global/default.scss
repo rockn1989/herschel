@@ -77,7 +77,12 @@ html.uk-touch {
   max-width: $containerWidth;
   box-sizing: border-box;
   &--large {
-  	max-width: $containerLargeWidth;
+  	@media (min-width: $desk-w) {
+  		max-width: $containerWidth;
+  	};
+  	@media (min-width: 1400px) {
+  		max-width: $containerLargeWidth;
+  	};  	
   }
   @media (min-width: $mob-xs) {
   	padding: 0 15px;

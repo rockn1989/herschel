@@ -45,10 +45,24 @@ $(function () {
 
 	/*______ Вывод кол-ва цветов ______*/
 
-	$('.colors-count').text($('.color').length);
+	if($('.color').length >=5) {
+		$('.js__toggle-colors-list').css('display', 'inline-block');
+		$('.colors-count').text($('.color').length);
+	} else {
+		$('.colors-list__inner-wrapper').css('height', 'auto');
+	};
 
+	/*______ Выбора размера ______*/
 
-	/*______ Rating Star ______*/
+	$('.sizes-clothes-list').on('click', 'a', function (e) {
+		e.preventDefault();
+		if(!$(this).hasClass('disabled')) {
+			$('.sizes-clothes-list a').removeClass('checked');
+			$(this).addClass('checked');
+		};
+	});
+
+	/*______ Выбор рейтинга ______*/
 
 	var $reviews = $('.review');
 

@@ -158,7 +158,7 @@ h1,
   padding-bottom: 20px;
   font-size: 42px;
   line-height: 46px;
-  border-bottom: 1px solid var(--second-bg-ui-color);
+  border-bottom: 1px solid var(--main-text-color-hover);
 }
 
 h2,
@@ -166,6 +166,28 @@ h2,
   margin-bottom: 36px;
   font-size: 36px;
   line-height: 42px;
+}
+
+.tooltip-link {
+  position: relative;
+  font-size: 12px;
+  letter-spacing: .2px;
+  color: var(--main-text-color-hover);
+}
+
+.tooltip-link:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--main-text-color-hover);
+}
+
+.tooltip-link:hover {
+  color: var(--main-text-color);
 }
 
 .separate-title {
@@ -896,10 +918,6 @@ html.uk-touch body *.uk-invisible {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.uk-container--large {
-  max-width: 1400px;
 }
 
 .uk-grid-collapse {
@@ -1874,6 +1892,36 @@ html.uk-touch body *.uk-invisible {
   padding-top: 65px;
 }
 
+.product-detail__materials {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.product-detail__materials .materials {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .9px;
+}
+
+.product-detail__label {
+  margin-right: 16px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: .1px;
+  color: var(--main-text-color-hover);
+}
+
 .product-detail__text {
   margin-bottom: 28px;
   font-size: 16px;
@@ -1902,6 +1950,82 @@ html.uk-touch body *.uk-invisible {
 .product-detail__sizes table th,
 .product-detail__sizes table td {
   text-align: left;
+}
+
+.product-detail__sizes .sizes-clothes {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.product-detail__sizes .sizes-clothes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.product-detail__sizes .sizes-clothes-list li {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.product-detail__sizes .sizes-clothes-list li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 42px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--second-bg-ui-color);
+  border: 1px solid var(--second-bg-ui-color);
+  -webkit-transition: background-color .3s, color .3s ease;
+  -o-transition: background-color .3s, color .3s ease;
+  -moz-transition: background-color .3s, color .3s ease;
+  transition: background-color .3s, color .3s ease;
+}
+
+.product-detail__sizes .sizes-clothes-list li a.disabled {
+  border-color: rgba(131, 141, 155, 0.07);
+  background-color: rgba(131, 141, 155, 0.07);
+  color: #67696b;
+}
+
+.product-detail__sizes .sizes-clothes-list li a.disabled:hover {
+  cursor: no-drop;
+}
+
+.product-detail__sizes .sizes-clothes-list li a.checked {
+  background-color: var(--second-bg-ui-color);
+  color: #ffffff;
+}
+
+.product-detail__sizes .sizes-clothes-list li a:hover:not([class="disabled"]) {
+  background-color: var(--second-bg-ui-color);
+  color: #ffffff;
 }
 
 .product-detail__small-title {
@@ -2177,7 +2301,6 @@ html.uk-touch body *.uk-invisible {
 }
 
 .colors-list__inner-wrapper {
-  margin-bottom: 6px;
   height: 91px;
   overflow: hidden;
 }
@@ -2238,11 +2361,13 @@ html.uk-touch body *.uk-invisible {
 .colors-list__btn {
   font-family: "SF" !important;
   position: relative;
+  margin-top: 6px;
   padding-right: 22px;
   font-size: 12px;
   line-height: 13px;
   letter-spacing: .09px;
   color: var(--main-text-color);
+  display: none;
 }
 
 .colors-list__btn:before {
@@ -4605,6 +4730,10 @@ html.uk-touch body *.uk-invisible {
     margin-bottom: 106px;
   }
 
+  .uk-container--large {
+    max-width: 1260px;
+  }
+
   main.main {
     padding-bottom: 120px;
     padding-top: 50px;
@@ -4705,6 +4834,10 @@ html.uk-touch body *.uk-invisible {
 @media (min-width: 1400px) {
   .promo-panel__inner .close-form {
     right: -68px;
+  }
+
+  .uk-container--large {
+    max-width: 1400px;
   }
 }
 

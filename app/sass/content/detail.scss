@@ -36,6 +36,25 @@
 			padding-bottom: 85px;
 		};
 	}
+	&__materials {
+		margin-bottom: 30px;
+		display: flex;
+		align-items: flex-end;
+		.materials {
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: .9px;
+		}
+	}
+	&__label {
+		margin-right: 16px;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: .1px;
+		color: $textHColor;
+	}
 	&__text {
 		margin-bottom: 28px;
 		font-size: 16px;
@@ -60,6 +79,49 @@
 			}
 			th,td {
 				text-align: left;
+			}
+		}
+		.sizes-clothes {
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+		}		
+		.sizes-clothes-list {
+			@include list-reset;
+			font-size: 0;
+			li {
+				margin-right: 10px;
+				display: inline-block;
+				vertical-align: top;
+				a {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 42px;
+					height: 36px;
+					font-size: 14px;
+					line-height: 15px;
+					text-transform: uppercase;
+					color: $bgUIBlack;
+					border: 1px solid $bgUIBlack;
+					transition: background-color .3s, color .3s ease;
+					&.disabled {
+						border-color: rgba(131, 141, 155, 0.07);;
+						background-color: rgba(131, 141, 155, 0.07);;
+						color: #67696b;
+						&:hover {
+							cursor: no-drop;
+						}
+					}
+					&.checked {
+						background-color: $bgUIBlack;
+						color: #ffffff;
+					}
+					&:hover:not([class="disabled"]) {
+						background-color: $bgUIBlack;
+						color: #ffffff;
+					}
+				}
 			}
 		}
 	}
@@ -236,7 +298,6 @@
 
 .colors-list {
 	&__inner-wrapper {
-		margin-bottom: 6px;
 		height: 91px;
 		overflow: hidden;
 	}
@@ -279,11 +340,13 @@
 	&__btn {
 		@include icomoon;
 		position: relative;
+		margin-top: 6px;
 		padding-right: 22px;
 		font-size: 12px;
 		line-height: 13px;
 		letter-spacing: .09px;
 		color: $textColor;
+		display: none;
 		&:hover {
 			color: $textHColor;
 		}
