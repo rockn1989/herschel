@@ -81,6 +81,31 @@ $(function () {
 	});
 
 
+	/*______ Выбор рейтинга в форме отзывов ______*/
+
+	var $reviewForm = $('.review-form');
+
+	$.each($reviewForm, function (i, el) {
+		var $rating = $(el).find('.rating'),
+			inputList = $(el).find('input[type="radio"]'),
+			inputLength = inputList.length,
+			j = inputLength-1,
+			k= 0;
+		for (j; j >= 0; j--,k++ ) {
+			$(inputList).eq(k).attr('id','rating-star-'+i+'-'+(j+1));
+			$(inputList).eq(k).prop('value',j+1);
+			$(inputList).eq(k).prop('name','rating');
+			$(inputList).eq(k).next('label').attr('for','rating-star-'+i+'-'+(j+1));
+		}
+	});
+
+	/*______ Открытие/закрытие формы отзывов ______*/
+
+	$('.js__toggle-review-form').on('click', function (e) {
+		e.preventDefault();
+		$('.review-form-wrapper').slideToggle('250');
+	});
+
 
 /*______ Video gallery ______*/
 

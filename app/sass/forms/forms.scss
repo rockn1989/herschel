@@ -15,7 +15,86 @@
 		display: block;
 		font-size: 12px;
 	}
+	textarea {
+		font-family: $mainFont;
+		padding: 17px;
+		font-size: 14px;
+		letter-spacing: .1px;
+		width: 100%;
+		min-height: 150px;
+		resize: vertical;
+	}
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+		margin-bottom: 24px;
+		line-height: 14px;
+	}
 }
+
+
+/*______ Review form ______*/
+
+.review-form-wrapper {
+	display: none;
+	border-top: 1px solid $bgUIGray;
+	margin-top: 36px;
+	padding-top: 34px;
+}
+
+.review-form {
+	&__title {
+		margin-bottom: 18px;
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: .1px;
+	}
+	&__label {
+		margin-right: 20px;
+		font-size: 14px;
+		line-height: 15px;
+		letter-spacing: .1px;
+	}
+	input[type="text"] {
+		width: 100%;
+	}
+	.rating {
+		max-width: 135px;
+		label {
+			&:before {
+			font-size: 24px;
+			line-height: 24px;
+			}
+		}
+	}
+	.btn {
+		padding: 20px 34px;
+		width: 100%;
+		max-width: 380px;
+	}
+	.rating-wrapper {
+		display: flex;
+		align-items: center;
+		@media (min-width: $mob-xs) {
+			margin-top: 24px;
+			padding: 11px 17px;
+			border: 1px solid $bgUIGray;
+		};
+		@media (min-width: $mob-s) {
+			height: 48px;
+			border: none;
+			margin-top: 0;
+			padding: 0;
+		};
+	}
+	label.error {
+		margin-top: 5px;
+	}
+}
+
+/*______ End Review form ______*/
+
 
 /*______ Search Form ______*/
 

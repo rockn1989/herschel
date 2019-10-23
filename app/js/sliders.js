@@ -18,8 +18,8 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		lazyLoad: 'progressive',
-		prevArrow: $(this).find('.slide-prev'),
-		nextArrow: $(this).find('.slide-next'),
+		prevArrow: $(mainSlider).find('.slide-prev'),
+		nextArrow: $(mainSlider).find('.slide-next'),
 		responsive: [
 			{
 				breakpoint: 960,
@@ -135,7 +135,21 @@ $(function () {
 		slidesToScroll: 1,
 		prevArrow: $(this).find('.slide-prev'),
 		nextArrow: $(this).find('.slide-next'),
-		asNavFor: '.detail-product-preview-slider .slider'
+		asNavFor: '.detail-product-preview-slider .slider',
+		responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				fade: true
+		}
+		},
+		{
+			breakpoint: 767,
+			settings: {
+				fade: false
+			}
+		},
+	]
 	});
 
 
@@ -148,32 +162,31 @@ $(function () {
 		infinity: true,
 		centerMode: false,
 		lazyLoad: 'ondemand',
-		focusOnSelect: true,
 		vertical: true,
 		prevArrow: '<div class="btn-slide slick-prev"><i class="icon-chevron-left"></i></div>',
 		nextArrow: '<div class="btn-slide slick-next"><i class="icon-chevron-right"></i></div>',
 		responsive: [
-		{
-			breakpoint: 1245,
-			settings: {
-				slidesToShow: 5,
+			{
+				breakpoint: 1245,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5,
+					vertical: false,
 			}
-		},
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 5,
-				vertical: false,
-		}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 4,
-				vertical: false,
-			}
-		},
-	]
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 4,
+					vertical: false,
+				}
+			},
+		]
 	});
 
 

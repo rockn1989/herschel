@@ -194,6 +194,12 @@ h2, .title-h2 {
 	transform: translateY(-50%);
 }
 
+.align-block-center {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
 /*______ End Buttons ______*/
 
 
@@ -360,6 +366,7 @@ h2, .title-h2 {
 		}
 		span, a {
 			font-size: 14px;
+			line-height: 26px;
 			color: $textHColor;
 			letter-spacing: .2px;
 		}

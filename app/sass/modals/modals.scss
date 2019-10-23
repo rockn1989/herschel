@@ -1,2 +1,39 @@
 /*______ MODALS ______*/
+
+.modal-fastview {
+	.uk-modal-dialog {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1260px !important;
+		.btn {
+			max-width: 100%;
+		}
+	}
+	.uk-modal-body {
+		padding: 0;
+	}
+	.product-detail__description {
+		padding-top: 30px;
+		padding-left: 11%;
+	}
+	.title-h1 {
+		font-size: 33px;
+		line-height: 34px;
+	}
+	.uk-close {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    svg {
+    	width: 24px;
+    	height: 24px;
+    	color: $textHColor;
+	    &:hover {
+				color: $textColor;
+	    }
+    }
+
+	}
+}
+
 /*______ END MODALS ______*/

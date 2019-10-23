@@ -33,12 +33,12 @@
 								<!-- begin detail-product-preview-slider -->
 								<div class="detail-product-preview-slider">
 									<div class="slider">
-										<div class="slide"><img src="img/sliders/product-preview-slide-1-73x90.png" alt=""></div>
-										<div class="slide"><img src="img/sliders/product-preview-slide-2-73x90.png" alt=""></div>
-										<div class="slide"><img src="img/sliders/product-preview-slide-3-73x90.png" alt=""></div>
-										<div class="slide"><img src="img/sliders/product-preview-slide-4-73x90.png" alt=""></div>
-										<div class="slide"><img src="img/sliders/product-preview-slide-5-73x90.png" alt=""></div>
-										<div class="slide"><img src="img/sliders/product-preview-slide-1-73x90.png" alt=""></div>
+										<div class="slide"><img data-lazy="img/sliders/product-preview-slide-1-73x90.png" alt=""></div>
+										<div class="slide"><img data-lazy="img/sliders/product-preview-slide-2-73x90.png" alt=""></div>
+										<div class="slide"><img data-lazy="img/sliders/product-preview-slide-3-73x90.png" alt=""></div>
+										<div class="slide"><img data-lazy="img/sliders/product-preview-slide-4-73x90.png" alt=""></div>
+										<div class="slide"><img data-lazy="img/sliders/product-preview-slide-5-73x90.png" alt=""></div>
+										<div class="slide"><img data-lazy="img/sliders/product-preview-slide-1-73x90.png" alt=""></div>
 									</div>
 								</div><!-- end detail-product-preview-slider -->
 
@@ -381,7 +381,42 @@
 								<a href="" class="review__read-more">Читать дальше</a>
 							</div>
 						</div>
-						<a href="" class="btn reviews-btn-add">Добавить отзыв</a>
+						<a href="" class="btn reviews-btn-add js__toggle-review-form">Добавить отзыв</a>
+
+						<div class="review-form-wrapper">
+							<div class="review-form__title">Добавить отзыв</div>
+							<form action="" class="review-form default-form">
+								<fieldset>
+									<div class="uk-grid">
+										<div class="uk-width-1-2@s">
+											<input type="text" name="name" placeholder="Ваше имя" required>
+										</div>
+										<div class="uk-width-1-2@s">
+											<div class="rating-wrapper">
+												<div class="review-form__label">Оценка</div>
+												<div class="rating uk-clearfix">
+													<input id="" type="radio" name="" value="">
+													<label for="" class="icon-star"></label>
+													<input id="" type="radio" name="" value="">
+													<label for="" class="icon-star"></label>
+													<input id="" type="radio" name="" value="">
+													<label for="" class="icon-star"></label>
+													<input id="" type="radio" name="" value="">
+													<label for="" class="icon-star"></label>
+													<input id="" type="radio" name="" value="">
+													<label for="" class="icon-star"></label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset>
+									<textarea name="message" id="" placeholder="Ваш отзыв"></textarea>
+								</fieldset>
+								<button type="submit" class="btn btn--big btn--dark">Оставить отзыв</button>
+							</form>
+						</div>
+
 					</div>
 				</div>
 			</div><!-- end reviews-list -->
@@ -423,7 +458,7 @@
 													{% endfor %}
 												</div>
 											</div>
-											<a href="#modal-fastview" class="btn btn--medium btn--dark" uk-toggle>Быстрый просмотр</a>
+											<a href="" class="btn btn--medium btn--dark" uk-toggle="target: #modal-fastview">Быстрый просмотр</a>
 										</div>
 									</div>
 								</div>

@@ -103,6 +103,16 @@
 				}
 			}
 		};
+		&.item-text {
+			.item__text {
+				margin-top: 33px;
+				font-size: 16px;
+				line-height: 24px;
+			}
+			.img-wrapper {
+				display: none;
+			}
+		}
 		.img-wrapper {
 			position: relative;
 			width: 100%;

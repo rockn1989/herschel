@@ -95,6 +95,24 @@ $(function() {
 		});
 	};
 
+	if($('form').is('.review-form')) {
+		console.log(123123);
+		$('.review-form').validate({
+			rules: {
+				name: {
+					required: true,
+				},
+				message: {
+					required: true,
+				}
+			},
+			messages: {
+				name: "Заполните поле",
+				message: "Заполните поле",
+			},
+		});
+	};
+
 
 	/*______ Открытие мобильного подменю ______*/
 

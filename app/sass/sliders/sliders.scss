@@ -430,11 +430,25 @@
 	}
 }
 
-.detail-product-preview-slider {
-	z-index: 680;
+
+/* .detail-product-preview-slider {
 	@media (min-width: $mob-xs) {
-		position: static;
+		position: relative;
 		width: 100%;
+		padding-bottom: 25px;
+		background-color: rgba(131, 141, 155, 0.07);
+		margin: 0 auto;
+		&:after {
+			//content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: block;
+	    background-color: rgba(131, 141, 155, 0.07);
+	    z-index: -1;
+		}
 	};
 	@media (min-width: $desk-w) {
 		position: absolute;
@@ -443,26 +457,30 @@
 		width: 71px;
 	};
 	.slider {
-		@media (min-width: $desk-w) {
-			height: 491px;
-			overflow: hidden;
-			&.slick-initialized {
-				height: auto;
-				overflow: visible;
-			}
+		@media (min-width: $mob-xs) {
+			max-width: 400px;
+			margin: 0 auto;
 		};
-
 	}
 	.slide {
+		@media (min-width: $mob-xs) {
+			margin: 0 5px;
+			&.slick-current {
+				border: 1px solid $bgUIBlack;
+			}
+			img {
+				width: 100%;
+			}
+		};
+	}
+} */
+
+.detail-product-preview-slider {
+	z-index: 680;
+	@media (min-width: $mob-xs) {
 		position: relative;
-		margin-bottom: 11px;
-		text-align: center;
-		img {
-			display: inline-block;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
+		width: 100%;
+		padding-bottom: 25px;
 		&:after {
 			content: '';
 	    position: absolute;
@@ -472,14 +490,97 @@
 	    height: 100%;
 	    display: block;
 	    background-color: rgba(131, 141, 155, 0.07);
-	    z-index: 999;
-	    transition: background-color .3s ease;
+	    z-index: -1;
 		}
-		&.slick-current {
-			&:after {
-				background-color: transparent;
+	};
+	@media (min-width: $tablet-w) {
+		&:after {
+			display: none;
+		}
+	};
+	@media (min-width: $desk-w) {
+		padding-bottom: 0;
+		position: absolute;
+		top: 130px;
+		left: 0;
+		width: 71px;
+	};
+	.slider {
+		position: relative;
+		@media (min-width: $mob-xs) {
+			height: 92px;
+			overflow: hidden;
+			.slick-list {
+				margin: 0 -5px;
 			}
+			max-width: 400px;
+			margin: 0 auto;
+		};
+
+		@media (min-width: $desk-w) {
+			height: 491px;
+			overflow: hidden;
+			margin: 0;
+			max-width: none;
+			&:after {
+				display: none;
+			}
+			.slick-list {
+				margin: 0;
+			}
+			&.slick-initialized {
+				height: auto;
+				//overflow: visible;
+			}
+		};
+
+	}
+	.slide {
+		position: relative;
+		text-align: center;
+		@media (min-width: $mob-xs) {
+			margin: 0 5px;
+			border: 1px solid transparent;
+		};
+		&.slick-current {
+			@media (min-width: $mob-xs) {
+				border-color: $bgUIBlack;
+			};
+			@media (min-width: $desk-w) {
+				border: none;
+				&:after {
+					background-color: transparent;
+				}
+			};
 		}
+		img {
+			display: inline-block;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@media (min-width: $desk-w) {
+			margin: 0;
+			margin-bottom: 10px;
+			border: none;
+			width: 100%;
+			height: 90px;
+			&:after {
+				content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    display: block;
+		    background-color: rgba(131, 141, 155, 0.07);
+		    z-index: 999;
+		    transition: background-color .3s ease;
+			}
+			img {
+				height: 100%;
+			}
+		};
 	}
 	.slick-prev,
 	.slick-next {
@@ -522,7 +623,6 @@
 		};
 	}
 }
-
 /*______ End Detail slider ______*/
 
 
