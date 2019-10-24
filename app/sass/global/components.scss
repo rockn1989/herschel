@@ -1,7 +1,7 @@
 /*______ COMPONENTS ______*/
 
 h1, .title-h1 {
-	margin-bottom: 26px;
+	margin-bottom: 40px;
 	padding-bottom: 20px;
 	font-size: 42px;
 	line-height: 46px;
@@ -12,6 +12,23 @@ h2, .title-h2 {
 	margin-bottom: 36px;
 	font-size: 36px;
 	line-height: 42px;
+}
+
+.round-link {
+  display: block;
+  width: 73px;
+  height: 73px;
+  line-height: 73px;
+  color: #ffffff;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  &:hover {
+		background: var(--second-bg-ui-color);
+    border-color: var(--second-bg-ui-color);
+    color: #ffffff;
+  }
 }
 
 .tooltip-link {
@@ -162,6 +179,31 @@ h2, .title-h2 {
 		font-size: 21px;
 		line-height: 21px;
 		border: 1px solid $bgUIBlack;
+	}
+	&--modal-btn-black {
+		padding: 20px 15px !important;
+		display: block;
+		max-width: 100%;
+		width: 100%;
+		background: $bgUIBlack;
+		border-color: $bgUIBlack;
+		color: #ffffff;
+		&:hover {
+			background: $textColor;
+			border-color: $textColor;
+		}
+	}
+	&--modal-btn-white {
+		padding: 20px 15px !important;
+		display: block;
+		max-width: 100%;
+		width: 100%;
+		background: transparent;
+		border-color: $bgUIBlack;
+		color: $bgUIBlack;
+		&:hover {
+			border-color: $bgUIBlack;
+		}
 	}
 }
 
@@ -574,6 +616,141 @@ h2, .title-h2 {
 }
 
 /*______ End Review ______*/
+
+
+
+/*______ Product item ______*/
+
+.product-item {
+	@include clearfix;
+	margin-bottom: 47px;
+	&__img {
+		@media (min-width: $mob-xs) {
+			margin-bottom: 30px;
+		};
+		@media (min-width: $mob-s) {
+			margin-right: 27px;
+			margin-bottom: 0;
+			float: left;
+			min-width: 175px;
+			max-width: 220px;
+		};
+		a {
+			display: block;
+			text-align: center;
+			@include img-gradient;
+		}
+	}
+	&__desc {
+		overflow: hidden;
+	}
+	&__title {
+		margin-bottom: 24px;
+		font-size: 14px;
+		line-height: 15px;
+		letter-spacing: .1px;
+		a {
+			color: $textHColor;
+			&:hover {
+				color: $textColor;
+			}
+		}
+	}
+	&__article {
+		margin-bottom: 14px;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: .9px;
+		color: $textHColor;
+	}
+	&__price {
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 15px;
+		.current-price {
+			font-weight: 500;
+		}
+	}
+}
+
+
+
+/*______ Product panel ______*/
+
+.products-panel {
+	&__title {
+		margin-bottom: 30px;
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: .1px;
+	}
+	&__list {
+		margin-bottom: 9px;
+	}
+	.item {
+		@include clearfix;
+		margin-bottom: 24px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&__img {
+			margin-right: 16px;
+			width: 72px;
+			height: 82px;
+			float: left;
+			a {
+				display: block;
+				@include img-gradient;
+			}
+		}
+		&__desc{
+			overflow: hidden;
+		}
+		&__name {
+			margin-bottom: 18px;
+			line-height: 1px;
+			a {
+				font-size: 14px;
+				line-height: 15px;
+				letter-spacing: .1px;
+				color: $textHColor;
+				&:hover {
+					color: $textColor;
+				}
+			}
+		}
+		&__price {
+			font-size: 14px;
+			line-height: 15px;
+		}
+	}
+}
+/*______ End Product panel ______*/
+
+
+
+.old-price,
+.current-price {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.old-price {
+	margin-right: 12px;
+	color: $bgUIRed;
+	text-decoration: line-through;
+	&:empty {
+		display: none;
+	}
+}
+
+.current-price {
+	color: $textColor;
+}
+
+/*______ End Product item ______*/
+
+
 
 
 /*______ END COMPONENTS ______*/

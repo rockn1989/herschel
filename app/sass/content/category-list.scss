@@ -120,6 +120,7 @@
 		&__img {
 			position: relative;
 			width: 100%;
+			z-index: 49;
 			&:after {
 				content: '';
 		    position: absolute;
@@ -158,6 +159,7 @@
 			text-align: center;
 			border-radius: 50%;
 			border: 1px solid #ffffff;
+			z-index: 50;
 			&:hover {
 				background: $bgUIBlack;
 				border-color: $bgUIBlack;

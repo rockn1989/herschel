@@ -749,7 +749,7 @@
 								
 								<div class="product-detail__controls">
 									<div class="btn-wrapper">
-										<a href="" class="btn btn--dark icon-basket">Добавить в корзину</a>
+										<a href="" class="btn btn--dark icon-basket" uk-toggle="target: #modal-added-basket">Добавить в корзину</a>
 										<a href="" class="btn btn--favorite icon-star"></a>
 									</div>
 								</div>
@@ -774,7 +774,7 @@
 
 							<div class="product-detail-section">
 								<div class="product-detail__small-title">Доставка</div>
-								<ul class="product-detail__delivery-list">
+								<ul class="delivery-list">
 									<li>
 										<i class="icon-courier"></i>
 									Доставим курьером завтра за 300 рублей</li>
@@ -1501,7 +1501,7 @@
 
 
 
-<div id="modal-fastview" class="modal-fastview" uk-modal>
+<div id="modal-fastview" class="modal-fastview default-modal" uk-modal>
     <div class="uk-modal-dialog">
       <button class="uk-modal-close" type="button" uk-close></button>
     
@@ -1689,6 +1689,98 @@
 				</div><!-- end product-detail -->
 	    </div>
     </div>
+</div>
+
+<div id="modal-added-basket" class="modal-basket default-modal" uk-modal>
+	<div class="uk-modal-dialog">
+  	<button class="uk-modal-close" type="button" uk-close></button>
+  	<div class="uk-modal-body">
+  		<div class="title-h1">Товар добавлен в корзину</div>
+  		<div class="uk-grid">
+  			<div class="uk-width-3-5@m">
+  				<div class="basket-modal-section">
+  					<div class="product-item">
+  						<div class="product-item__img">
+  							<a href=""><img src="img/media/modal-basket-img-175x219.png" alt=""></a>
+  						</div>
+  						<div class="product-item__desc">
+  							<div class="product-item__title">
+  								<a href="">Рюкзак Herschel Little America | Middle-Volume</a>
+  							</div>
+  							<div class="product-item__article">Код товара: 10501-03071-OS</div>
+  							<div class="product-item__price">
+  								<div class="old-price">7 980 р.</div>
+  								<div class="current-price">3 470 Р.</div>
+  							</div>
+
+								<ul class="delivery-list">
+									<li>
+										<i class="icon-courier"></i>
+									Доставим курьером завтра за 300 рублей</li>
+									<li>
+										<i class="icon-location"></i>
+										Самовывоз завтра с 11:00 из <a href="">5 пунктов</a></li>
+									<li>
+										<i class="icon-truck"></i>
+									Доставка почти в любой город за 2-3 дня</li>
+								</ul>
+
+  						</div>
+  					</div>
+
+						<div class="btn-wrapper">
+							<a href="/basket" class="btn btn--modal-btn-black">Оформить заказ</a>
+							<a href="" class="btn btn--modal-btn-white">Продолжить покупки</a>
+						</div>
+
+  				</div>
+  			</div>
+  			<div class="uk-width-2-5@m">
+  				<div class="basket-modal-section">
+  					<div class="products-panel">
+  						<div class="products-panel__title">К этому товару замечательно подойдет</div>
+  						<div class="products-panel__list">
+  							<div class="item">
+  								<div class="item__img"><a href=""><img src="img/media/product-panel-img-1-72x81.png" alt=""></a></div>
+  								<div class="item__desc">
+  									<div class="item__name"><a href="">Ripstop Tote Black</a></div>
+  									<div class="item__price">
+  										<div class="old-price"></div>
+  										<div class="current-price">990 Р.</div>
+  									</div>
+  								</div>
+  							</div>
+
+  							<div class="item">
+  								<div class="item__img"><a href=""><img src="img/media/product-panel-img-2-72x81.png" alt=""></a></div>
+  								<div class="item__desc">
+  									<div class="item__name"><a href="">Tan Synthetic Leather</a></div>
+  									<div class="item__price">
+  										<div class="old-price"></div>
+  										<div class="current-price">2 960 Р.</div>
+  									</div>
+  								</div>
+  							</div>
+
+  							<div class="item">
+  								<div class="item__img"><a href=""><img src="img/media/product-panel-img-3-72x81.png" alt=""></a></div>
+  								<div class="item__desc">
+  									<div class="item__name"><a href="">Heritage Backpack</a></div>
+  									<div class="item__price">
+  										<div class="old-price"></div>
+  										<div class="current-price">1 970 Р.</div>
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  						<a href="" class="tooltip-link">Посмотреть все аксессуары</a>
+  					</div>
+  					
+  				</div>
+  			</div>
+  		</div>
+  	</div> 
+  </div>
 </div>
 
 
