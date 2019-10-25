@@ -1,5 +1,31 @@
 $(function () {
 
+	/*______ Меню фильтра ______*/
+
+	$('.js__toggle-filter-menu').on('click', function (e) {
+		e.preventDefault();
+		$(this).parent('a').toggleClass('is-open').siblings('ul').stop(true, true).slideToggle('350')
+	})	
+
+
+	$('.js__toggle-sublist').on('click', function (e) {
+		e.preventDefault();
+		var link = $(this).parent('a');
+		if(link.hasClass('is-open')) {
+			link.siblings('ul').stop(true, true).slideUp('250', function () {
+				link.removeClass('is-open');
+			});
+		} else {
+			link.siblings('ul').stop(true, true).slideDown('250', function () {
+				link.addClass('is-open');
+			});	
+		}
+		
+	})	
+
+	/*______  ______*/
+
+
 	$('.tags-list').on('click', 'li', function (e) {
 		e.preventDefault();
 		$(this).toggleClass('active');

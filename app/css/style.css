@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.ttf?s2k6q6") format("truetype"), url("../fonts/icomoon/icomoon.woff?s2k6q6") format("woff"), url("../fonts/icomoon/icomoon.svg?s2k6q6#icomoon") format("svg");
+  src: url("../fonts/icomoon/icomoon.ttf?6d8hd6") format("truetype"), url("../fonts/icomoon/icomoon.woff?6d8hd6") format("woff"), url("../fonts/icomoon/icomoon.svg?6d8hd6#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -148,6 +148,10 @@
 
 .icon-truck:before {
   content: "\e917";
+}
+
+.icon-triangle:before {
+  content: "\e918";
 }
 
 /*______ COMPONENTS ______*/
@@ -2923,6 +2927,197 @@ html.uk-touch body *.uk-invisible {
 
 /*______ End Filter catalog ______*/
 
+/*______ Filter Menu ______*/
+
+/* .icon-triangle {
+	width: 0;
+	height: 0;
+	display: inline-block;
+	border-left: 6px solid $bgUIBlack;
+	border-bottom: 4px solid transparent;
+	border-top: 4px solid transparent;
+	transition: all .3s ease;
+	&.turn-on {
+		transform: rotate(90deg);
+	}
+} */
+
+.filter-menu__title-section {
+  position: relative;
+  padding-bottom: 21px;
+  display: block;
+  color: var(--main-text-color-hover);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: .1px;
+  border-bottom: 1px solid var(--main-text-color-hover);
+  cursor: pointer;
+}
+
+.filter-menu__title-section:hover {
+  color: var(--main-text-color);
+}
+
+.filter-menu__title-section.is-open i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.filter-menu__title-section i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px;
+  display: block;
+  font-size: 6px;
+}
+
+.filter-menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-menu-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-menu-list > li > a,
+.filter-menu-list li.parent > a {
+  position: relative;
+  padding: 21px 0;
+  display: block;
+  color: var(--main-text-color-hover);
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: .1px;
+  border-bottom: 1px solid var(--main-text-color-hover);
+}
+
+.filter-menu-list > li > a.is-open,
+.filter-menu-list li.parent > a.is-open {
+  border-bottom-color: var(--separate-line-ui-color);
+}
+
+.filter-menu-list > li > a.is-open i,
+.filter-menu-list li.parent > a.is-open i {
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.filter-menu-list > li > a i,
+.filter-menu-list li.parent > a i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 9px;
+  padding: 7px;
+  display: block;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  -moz-transition: transform .3s ease, -moz-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
+}
+
+.filter-menu-list > li a.is-open ~ ul.sublist,
+.filter-menu-list li.parent a.is-open ~ ul.sublist {
+  display: block;
+}
+
+.filter-menu-list > li ul.sublist,
+.filter-menu-list li.parent ul.sublist {
+  padding: 22px 0 22px 10px;
+  display: none;
+}
+
+.filter-menu-list > li ul.sublist li,
+.filter-menu-list li.parent ul.sublist li {
+  margin-bottom: 2px;
+}
+
+.filter-menu-list > li ul.sublist li:last-child,
+.filter-menu-list li.parent ul.sublist li:last-child {
+  margin-bottom: 0;
+}
+
+.filter-menu-list > li ul.sublist li a,
+.filter-menu-list li.parent ul.sublist li a {
+  position: relative;
+  display: block;
+  color: var(--main-text-color);
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: .09px;
+}
+
+.filter-menu-list > li ul.sublist li.parent a,
+.filter-menu-list li.parent ul.sublist li.parent a {
+  padding: 0;
+  border-bottom: none;
+  color: var(--main-text-color-hover);
+}
+
+.filter-menu-list > li ul.sublist ul,
+.filter-menu-list li.parent ul.sublist ul {
+  padding: 5px 0 5px 15px;
+}
+
+/* 	&>li.parent {
+	padding-bottom: 21px;
+	border-bottom: 1px solid $textHColor;
+	i {
+		position: absolute;
+		top: -2px;
+		right: 0;
+		font-size: 9px;
+		padding: 7px;
+		display: block;
+	}
+	&>a {
+		position: relative;
+		display: block;
+		color: $textHColor;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: .1px;
+		i {
+			top: -px;
+		}
+	}
+	ul {
+		li {
+			margin-bottom: 8px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				position: relative;
+				display: block;
+				color: $textColor;
+				font-size: 12px;
+				letter-spacing: .09px;
+			}
+		}
+	}
+}
+ul.sublist {
+	padding-left: 10px;
+} */
+
+/*______ End Filter Menu ______*/
+
 /*______ Card ______*/
 
 .stocks {
@@ -5494,6 +5689,10 @@ html.uk-touch body *.uk-invisible {
   .top-review .review__top .review__user {
     margin-right: 27px;
     padding-right: 30px;
+  }
+
+  .filter {
+    padding-top: 29px;
   }
 
   .card__img img[data-src] {

@@ -21,6 +21,9 @@
 
 .filter {
 	position: relative;
+	@media (min-width: $desk-w) {
+		padding-top: 29px;
+	};
 	&-btn {
 		margin-bottom: 20px;
 	}
@@ -131,3 +134,164 @@
 }
 
 /*______ End Filter catalog ______*/
+
+
+
+/*______ Filter Menu ______*/
+
+/* .icon-triangle {
+	width: 0;
+	height: 0;
+	display: inline-block;
+	border-left: 6px solid $bgUIBlack;
+	border-bottom: 4px solid transparent;
+	border-top: 4px solid transparent;
+	transition: all .3s ease;
+	&.turn-on {
+		transform: rotate(90deg);
+	}
+} */
+
+.filter-menu {
+	&__title-section {
+		position: relative;
+		padding-bottom: 21px;
+		display: block;
+		color: $textHColor;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: .1px;
+		border-bottom: 1px solid $textHColor;
+		cursor: pointer;
+		&:hover {
+			color: $textColor;
+		}
+		&.is-open {
+			i {
+				transform: rotate(180deg);
+			}
+		}
+		i {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 7px;
+			display: block;
+			font-size: 6px;
+		}
+	}
+}
+
+.filter-menu-list {
+	@include list-reset;
+	ul {
+		@include list-reset;
+	}
+	&>li, li.parent {
+		&>a {
+			position: relative;
+			padding: 21px 0;
+			display: block;
+			color: $textHColor;
+			font-size: 14px;
+			line-height: 22px;
+			letter-spacing: .1px;
+			border-bottom: 1px solid $textHColor;
+			&.is-open {
+				border-bottom-color: $bgUIGray;
+				i {
+					transform: translateY(-50%) rotate(-90deg);
+				}
+			}
+			i {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				font-size: 9px;
+				padding: 7px;
+				display: block;
+				transform: translateY(-50%);
+				transition: transform .3s ease;
+			}
+		}
+		a.is-open {
+			&~ul.sublist {
+				display: block;
+			}
+		}
+		ul.sublist {
+			padding: 22px 0 22px 10px;
+			display: none;
+			li {
+				margin-bottom: 2px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				 a {
+					position: relative;
+					display: block;
+					color: $textColor;
+					font-size: 12px;
+					line-height: 22px;
+					letter-spacing: .09px;
+				 }
+				 &.parent {
+				 	a {
+				 		padding: 0;
+				 		border-bottom: none;
+				 		color: $textHColor;
+				 	}
+				 }
+			}
+			ul {
+				padding: 5px 0 5px 15px;
+			}
+		}
+	}
+}
+
+/* 	&>li.parent {
+	padding-bottom: 21px;
+	border-bottom: 1px solid $textHColor;
+	i {
+		position: absolute;
+		top: -2px;
+		right: 0;
+		font-size: 9px;
+		padding: 7px;
+		display: block;
+	}
+	&>a {
+		position: relative;
+		display: block;
+		color: $textHColor;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: .1px;
+		i {
+			top: -px;
+		}
+	}
+	ul {
+		li {
+			margin-bottom: 8px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				position: relative;
+				display: block;
+				color: $textColor;
+				font-size: 12px;
+				letter-spacing: .09px;
+			}
+		}
+	}
+}
+ul.sublist {
+	padding-left: 10px;
+} */
+
+/*______ End Filter Menu ______*/
+
+
