@@ -1,5 +1,51 @@
 $(function () {
 
+
+	$('#ui-slider').slider({
+		range: true,
+		min: 0,
+		max: 12000,
+		step: 1,
+		values: [0,7980],
+		create: function (event, ui) {
+			var val = $('#ui-slider').slider("values");
+			var min = $('#ui-slider').slider("option","min");
+			var max = $('#ui-slider').slider("option","max");
+			var maxPricePosition = $('.ui-slider-handle').eq(1).css('left');
+			$('.ui-slider-max').css('left', maxPricePosition);
+
+			$('.ui-slider-current-value span').html(val[1]);
+
+			$('.ui-slider-min').html(min);
+			$('.ui-slider-max').html(max);
+
+			$('.ui-slider-box .price-input-min').val(val[0]);
+			$('.ui-slider-box .price-input-max').val(val[1]);
+
+			$('.js__ui-slider').on('change keyup', function (e) {
+					var _self = $(this),
+						inputValue = parseInt($(this).val(), 10);
+
+						if(inputValue > max) {
+							$('.ui-slider-box .price-input-max').val(max);
+							$('#ui-slider').slider("value", inputValue)
+						} else if (inputValue < min) {
+							$('.ui-slider-box .price-input-min').val(min);
+							$('#ui-slider').slider("value", inputValue)
+						} else {
+							$('#ui-slider').slider("value", inputValue)
+						};
+
+			});
+		},
+		slide: function (event, ui) {
+			var maxPricePosition = $('.ui-slider-handle').eq(1).css('left');
+			$('.ui-slider-max').css('left', maxPricePosition)
+			$('.ui-slider-box .price-input-min').val(ui.values[0]);
+			$('.ui-slider-box .price-input-max').val(ui.values[1]);
+		}
+	})
+	$('#ui-slider').draggable();
 	/*______ Меню фильтра ______*/
 
 	$('.js__toggle-filter-menu').on('click', function (e) {
@@ -11,6 +57,7 @@ $(function () {
 	$('.js__toggle-sublist').on('click', function (e) {
 		e.preventDefault();
 		var link = $(this).parent('a');
+		$(this).toggleClass('is-open');
 		if(link.hasClass('is-open')) {
 			link.siblings('ul').stop(true, true).slideUp('250', function () {
 				link.removeClass('is-open');
@@ -37,7 +84,7 @@ $(function () {
 	$('.js__toggle-filter').on('click', function (e) {
 		e.preventDefault();
 		$(this).find('.filter-icon').toggleClass('active');
-		$('.filter-form-wrapper').slideToggle('250');
+		$('.left-sidebar__inner').slideToggle('250');
 	});
 
 

@@ -33,6 +33,127 @@
 	}
 }
 
+label.custom-checkbox-wrapper {
+	position: relative;
+	margin-bottom: 12px;
+	display: block;
+	cursor: pointer;
+	@include clearfix;
+	input[type="checkbox"] {
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		visibility: hidden;
+		&:checked {
+			~.custom-checkbox {
+				background: $bgUIBlack;
+				&:after {
+					background: url('../img/ui/check.png') center no-repeat;
+				}
+			}
+			~.custom-label {
+				color: $textHColor;
+			}
+		}
+	}
+	.custom-checkbox {
+		position: relative;
+		margin-right: 11px;
+		float: left;
+		display: block;
+		width: 14px;
+		height: 14px;
+		border: 2px solid $bgUIBlack;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 9px;
+			height: 6px;
+			background-size: 9px 6px;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.custom-label {
+		display: block;
+		overflow: hidden;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: .09px;
+		color: $textColor;
+		transition: color .3s ease;
+	}
+}
+
+label.color-checkbox {
+	position: relative;
+	margin-right: 12px;
+	margin-bottom: 17px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	@include clearfix;
+	input[type="checkbox"] {
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		visibility: hidden;
+		&:checked {
+			~.custom-checkbox {
+				&:after {
+					background-image: url('../img/ui/check.png');
+				}
+				&:before {
+					border-color: #d5d5d5;
+				}
+			}
+		}
+	}
+	.custom-checkbox {
+		position: relative;
+		display: block;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		z-index: 49;
+		&:before {
+			content: '';
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: transparent;
+			border-radius: 50%;
+			border: 1px solid transparent;
+			z-index: 30;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 9px;
+			height: 6px;
+			background-size: 9px 6px;
+			transform: translate(-50%, -50%);
+			z-index: 50;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
 
 /*______ Review form ______*/
 
@@ -259,5 +380,45 @@
 }
 
 /*______ End Promo Form ______*/
+
+
+
+/*______ Filter form ______*/
+
+.filter-form {
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+		margin-bottom: 5px;
+	}
+	.btn-wrapper {
+		margin-top: 40px;
+		.btn {
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.group-title {
+	margin-bottom: 30px;
+	padding: 21px 0;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: .1px;
+	border-bottom: 1px solid $textHColor;
+}
+
+.group-list {
+	&.color-list {
+		margin: 0 -12px;
+		padding-left: 12px;
+	}
+}
+
+/*______ End Filter form ______*/
+
 
 /*______ END FORMS ______*/

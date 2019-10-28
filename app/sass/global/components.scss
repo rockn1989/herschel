@@ -205,6 +205,20 @@ h2, .title-h2 {
 			border-color: $bgUIBlack;
 		}
 	}
+	&--reset {
+		border: none;
+		color: $textHColor;
+		i {
+			margin-right: 10px;
+			&:before {
+				color: $textHColor;	
+			}
+		}
+		&:hover {
+			color: $textHColor;
+			background: transparent;
+		}
+	}
 }
 
 .show-all {
@@ -750,6 +764,87 @@ h2, .title-h2 {
 
 /*______ End Product item ______*/
 
+
+
+
+/*______ UI Slider ______*/
+
+.ui-slider-box {
+	.input-box {
+		
+		margin-top: 21px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.separate {
+			width: 18px;
+			height: 1px;
+			background: #d5d5d5;
+		}
+		.input-section {
+			width: 90px;
+			display: flex;
+			align-items: center;
+			.input-type-values {
+				margin-left: 11px;
+				text-transform: uppercase;
+				font-size: 14px;
+				line-height: 15px;
+			}
+			input {
+				width: 100%;
+				border: 1px solid #d5d5d5;
+				height: 36px;
+				padding: 9px 11px;
+			}
+			&:last-child {
+				width: 110px;
+			}
+		}
+	}
+}
+
+.ui-slider-wrapper {
+	position: relative;
+	padding-top: 27px;
+	.ui-slider-min,
+	.ui-slider-max {
+		top: -10px;
+		position: absolute;
+		font-size: 12px;
+	}
+	.ui-slider-min {
+		left: 4.5px;
+	}
+	.ui-slider-max {
+		left: 100%;
+	}
+}
+
+.ui-slider {
+	.ui-slider-handle {
+		top: -6px;
+		margin-left: 0;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: $bgUIBlack;
+	}
+	.ui-slider-range {
+		background: $bgUIBlack;
+	}
+}
+
+.ui-slider-horizontal {
+	height: 2px;
+	background-color: #d5d5d5;
+}
+
+.ui-widget.ui-widget-content {
+	border: none;
+}
+
+/*______ End UI Slider ______*/
 
 
 

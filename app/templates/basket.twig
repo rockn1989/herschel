@@ -1,0 +1,177 @@
+{% extends "layouts/default.twig" %}
+{% set title="Корзина" %}
+{% set bread = ["Главная", "Корзина"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+			<div class="uk-container">
+				<h1 class="title-h1">Корзина</h1>
+
+				<!-- begin basket -->
+				<div class="basket">
+					<form action="">
+						<div class="order-list">
+							<div class="order-list__header">
+								<div class="desc">Описание</div>
+								<div class="size">Размер</div>
+								<div class="color">Цвет</div>
+								<div class="price">Цена</div>
+								<div class="discount">Скидка</div>
+								<div class="counter">Кол-во</div>
+								<div class="ammount">Сумма</div>
+							</div>
+							<div class="order-list__body">
+								<div class="product">
+									<div class="product__desc">
+										<div class="product__img">
+											<a href=""><img data-src="img/media/basket-img-1.png" alt="" uk-img></a>
+										</div>
+										<div class="product__text">
+											<div class="product__name">
+												<a href="">Рюкзак Herschel Little America | Middle-Volume</a>
+											</div>
+											<div class="product__article">Код товара: 10501-03071-OS</div>
+										</div>
+									</div>
+									
+									<div class="product__size">
+										16.25"(H) x 11"(W) x 5.25"(D)
+									</div>
+
+									<div class="product__color">
+										Raven Crosshatch / Black
+										<div class="discount-text">Скидка по промокоду:</div>
+									</div>
+									<div class="product__price">
+										<div class="price-product-wrapper">
+											<div class="old-price">6 780 Р.</div>
+											<div class="current-price">5 090 Р.</div>
+										</div>
+										<div class="discount-price">290 Р.</div>
+									</div>
+
+									<div class="product__discount">
+										-30%
+									</div>
+
+									<div class="product__counter">
+										<div class="calc">
+											<span class="minus">-</span>
+											<input type="text" value="1">
+											<span class="plus">+</span>
+										</div>
+									</div>
+									
+									<div class="product__ammount">
+										<div class="ammount__val">6 780 Р.</div>
+										<a href="" class="basket-favorite"><i class="icon-star"></i>Отложить</a>
+										<a href="" class="icon-close js__remove-product"></a>
+									</div>
+
+								</div>
+								<div class="product">
+									<div class="product__desc">
+										<div class="product__img">
+											<a href=""><img data-src="img/media/basket-img-2.png" alt="" uk-img></a>
+										</div>
+										<div class="product__text">
+											<div class="product__name">
+												<a href="">Спортивная куртка Herschel Voyage</a>
+											</div>
+											<div class="product__article">Код товара: 10501-03071-OS</div>
+										</div>
+									</div>
+									
+									<div class="product__size">
+										XS
+									</div>
+
+									<div class="product__color">
+										Border Stripe/ Peacoat
+										<div class="discount-text">Скидка по промокоду:</div>
+									</div>
+									<div class="product__price">
+										<div class="price-product-wrapper">
+											<div class="old-price"></div>
+											<div class="current-price">5 090 Р.</div>
+										</div>
+										<div class="discount-price">290 Р.</div>
+									</div>
+
+									<div class="product__discount">
+										Нет
+									</div>
+
+									<div class="product__counter">
+										<div class="calc">
+											<span class="minus">-</span>
+											<input type="text" value="1">
+											<span class="plus">+</span>
+										</div>
+									</div>
+									
+									<div class="product__ammount">
+										<div class="ammount__val">6 780 Р.</div>
+										<a href="" class="basket-favorite"><i class="icon-star"></i>Отложить</a>
+										<a href="" class="icon-close js__remove-product"></a>
+									</div>
+
+								</div>
+
+								<div class="product">
+									<div class="product__desc">
+										<div class="product__img">
+											<a href=""><img data-src="img/media/basket-img-3.png" alt="" uk-img></a>
+										</div>
+										<div class="product__text">
+											<div class="product__name">
+												<a href="">Спортивная куртка Herschel Voyage</a>
+											</div>
+											<div class="product__article">Код товара: 10501-03071-OS</div>
+										</div>
+									</div>
+									
+									<div class="product__size">
+										XS
+									</div>
+
+									<div class="product__color">
+										Border Stripe/ Peacoat
+										<div class="discount-text">Скидка по промокоду:</div>
+									</div>
+									<div class="product__price">
+										<div class="price-product-wrapper">
+											<div class="old-price">6 780 Р.</div>
+											<div class="current-price">5 090 Р.</div>
+										</div>
+										<div class="discount-price">290 Р.</div>
+									</div>
+
+									<div class="product__discount">
+										Нет
+									</div>
+
+									<div class="product__counter">
+										<div class="calc">
+											<span class="minus">-</span>
+											<input type="text" value="1">
+											<span class="plus">+</span>
+										</div>
+									</div>
+									
+									<div class="product__ammount">
+										<div class="ammount__val">6 780 Р.</div>
+										<a href="" class="basket-favorite"><i class="icon-star"></i>Отложить</a>
+										<a href="" class="icon-close js__remove-product"></a>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</form>
+				</div><!-- end basket -->
+
+			</div>
+	</main>
+{% endblock content %}

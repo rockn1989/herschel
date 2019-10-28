@@ -8,8 +8,8 @@
 		<div class="uk-container">
 			<div class="uk-grid">
 				<div class="uk-width-1-4@m">
-					<!-- begin filter -->
-					<div class="filter">
+					<!-- begin left-sidebar -->
+					<div class="left-sidebar">
 						<div class="filter-btn uk-hidden@m">
 							<a href="" class="btn btn--lighten btn--filter active js__toggle-filter">
 								<span class="filter-icon dark active">
@@ -20,14 +20,13 @@
 								Фильтр
 							</a>
 						</div>
-						<div class="filter-form-wrapper">
-							
+						<div class="left-sidebar__inner">
 							<!-- begin filter-menu -->
 							<div class="filter-menu">
 								<a class="filter-menu__title-section">Мужчинам <i class="icon-triangle js__toggle-filter-menu"></i></a>
 								<ul class="filter-menu-list">
 									<li class="parent">
-										<a href="" class="is-open">Рюкзаки и сумки <i class="icon-chevron-right js__toggle-sublist"></i></a>
+										<a href="" class="is-open">Рюкзаки и сумки <i class="icon-chevron-right js__toggle-sublist is-open"></i></a>
 										<ul class="sublist">
 											<li class="parent">
 												<a href="">Рюкзаки <i class="icon-chevron-right js__toggle-sublist"></i></a>
@@ -116,14 +115,78 @@
 											</li>
 										</ul>
 									</li>
-									<li class="parent">
-										<a href="">Фичи</a>
-									</li>
 								</ul>
 							</div><!-- end filter-menu -->
 
+							<!-- begin filter -->
+							<div class="filter">
+								<form action="" class="filter-form">
+									<fieldset>
+										<div class="group-title">Фичи</div>
+										<div class="group-list">
+											{% for i in 0..4 %}
+											<label for="item-{{i}}" class="custom-checkbox-wrapper">
+												<input id="item-{{i}}" type="checkbox">
+												<span class="custom-checkbox"></span>
+												<span class="custom-label">Карман для 15" ноутбука</span>
+											</label>
+											{% endfor %}
+										</div>
+									</fieldset>
+									<fieldset>
+										<div class="group-title">Объем</div>
+										<div class="group-list">
+											{% for i in 5..7 %}
+											<label for="item-{{i}}" class="custom-checkbox-wrapper">
+												<input id="item-{{i}}" type="checkbox">
+												<span class="custom-checkbox"></span>
+												<span class="custom-label">до 15 литров</span>
+											</label>
+											{% endfor %}
+										</div>
+									</fieldset>
+									<fieldset>
+										<div class="group-title">Цвета</div>
+										<div class="group-list color-list">
+											{% for j in 10..21 %}
+											<label for="{{j}}" class="color-checkbox">
+												<input id="{{j}}" type="checkbox">
+												<span class="custom-checkbox" style="background-color: #000{{j}}0"></span>
+											</label>
+											{% endfor %}
+										</div>
+									</fieldset>
+									<fieldset>
+										<div class="group-title">Цена</div>
+										<div class="group-list">
+											<div class="ui-slider-box">
+												<div class="ui-slider-wrapper">
+													<div class="ui-slider-min"></div>
+													<div class="ui-slider-max"></div>
+													<div id="ui-slider" class="ui-slider"></div>
+												</div>
+												<div class="input-box">
+													<div class="input-section">
+														<input type="number" id="min" class="price-input-min js__ui-slider">
+													</div>
+													<div class="separate"></div>
+													<div class="input-section">
+														<input type="number" id="max" class="price-input-max js__ui-slider">
+														<span class="input-type-values">р.</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="btn-wrapper">
+										<button type="submit" class="btn btn--dark">Применить</button>
+										<button type="reset" class="btn btn--reset"> <i class="icon-close"></i> Сбросить</button>
+									</div>
+								</form>
+							</div><!-- end filter -->
+
 						</div>
-					</div><!-- end filter -->
+					</div><!-- end left-sidebar -->
 				</div>
 				<div class="uk-width-3-4@m">
 					

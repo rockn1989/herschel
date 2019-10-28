@@ -1,0 +1,213 @@
+/*______ Basket ______*/
+.basket {
+	.order-list {
+		a {
+			padding-left: 0;
+		}
+	}
+}
+.order-list {
+	&__header {
+		padding: 22px 0;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $bgUIGray;
+		font-size: 12px;
+		line-height: 13px;
+		letter-spacing: .09px;
+		text-align: left;
+		.desc {
+			padding-left: 102px;
+			width: 26.7%;
+		}
+		.size {
+			width: 8.5%;
+		}
+		.color {
+			width: 11.5%;
+		}
+		.price {
+			width: 5%;
+		}
+		.discount {
+			width: 4%;
+		}
+		.counter {
+			width: 7%;
+		}
+		.ammount {
+			width: 15.5%;
+		}
+	}
+	&__body {
+
+	}
+	.product {
+		position: relative;
+		padding: 22px 0;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $bgUIGray;
+		&:last-child {
+			border-bottom: none;
+		}
+		&__desc {
+			width: 26.7%;
+		}
+		&__img {
+			float: left;
+			width: 72px;
+			height: 81px;
+			margin-right: 30px;
+			@include img-gradient;
+			a {
+				display: block;
+			}
+		}
+		&__text {
+			overflow: hidden;
+		}
+		&__name {
+			margin-bottom: 20px;
+			font-size: 14px;
+			color: $textHColor;
+			a {
+				color: $textHColor;
+				line-height: 16px;
+			}
+		}
+		&__article {
+			font-size: 12px;
+			line-height: 14px;
+		}
+		&__size {
+			width: 8.5%;
+			font-size: 14px;
+			line-height: 16px;
+		}
+		&__color {
+			width: 11.5%;
+			font-size: 14px;
+			line-height: 16px;
+			.discount-text {
+				&:empty {
+					margin-top: 0;
+				}
+				margin-top: 20px;
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+		&__price {
+			width: 5%;
+			font-size: 14px;
+			line-height: 16px;
+			.price-product-wrapper {
+				height: 36px;
+			}
+			div {
+				margin: 0 0 5px;
+				display: block;
+				&.old-price {
+					&:empty {
+						display: none;
+					}
+				}
+			}
+			.discount-price {
+				margin-top: 15px;
+			}
+		}
+		&__discount {
+			width: 4%;
+			font-size: 14px;
+			line-height: 16px;
+		}
+		&__counter {
+			width: 7%;
+		}
+		&__ammount {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			width: 15.5%;
+			.ammount__val {
+				font-size: 14px;
+				line-height: 15px;
+				font-weight: 500;
+			}
+			.basket-favorite {
+				width: 58px;
+				text-align: center;
+				font-size: 12px;
+				color: $textColor;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .3s ease;
+				i {
+					text-align: center;
+					display: block;
+					font-size: 25px;
+					color: $textHColor;
+				}
+			}
+			.icon-close {
+				font-size: 24px;
+				&:before {
+					color: $bgUIGray;
+				}
+			}
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: -1px;
+			left: -22px;
+			right: -22px;
+			bottom: -1px;
+			display: block;
+			background: transparent;
+			border: 1px solid transparent;
+			transition: border-color .3s ease;
+			z-index: -1;
+		}
+		&:hover {
+			&:after {
+				border-color: $bgUIGray;
+			}
+			.basket-favorite {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+.calc {
+	font-size: 0;
+	&>* {
+		display: inline-block;
+		vertical-align: top;
+		height: 36px;
+		line-height: 36px;
+		background-color: #f5f6f6;
+		color: $textColor;
+		border: none;
+		text-align: center;
+	}
+	span {
+		width: 24px;
+		font-size: 20px;
+		cursor: pointer;
+		user-select: none;
+		&:active {
+			background: darken(#d5d5d5, 20%);
+		}
+	}
+	input {
+		width: 30px;
+		outline: none;
+	}
+}
+
+/*______ End Basket ______*/

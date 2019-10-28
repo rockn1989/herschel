@@ -1,6 +1,15 @@
 /*______ Filter catalog ______*/
 
-.filter-form-wrapper {
+.left-sidebar {
+	position: relative;
+
+	@media (min-width: $desk-w) {
+		padding-top: 29px;
+		padding-right: 12%;
+	};
+}
+
+.left-sidebar__inner{
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -199,11 +208,11 @@
 			border-bottom: 1px solid $textHColor;
 			&.is-open {
 				border-bottom-color: $bgUIGray;
-				i {
-					transform: translateY(-50%) rotate(-90deg);
-				}
 			}
 			i {
+				&.is-open {
+					transform: translateY(-50%) rotate(-90deg);
+				}
 				position: absolute;
 				top: 50%;
 				right: 0;
