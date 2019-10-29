@@ -4,6 +4,14 @@ $(function () {
 	
 	mainSlider.init(function(event, slick) {
 		mainSlider.addClass('slide-up');
+
+		$('.main-slider .slide-prev').on('click', function () {
+			mainSlider.slick('slickPrev');
+		});
+
+		$('.main-slider .slide-next').on('click', function () {
+			mainSlider.slick('slickNext');
+		});
 	});
 
 	mainSlider.slick({
@@ -18,8 +26,6 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		lazyLoad: 'progressive',
-		prevArrow: $(mainSlider).find('.slide-prev'),
-		nextArrow: $(mainSlider).find('.slide-next'),
 		responsive: [
 			{
 				breakpoint: 960,
@@ -41,6 +47,7 @@ $(function () {
 	.on('afterChange', function(event, slick, currentSlide, nextSlide) {
 		mainSlider.addClass('slide-up');
 	});
+
 
 	setTimeout(function () {
 		$('.main-slider').addClass('loaded');

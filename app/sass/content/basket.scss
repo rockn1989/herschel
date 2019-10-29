@@ -1,11 +1,64 @@
 /*______ Basket ______*/
 .basket {
+	margin-bottom: 120px !important;
 	.order-list {
+		margin-bottom: 50px;
+		~.attantion-block {
+			margin-top: -50px;
+		}
 		a {
 			padding-left: 0;
 		}
 	}
+	.promo-section {
+		position: relative;
+		@media (min-width: $mob-s) {
+			width: 70%;
+		};
+		@media (min-width: $tablet-w) {
+			width: 58%;
+		};
+		input[type="text"] {
+			width: 100%;
+			padding-right: 184px;
+		}
+		.btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+	.basket-info {
+		padding-right: 5%;
+	}
+	.total-section {
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 1px solid $bgUIGray;
+		@media (min-width: $tablet-w) {
+			margin: 0;
+			padding: 0;
+			border-top: none;
+			border-left: 1px solid $bgUIGray;
+			padding-left: 14%;
+		};
+	}
 }
+
+.basket-bottom-section {
+	margin-bottom: 60px;
+	.btn.btn--reset {
+		padding: 16px 0;
+		text-align: left;
+	}
+	.delivery-list {
+		margin-bottom: 30px;
+		@media (min-width: $mob-s) {
+			margin-bottom: 0;
+		};
+	}
+}
+
 .order-list {
 	&__header {
 		padding: 22px 0;
@@ -16,6 +69,12 @@
 		line-height: 13px;
 		letter-spacing: .09px;
 		text-align: left;
+		@media (min-width: $mob-xs) {
+			display: none;
+		};
+		@media (min-width: $tablet-w) {
+			display: flex;
+		};
 		.desc {
 			padding-left: 102px;
 			width: 26.7%;
@@ -48,6 +107,17 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid $bgUIGray;
+		@media (max-width: 959px) {
+			flex-wrap: wrap;
+			&>* {
+				margin-bottom: 10px;
+				width: 100%;
+				padding-left: 102px;
+			}
+				.product__desc {
+					padding-left: 0;
+				}
+		};
 		&:last-child {
 			border-bottom: none;
 		}
@@ -70,6 +140,7 @@
 		&__name {
 			margin-bottom: 20px;
 			font-size: 14px;
+			line-height: 16px;
 			color: $textHColor;
 			a {
 				color: $textHColor;
@@ -184,6 +255,7 @@
 }
 
 .calc {
+	width: 78px;
 	font-size: 0;
 	&>* {
 		display: inline-block;
@@ -205,8 +277,12 @@
 		}
 	}
 	input {
+		padding: 0 !important;
+		height: auto !important;
+		line-height: 36px !important;
 		width: 30px;
 		outline: none;
+		border: none !important;
 	}
 }
 

@@ -9,169 +9,273 @@
 
 				<!-- begin basket -->
 				<div class="basket">
-					<form action="">
-						<div class="order-list">
-							<div class="order-list__header">
-								<div class="desc">Описание</div>
-								<div class="size">Размер</div>
-								<div class="color">Цвет</div>
-								<div class="price">Цена</div>
-								<div class="discount">Скидка</div>
-								<div class="counter">Кол-во</div>
-								<div class="ammount">Сумма</div>
+					<form action="" class="default-form">
+						<div class="basket-top-section">
+							<div class="order-list">
+								<div class="order-list__header">
+									<div class="desc">Описание</div>
+									<div class="size">Размер</div>
+									<div class="color">Цвет</div>
+									<div class="price">Цена</div>
+									<div class="discount">Скидка</div>
+									<div class="counter">Кол-во</div>
+									<div class="ammount">Сумма</div>
+								</div>
+								<div class="order-list__body">
+									<div class="product">
+										<div class="product__desc">
+											<div class="product__img">
+												<a href=""><img data-src="img/media/basket-img-1.png" alt="" uk-img></a>
+											</div>
+											<div class="product__text">
+												<div class="product__name">
+													<a href="">Рюкзак Herschel Little America | Middle-Volume</a>
+												</div>
+												<div class="product__article">Код товара: 10501-03071-OS</div>
+											</div>
+										</div>
+										
+										<div class="product__size">
+											16.25"(H) x 11"(W) x 5.25"(D)
+										</div>
+							
+										<div class="product__color">
+											Raven Crosshatch / Black
+											<div class="discount-text">Скидка по промокоду:</div>
+										</div>
+										<div class="product__price">
+											<div class="price-product-wrapper">
+												<div class="old-price">6 780 Р.</div>
+												<div class="current-price">5 090 Р.</div>
+											</div>
+											<div class="discount-price">290 Р.</div>
+										</div>
+							
+										<div class="product__discount">
+											-30%
+										</div>
+							
+										<div class="product__counter">
+											<div class="calc">
+												<span class="minus">-</span>
+												<input type="text" value="1">
+												<span class="plus">+</span>
+											</div>
+										</div>
+										
+										<div class="product__ammount">
+											<div class="ammount__val">6 780 Р.</div>
+											<a href="" class="basket-favorite"><i class="icon-star"></i>Отложить</a>
+											<a href="" class="icon-close js__remove-product"></a>
+										</div>
+							
+									</div>							
+								</div>
 							</div>
-							<div class="order-list__body">
-								<div class="product">
-									<div class="product__desc">
-										<div class="product__img">
-											<a href=""><img data-src="img/media/basket-img-1.png" alt="" uk-img></a>
+							
+							<!-- begin attantion-block -->
+							<div class="attantion-block">
+								<i class="attantion-icon">i</i>
+								<div class="attantion-block__inner">
+										<div class="attantion-block__text">
+											<div class="price-text">Для бесплатной доставки добавьте товары на <span class="price-text__val">3 890 Р.</span></div>
+											<a href="" class="tooltip-link">Перейти в каталог</a>
 										</div>
-										<div class="product__text">
-											<div class="product__name">
-												<a href="">Рюкзак Herschel Little America | Middle-Volume</a>
+										<div class="attantion-block__add-info">
+											
+										</div>
+								</div>
+							</div><!-- end attantion-block -->
+						</div>
+	
+						<div class="basket-bottom-section">
+							<div class="uk-grid">
+								<div class="uk-width-3-5@m">
+
+									<div class="basket-info">
+										<div class="uk-panel uk-flex uk-flex-wrap uk-flex-middle uk-flex-between uk-margin-large-bottom">
+											<button class="btn btn--reset"><i class="icon-close"></i>Очистить корзину</button>
+											<div class="promo-section">
+												<input type="text" placeholder="Промокод">
+												<button class="btn">Применить</button>		
 											</div>
-											<div class="product__article">Код товара: 10501-03071-OS</div>
 										</div>
-									</div>
-									
-									<div class="product__size">
-										16.25"(H) x 11"(W) x 5.25"(D)
-									</div>
-
-									<div class="product__color">
-										Raven Crosshatch / Black
-										<div class="discount-text">Скидка по промокоду:</div>
-									</div>
-									<div class="product__price">
-										<div class="price-product-wrapper">
-											<div class="old-price">6 780 Р.</div>
-											<div class="current-price">5 090 Р.</div>
+										<div class="uk-grid">
+											<div class="uk-width-1-2@s">
+												<div class="small-title">Доставка</div>
+												<ul class="delivery-list">
+													<li>
+														<i class="icon-courier"></i>
+													Доставим курьером завтра за 300 рублей</li>
+													<li>
+														<i class="icon-location"></i>
+														Самовывоз завтра с 11:00 из <a href="">5 пунктов</a></li>
+													<li>
+														<i class="icon-truck"></i>
+													Доставка почти в любой город за 2-3 дня</li>
+												</ul>
+											</div>
+											<div class="uk-width-1-2@s">
+												<div class="small-title">Информация</div>
+												<ul class="info-list">
+													<li><a href="">Вопросы и ответы по доставке и оплате</a></li>
+													<li><a href="">Правила возврата товара</a></li>
+													<li><a href="">Гарантия</a></li>
+												</ul>
+											</div>
 										</div>
-										<div class="discount-price">290 Р.</div>
-									</div>
-
-									<div class="product__discount">
-										-30%
-									</div>
-
-									<div class="product__counter">
-										<div class="calc">
-											<span class="minus">-</span>
-											<input type="text" value="1">
-											<span class="plus">+</span>
-										</div>
-									</div>
-									
-									<div class="product__ammount">
-										<div class="ammount__val">6 780 Р.</div>
-										<a href="" class="basket-favorite"><i class="icon-star"></i>Отложить</a>
-										<a href="" class="icon-close js__remove-product"></a>
 									</div>
 
 								</div>
-								<div class="product">
-									<div class="product__desc">
-										<div class="product__img">
-											<a href=""><img data-src="img/media/basket-img-2.png" alt="" uk-img></a>
-										</div>
-										<div class="product__text">
-											<div class="product__name">
-												<a href="">Спортивная куртка Herschel Voyage</a>
-											</div>
-											<div class="product__article">Код товара: 10501-03071-OS</div>
-										</div>
+								<div class="uk-width-2-5@m">
+									<div class="total-section">
+										<ul class="total-list">
+											<li>
+												<span class="text">Итого 3 товара на сумму:</span>
+												<span class="separate"></span>
+												<span class="val">17 550 Р.</span>
+											</li>
+											<li>
+												<span class="text">Скидка:</span>
+												<span class="separate"></span>
+												<span class="val">4 050 Р.</span>
+											</li>
+											<li>
+												<span class="text">Скидка по промокоду:</span>
+												<span class="separate"></span>
+												<span class="val">2 050 Р.</span>
+											</li>
+											<li>
+												<span class="text">К оплате:</span>
+												<span class="separate"></span>
+												<span class="val">13 500 р.</span>
+											</li>
+										</ul>
+										<button type="submit" class="btn btn--modal-btn-black">Оформить заказ</button>
 									</div>
-									
-									<div class="product__size">
-										XS
-									</div>
-
-									<div class="product__color">
-										Border Stripe/ Peacoat
-										<div class="discount-text">Скидка по промокоду:</div>
-									</div>
-									<div class="product__price">
-										<div class="price-product-wrapper">
-											<div class="old-price"></div>
-											<div class="current-price">5 090 Р.</div>
-										</div>
-										<div class="discount-price">290 Р.</div>
-									</div>
-
-									<div class="product__discount">
-										Нет
-									</div>
-
-									<div class="product__counter">
-										<div class="calc">
-											<span class="minus">-</span>
-											<input type="text" value="1">
-											<span class="plus">+</span>
-										</div>
-									</div>
-									
-									<div class="product__ammount">
-										<div class="ammount__val">6 780 Р.</div>
-										<a href="" class="basket-favorite"><i class="icon-star"></i>Отложить</a>
-										<a href="" class="icon-close js__remove-product"></a>
-									</div>
-
 								</div>
-
-								<div class="product">
-									<div class="product__desc">
-										<div class="product__img">
-											<a href=""><img data-src="img/media/basket-img-3.png" alt="" uk-img></a>
-										</div>
-										<div class="product__text">
-											<div class="product__name">
-												<a href="">Спортивная куртка Herschel Voyage</a>
-											</div>
-											<div class="product__article">Код товара: 10501-03071-OS</div>
-										</div>
-									</div>
-									
-									<div class="product__size">
-										XS
-									</div>
-
-									<div class="product__color">
-										Border Stripe/ Peacoat
-										<div class="discount-text">Скидка по промокоду:</div>
-									</div>
-									<div class="product__price">
-										<div class="price-product-wrapper">
-											<div class="old-price">6 780 Р.</div>
-											<div class="current-price">5 090 Р.</div>
-										</div>
-										<div class="discount-price">290 Р.</div>
-									</div>
-
-									<div class="product__discount">
-										Нет
-									</div>
-
-									<div class="product__counter">
-										<div class="calc">
-											<span class="minus">-</span>
-											<input type="text" value="1">
-											<span class="plus">+</span>
-										</div>
-									</div>
-									
-									<div class="product__ammount">
-										<div class="ammount__val">6 780 Р.</div>
-										<a href="" class="basket-favorite"><i class="icon-star"></i>Отложить</a>
-										<a href="" class="icon-close js__remove-product"></a>
-									</div>
-
-								</div>
-
 							</div>
 						</div>
+						
 					</form>
+
+					<!-- begin attantion-block -->
+					<div class="attantion-block">
+						<i class="attantion-icon">i</i>
+						<div class="attantion-block__inner">
+								<div class="attantion-block__text">
+									Возможно вы уже регистрировались на нашем сайте! Введите email и пароль, чтобы получить доступ к своим бонусам или <a href="" class="tooltip-link">восстановите</a> его, если забыли.
+								</div>
+								<div class="attantion-block__add-info">
+									<form action="" class="horizontal-form default-form">
+										<input type="email" placeholder="Email">
+										<input type="password" placeholder="Пароль">
+										<button class="btn">Войти</button>
+									</form>
+								</div>
+						</div>
+					</div><!-- end attantion-block -->
+
 				</div><!-- end basket -->
 
 			</div>
+
+			<!-- begin products-list -->
+			<section class="products-list">
+				<div class="uk-container">
+					<div class="separate-title"><span>Вам может понравиться</span></div>
+					<div class="products-list__inner" uk-scrollspy="target: .card; cls: slide-up-content; delay: 0; repeat: false">
+						<div class="uk-grid">
+							{% for item in 1..3 %}
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+								<div class="card">
+									<div class="card-wrapper">
+										<div class="card__inner">
+											<div class="card__img">
+												<a href=""><img data-src="img/media/product-clothes-img-{{item}}-380x424.png" alt="" class="lazy"></a>
+											</div>
+											<div class="stocks">
+												<div class="new">new</div>
+												<div class="discount">-50%</div>
+											</div>
+											<div class="favorite-icon">
+												<a href="" class="icon-star"></a>
+											</div>
+											<div class="card__product-name"><a href="">Рюкзак Settlement Backpack Settlement Backpack</a></div>
+											<div class="card__price">
+												<div class="old-price">12 889 Р.</div>
+												<div class="current-price">6 890 Р.</div>
+											</div>
+											<a href="" class="card__toggle-btn icon-chevron-right js__show-preview-slider">Посмотреть все цвета</a>
+											<div class="card__bottom">
+												<div class="preview-slider">
+													<div class="slider">
+														{% for slide in 1..5 %}
+														    <div class="slide">
+														    	<img data-lazy="img/sliders/card-preview-img-{{slide}}-72x82.png" alt="">
+														    </div>
+														{% endfor %}
+													</div>
+												</div>
+												<a href="" class="btn btn--medium btn--dark" uk-toggle="target: #modal-fastview">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</section><!-- end products-list -->
+
+			<!-- begin products-list -->
+			<section class="products-list">
+				<div class="uk-container">
+					<div class="separate-title"><span>Вы недавно смотрели</span></div>
+					<div class="products-list__inner" uk-scrollspy="target: .card; cls: slide-up-content; delay: 0; repeat: false">
+						<div class="uk-grid">
+							{% for item in 1..3 %}
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+								<div class="card">
+									<div class="card-wrapper">
+										<div class="card__inner">
+											<div class="card__img">
+												<a href=""><img data-src="img/media/product-img-{{item}}-380x424.png" alt="" class="lazy"></a>
+											</div>
+											<div class="stocks">
+												<div class="new">new</div>
+												<div class="discount">-50%</div>
+											</div>
+											<div class="favorite-icon">
+												<a href="" class="icon-star"></a>
+											</div>
+											<div class="card__product-name"><a href="">Рюкзак Settlement Backpack Settlement Backpack</a></div>
+											<div class="card__price">
+												<div class="old-price">12 889 Р.</div>
+												<div class="current-price">6 890 Р.</div>
+											</div>
+											<a href="" class="card__toggle-btn icon-chevron-right js__show-preview-slider">Посмотреть все цвета</a>
+											<div class="card__bottom">
+												<div class="preview-slider">
+													<div class="slider">
+														{% for slide in 1..5 %}
+														    <div class="slide">
+														    	<img data-lazy="img/sliders/card-preview-img-{{slide}}-72x82.png" alt="">
+														    </div>
+														{% endfor %}
+													</div>
+												</div>
+												<a href="" class="btn btn--medium btn--dark" uk-toggle="target: #modal-fastview">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</section><!-- end products-list -->
 	</main>
 {% endblock content %}

@@ -284,13 +284,18 @@
 		font-size: 13px;
 		letter-spacing: .2px;
 	}
-	a {
-		position: relative;
-		padding-left: 29px;
-		display: block;
-		@include icomoon;
-		&:before {
-			color: $textSColor;
+}
+
+.header {
+	.basket {
+		a {
+			position: relative;
+			padding-left: 29px;
+			display: block;
+			@include icomoon;
+			&:before {
+				color: $textSColor;
+			}
 		}
 	}
 }

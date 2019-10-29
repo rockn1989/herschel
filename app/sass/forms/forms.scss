@@ -126,6 +126,9 @@ label.color-checkbox {
 		height: 24px;
 		border-radius: 50%;
 		z-index: 49;
+		background-size: contain;
+		background-position: center 0;
+		background-repeat: no-repeat;
 		&:before {
 			content: '';
 			position: absolute;
@@ -152,6 +155,35 @@ label.color-checkbox {
 			background-repeat: no-repeat;
 			background-position: center;
 		}
+	}
+}
+
+.horizontal-form  {
+	display: flex;
+	justify-content: space-between;
+	@media (min-width: $mob-xs) {
+		flex-wrap: wrap;
+		&>*{
+			margin-right: 0;
+			margin-bottom: 10px;
+			@media (min-width: $tablet-w) {
+				margin-bottom: 0;
+			};
+		}
+	};
+	@media (min-width: $tablet-w) {
+		flex-wrap: nowrap;
+	};
+	input {
+		margin-right: 10px;
+		max-width: 194px;
+		@media (min-width: $mob-xs) {
+			max-width: 100%;
+			width: 100%;
+		};
+		@media (min-width: $tablet-w) {
+			max-width: 194px;
+		};
 	}
 }
 

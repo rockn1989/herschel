@@ -14,6 +14,13 @@ h2, .title-h2 {
 	line-height: 42px;
 }
 
+.small-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: .1px;
+}
+
 .round-link {
   display: block;
   width: 73px;
@@ -764,6 +771,79 @@ h2, .title-h2 {
 
 /*______ End Product item ______*/
 
+
+
+
+/*______ Attantion block ______*/
+
+.attantion-block {
+	position: relative;
+	margin-bottom: 50px;
+	padding: 30px 4% 10px 6%;
+	border-top: 1px solid $bgUIGray;
+	background-color: #f5f6f6;
+	@media (min-width: $mob-xs) {
+		padding-left: 10%;
+	};
+	@media (min-width: $mob-s) {
+		padding-left: 6%;
+	};
+	.attantion-icon {
+		position: absolute;
+		top: 36px;
+		left: 2.5%;
+		display: block;
+		width: 18px;
+		height: 18px;
+		font-size: 14px;
+		line-height: 18px;
+		text-align: center;
+		color: #ffffff;
+		border-radius: 50%;
+		background: $textColor;
+		font-style: normal;
+		@media (min-width: $mob-xs) {
+			//top: 8px;
+		};
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__text {
+		margin-bottom: 20px;
+		width: 48%;
+		@media (min-width: $mob-xs) {
+			width: 100%;
+		};
+		@media (min-width: $mob-s) {
+			width: 48%;
+		};
+		.price-text {
+			margin-bottom: 16px;
+			font-size: 18px;
+			line-height: 19px;
+		}
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: .2px;
+	}
+	&__add-info {
+		@media (min-width: $mob-xs) {
+			width: 100%;
+		};
+		@media (min-width: $mob-s) {
+			width: 52%;
+			padding-left: 4%;
+		};
+		@media (min-width: $tablet-w) {
+			padding-left: 3%;	
+		};
+	}
+}
+
+/*______ End Attantion block ______*/
 
 
 
