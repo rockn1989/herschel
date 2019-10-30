@@ -1,6 +1,12 @@
 /*______ Basket ______*/
+
+main {
+	.basket {
+		margin-bottom: 120px !important;
+	}
+}
+
 .basket {
-	margin-bottom: 120px !important;
 	.order-list {
 		margin-bottom: 50px;
 		~.attantion-block {
@@ -107,12 +113,19 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid $bgUIGray;
+		.mobile-title {
+			margin-bottom: 8px;
+			font-size: 14px;
+			line-height: 15px;
+			font-weight: 500;
+			display: block;
+		}
 		@media (max-width: 959px) {
 			flex-wrap: wrap;
 			&>* {
 				margin-bottom: 10px;
-				width: 100%;
-				padding-left: 102px;
+				width: auto;
+				padding-left: 0;
 			}
 				.product__desc {
 					padding-left: 0;

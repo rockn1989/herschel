@@ -2,10 +2,12 @@
 
 .left-sidebar {
 	position: relative;
-
-	@media (min-width: $desk-w) {
-		padding-top: 29px;
-		padding-right: 12%;
+	height: 100%;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 30px !important;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 0 !important;
 	};
 }
 
@@ -23,15 +25,63 @@
 	@media (min-width: $tablet-w) {
 		position: static;
 		padding: 0;
+		height: 100%;
 		border: none;
 		display: block !important;
 	};
+}
+
+.sidebar-menu {
+	@media (min-width: $tablet-w) {
+		margin-right: 30px;
+		padding-top: 16px;
+		padding-right: 25%;
+		height: 100%;
+		border-right: 1px solid $bgUIGray;
+	};
+	ul {
+		@include list-reset;
+		li {
+			margin-bottom: 2px;
+			&.parent {
+				a {
+					color: $textHColor;
+				}
+			}
+			a {
+				position: relative;
+				display: block;
+				font-size: 12px;
+				line-height: 22px;
+				letter-spacing: .09px;
+				color: $textColor;
+				i {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					font-size: 9px;
+					padding: 7px;
+					display: block;
+					transform: translateY(-50%);
+					transition: transform .3s ease;
+					&.is-open {
+						transform: translateY(-50%) rotate(-90deg);
+					}
+				}
+			}
+		}
+		&.sublist {
+			padding-left: 15px;
+			display: none;
+		}
+	}
 }
 
 .filter {
 	position: relative;
 	@media (min-width: $desk-w) {
 		padding-top: 29px;
+		padding-right: 12%;
 	};
 	&-btn {
 		margin-bottom: 20px;
@@ -162,6 +212,10 @@
 } */
 
 .filter-menu {
+	@media (min-width: $desk-w) {
+		padding-top: 29px;
+		padding-right: 12%;
+	};
 	&__title-section {
 		position: relative;
 		padding-bottom: 21px;

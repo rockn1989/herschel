@@ -1,0 +1,86 @@
+{% extends "layouts/default.twig" %}
+{% set title="Доставка и оплата" %}
+{% set bread = ["Главная", "Доставка и оплата"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+		<div class="uk-container">
+			<h1 class="title-h1">Доставка и оплата</h1>
+			<div class="uk-grid">
+				<div class="uk-width-1-3@m">
+					<!-- begin left-sidebar -->
+					<div class="left-sidebar">
+						<div class="filter-btn uk-hidden@m">
+							<a href="" class="btn btn--lighten btn--filter active js__toggle-filter">
+								<span class="filter-icon dark active">
+									<span class="line line-1"></span>
+									<span class="line line-2"></span>
+									<span class="line line-3"></span>
+								</span>
+								Доставка и оплата
+							</a>
+						</div>
+						<div class="left-sidebar__inner">
+							<div class="sidebar-menu">
+								<ul class="menu-list">
+									<li class="parent">
+										<a href="" class="">Доставка по Москве <i class="icon-chevron-right js__toggle-sublist"></i></a>
+										<ul class="sublist">
+											<li><a href="#">Lorem-1</a></li>
+											<li><a href="#">Lorem-2</a></li>
+											<li><a href="#">Lorem-3</a></li>
+											<li><a href="#">Lorem-4</a></li>
+											<li><a href="#">Lorem-5</a></li>
+										</ul>		
+									</li>
+									<li><a href="">Доставка по Московской области</a></li>
+									<li><a href="">Доставка по России</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- end left-sidebar -->
+				</div>
+				<div class="uk-width-2-3@m">
+
+					<!-- begin delivery-list-types -->
+					<div class="delivery-list-types">
+
+						<div class="delivery-type">
+							<h3 class="title-h3">Доставка по Москве</h3>
+							<div class="medium-title">Курьером</div>
+							<ul class="disc-list">
+								<li>Быстрая доставка по Москве (1–3 рабочих дня* с момента оформления заказа);  </li>
+								<li>Возможность выбора удобного для вас времени доставки;</li>
+								<li>Возможность выбора не более двух размеров из одной категории товаров;</li>
+								<li>Стоимость доставки по Москве — 350 рублей, при единовременной покупке от 15 000 рублей — бесплатно</li>
+							</ul>
+							<p>
+								Не подошел размер? Просто верните товар нашему курьеру, оплатив только стоимость доставки — 350 рублей (п.4, ст. 497 ГК РФ).
+							</p>
+							<p>
+								В случае, если курьер уже уехал, необходимо самостоятельно вернуть товар в розничном магазине на Петровском бульваре, 21.
+							</p>
+						</div>		
+
+						<div class="delivery-type">
+							<h3 class="title-h3">Доставка по Московской области</h3>
+							<div class="medium-title">Почта России</div>
+							<ul class="disc-list">
+								<li>Срок доставки ориентировочно 7–14 рабочих дней с момента отправления заказа (срок отправки заказа 1–2 дня, не считая дня поступления заказа);</li>
+								<li>Стоимость доставки — 500 рублей, при единовременной покупке от 15 000 рублей — бесплатно.</li>
+								<li>Посылка осуществляется «первым классом» (если габариты товаров не превышают максимальных и/или наложенный платеж не более 20 000 рублей);</li>
+								<li>Возможность отслеживания посылки по номеру почтового идентификатора;</li>
+								<li>Услуга примерки отсутствует.</li>
+							</ul>
+							<p>
+								Не подошел размер? Нет проблем! Отправьте товар нам обратно отдельной посылкой, заполнив и вложив в посылку бланк возврата.
+							</p>
+						</div>		
+
+					</div><!-- end delivery-list-types -->
+
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock content %}

@@ -1,24 +1,15 @@
 /*______ COMPONENTS ______*/
 
-h1, .title-h1 {
-	margin-bottom: 40px;
-	padding-bottom: 20px;
-	font-size: 42px;
-	line-height: 46px;
-	border-bottom: 1px solid $textHColor;
-}
-
-h2, .title-h2 {
-	margin-bottom: 36px;
-	font-size: 36px;
-	line-height: 42px;
-}
-
-.small-title {
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 15px;
-  letter-spacing: .1px;
+.custom-grid {
+	margin-left: -30px;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	&>* {
+		padding-left: 30px;
+	}
+	
 }
 
 .round-link {
@@ -779,7 +770,7 @@ h2, .title-h2 {
 .attantion-block {
 	position: relative;
 	margin-bottom: 50px;
-	padding: 30px 4% 10px 6%;
+	padding: 30px 4% 30px 6%;
 	border-top: 1px solid $bgUIGray;
 	background-color: #f5f6f6;
 	@media (min-width: $mob-xs) {
@@ -812,12 +803,14 @@ h2, .title-h2 {
 		flex-wrap: wrap;
 	}
 	&__text {
-		margin-bottom: 20px;
+		
 		width: 48%;
 		@media (min-width: $mob-xs) {
+			margin-bottom: 20px;
 			width: 100%;
 		};
 		@media (min-width: $mob-s) {
+			margin-bottom: 0;
 			width: 48%;
 		};
 		.price-text {
