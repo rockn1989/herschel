@@ -1,0 +1,127 @@
+{% extends "layouts/default.twig" %}
+{% set title="Оформление заказа" %}
+{% set bread = ["Главная", "Оформление заказа"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+		<div class="uk-container">
+			<h1 class="title-h1">Оформление заказа</h1>
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<div class="order">
+
+						<form action="" class="order-form default-form">
+
+							<fieldset class="section">
+								<div class="medium-title">Введите данные для заказа</div>
+								<div class="uk-grid">
+									<div class="uk-width-2-5">
+										<input type="email" placeholder="Ваш email">
+										<div class="form-subtitle">Для информировании о статусе заказа</div>
+									</div>
+									<div class="uk-width-2-5">
+										<input type="text" placeholder="Телефон*">
+										<div class="form-subtitle">Для уточнения деталей</div>
+									</div>
+								</div>
+							</fieldset>
+
+						</form>
+
+					</div>
+				</div>
+				<div class="uk-width-1-3@m">
+					<div class="scroll-block" uk-sticky="media: @m; bottom: .order">
+
+						<div class="medium-title">Состав заказа</div>
+						
+						<div class="order-list">
+							<div class="product-order">
+								<div class="product-order__img">
+									<a href=""><img data-src="img/media/basket-img-1.png" alt="" uk-img></a>
+								</div>
+								<div class="product-order__desc">
+									<div class="product-order__name"><a href="">Рюкзак Herschel Little America | Middle-Volume</a></div>
+									<div class="product-order__article">Код товара: 10501-03071-OS</div>
+									<div class="product-order__settings">
+										<div class="calc">
+											<span class="minus">-</span>
+											<input type="text" value="1">
+											<span class="plus">+</span>
+										</div>
+
+										<!-- <div class="product-order__sizes">Размер: <span class="val">XS</span></div> -->
+
+										<div class="product-order__prices">
+											<div class="old-price">7 980 р.</div>
+											<div class="current-price">3 470 Р.</div>
+										</div>
+									</div>
+								</div>
+								<a href="" class="remove-product js__remove-product icon-close"></a>
+							</div>
+
+							<div class="product-order">
+								<div class="product-order__img">
+									<a href=""><img data-src="img/media/basket-img-2.png" alt="" uk-img></a>
+								</div>
+								<div class="product-order__desc">
+									<div class="product-order__name"><a href="">Спортивная куртка Herschel Voyage</a></div>
+									<div class="product-order__article">Код товара: 10501-03071-OS</div>
+									<div class="product-order__settings">
+
+										<div class="calc">
+											<span class="minus">-</span>
+											<input type="text" value="1">
+											<span class="plus">+</span>
+										</div>
+
+										<div class="product-order__sizes">Размер: <span class="val">XS</span></div>
+
+										<div class="product-order__prices">
+											<div class="old-price">4 690 Р.</div>
+											<div class="current-price">2 090 Р.</div>
+										</div>
+
+									</div>
+								</div>
+								<a href="" class="remove-product js__remove-product icon-close"></a>
+							</div>
+
+						</div>
+
+						<form action="" class="send-form default-form">
+							<input type="text" name="text" placeholder="Промокод">
+							<button class="btn">Применить</button>
+						</form>
+
+						<ul class="total-list">
+							<li>
+								<span class="text">Итого 3 товара на сумму:</span>
+								<span class="separate"></span>
+								<span class="val">17 550 Р.</span>
+							</li>
+							<li>
+								<span class="text">Скидка:</span>
+								<span class="separate"></span>
+								<span class="val">4 050 Р.</span>
+							</li>
+							<li>
+								<span class="text">Скидка по промокоду:</span>
+								<span class="separate"></span>
+								<span class="val">2 050 Р.</span>
+							</li>
+							<li>
+								<span class="text">К оплате:</span>
+								<span class="separate"></span>
+								<span class="val">13 500 р.</span>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock content %}

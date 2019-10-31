@@ -187,6 +187,20 @@ label.color-checkbox {
 	}
 }
 
+.send-form {
+	position: relative;
+	max-width: 450px;
+	input {
+		padding-right: 176px !important;
+		width: 100%;
+	}
+	button {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
 /*______ Review form ______*/
 
 .review-form-wrapper {

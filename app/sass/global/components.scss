@@ -781,7 +781,7 @@
 	};
 	.attantion-icon {
 		position: absolute;
-		top: 36px;
+		top: 32px;
 		left: 2.5%;
 		display: block;
 		width: 18px;
@@ -833,6 +833,11 @@
 		@media (min-width: $tablet-w) {
 			padding-left: 3%;	
 		};
+	}
+	a {
+		&:hover {
+			color: $textHColor;
+		}
 	}
 }
 
@@ -919,6 +924,53 @@
 
 /*______ End UI Slider ______*/
 
+
+.social-list {
+	margin-bottom: 18px;
+	font-size: 0;
+	line-height: 1px;
+	a {
+		margin-right: 12px;
+		margin-bottom: 12px;
+		display: inline-block;
+		vertical-align: top;
+		@include icomoon;
+		font-size: 12px;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		text-align: center;
+		border-radius: 50%;
+		border: 1px solid $bgUIGray;
+		&:hover {
+
+			background: $textHColor;
+			&:before {
+				color: #ffffff;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+		&:before {
+			color: $textHColor;
+			line-height: 12px;
+		}
+		&.icon-vk {
+			font-size: 10px;
+		}
+		&.icon-facebook {
+			font-size: 16px;
+		}
+		&.icon-insta {
+			font-size: 16px;
+		}
+		&.icon-ok {
+			font-size: 16px;
+		}
+	}
+}
 
 
 /*______ END COMPONENTS ______*/
