@@ -4711,7 +4711,7 @@ main .basket {
 }
 
 .product-order__settings .calc {
-  margin-right: 30px;
+  margin-right: 12%;
 }
 
 .product-order__sizes {
@@ -6153,26 +6153,6 @@ label.color-checkbox .custom-checkbox:after {
 
 /*______ END FORMS ______*/
 
-@media (min-width: 0px) and (min-width: 640px) {
-  .review__top {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-  }
-
-  .review__top > div {
-    width: auto;
-    margin-right: 3.45%;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border: none;
-  }
-
-  .review__top > div:after {
-    display: block;
-  }
-}
-
 @media (min-width: 0px) {
   .separate-title {
     margin-bottom: 30px !important;
@@ -6651,6 +6631,24 @@ label.color-checkbox .custom-checkbox:after {
 
   .btn {
     padding: 16px 15px;
+  }
+
+  .review__top {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .review__top > div {
+    width: auto;
+    margin-right: 3.45%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  .review__top > div:after {
+    display: block;
   }
 
   .review__color-text {

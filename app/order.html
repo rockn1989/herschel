@@ -621,18 +621,82 @@
 
 						<form action="" class="order-form default-form">
 
-							<fieldset class="section">
+							<fieldset class="section section-auth">
 								<div class="medium-title">Введите данные для заказа</div>
-								<div class="uk-grid">
-									<div class="uk-width-2-5">
-										<input type="email" placeholder="Ваш email">
-										<div class="form-subtitle">Для информировании о статусе заказа</div>
-									</div>
-									<div class="uk-width-2-5">
-										<input type="text" placeholder="Телефон*">
-										<div class="form-subtitle">Для уточнения деталей</div>
+
+								<div class="form-row">
+									<div class="uk-grid">
+										<div class="uk-width-2-5">
+											<input type="email" placeholder="Ваш email">
+											<div class="form-subtitle">Для информировании о статусе заказа</div>
+										</div>
+										<div class="uk-width-2-5">
+											<input type="text" placeholder="Телефон*">
+											<div class="form-subtitle">Для уточнения деталей</div>
+										</div>
 									</div>
 								</div>
+
+								<div class="form-row auth-part">
+									<div class="uk-grid">
+										<div class="uk-width-1-1">
+											<!-- begin attantion-block -->
+											<div class="attantion-block">
+												<i class="attantion-icon">i</i>
+												<div class="attantion-block__inner">
+														<div class="attantion-block__text">
+															Возможно вы уже регистрировались на нашем сайте! Введите email и пароль, чтобы получить доступ к своим бонусам или <a href="" class="tooltip-link">восстановите</a> его, если забыли.
+														</div>
+												</div>
+											</div><!-- end attantion-block -->
+										</div>
+										<div class="uk-width-1-1">
+											<div class="send-form">
+												<input type="password" placeholder="Пароль*">
+												<button class="btn">Войти</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="form-row reg-part">
+									<div class="uk-grid">
+										<div class="uk-width-1-1">
+											<!-- begin attantion-block -->
+											<div class="attantion-block">
+												<i class="attantion-icon">i</i>
+												<div class="attantion-block__inner">
+														<div class="attantion-block__text">
+															Похоже мы вас не знаем :-( Давайте знакомиться! <a href="" class="tooltip-link">Зарегистрируйтесь</a> и копите бонусы от покупок и участвуйте в нашей программе лояльности.
+														</div>
+												</div>
+											</div><!-- end attantion-block -->
+										</div>
+										<div class="uk-width-1-1">
+											<input type="text" placeholder="Фамилия, имя, отчество*">
+											<div class="form-subtitle">Чтобы мы смогли обратиться к вам по имени</div>
+										</div>
+										<div class="uk-width-1-1">
+											<div class="mailing">
+												<label for="mailing" class="custom-checkbox-wrapper">
+													<input id="mailing" type="checkbox" checked>
+													<span class="custom-checkbox"></span>
+													<span class="custom-label">Я согласен получать рассылку с выгодными предложениями</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="form-reg">
+									<div class="uk-grid">
+										<div class="uk-width-1-1">
+											<input type="text" placeholder="Населенный пункт">
+											<div class="form-subtitle">Чтобы показать варианты доставки</div>
+										</div>
+									</div>
+								</div>
+
 							</fieldset>
 
 						</form>

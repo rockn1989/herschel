@@ -504,19 +504,19 @@
 					display: none;
 				}
 			}
-			@media (min-width: $mob-s) {
-				flex-wrap: nowrap;
-				&>div {
-					width: auto;
-					margin-right: 3.45%;
-					margin-bottom: 0;
-					padding-bottom: 0;
-					border: none;
-					&:after {
-						display: block;
-					}
+		};
+		@media (min-width: $mob-s) {
+			flex-wrap: nowrap;
+			&>div {
+				width: auto;
+				margin-right: 3.45%;
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border: none;
+				&:after {
+					display: block;
 				}
-			};
+			}
 		};
 	}
 	&__user {
