@@ -17,11 +17,11 @@
 
 								<div class="form-row">
 									<div class="uk-grid">
-										<div class="uk-width-2-5">
-											<input type="email" placeholder="Ваш email">
+										<div class="uk-width-2-5@s">
+											<input class="valid" type="email" placeholder="Ваш email">
 											<div class="form-subtitle">Для информировании о статусе заказа</div>
 										</div>
-										<div class="uk-width-2-5">
+										<div class="uk-width-2-5@s">
 											<input type="text" placeholder="Телефон*">
 											<div class="form-subtitle">Для уточнения деталей</div>
 										</div>
@@ -79,7 +79,7 @@
 									</div>
 								</div>
 								
-								<div class="form-reg">
+								<div class="form-row">
 									<div class="uk-grid">
 										<div class="uk-width-1-1">
 											<input type="text" placeholder="Населенный пункт">
@@ -89,7 +89,95 @@
 								</div>
 
 							</fieldset>
-
+							
+							<fieldset class="section section-order">
+								<div class="form-row">
+									<div class="medium-title">Способ доставки</div>
+									<div class="uk-grid">
+										<div class="uk-width-1-1">
+											<label for="delivery-1" class="custom-radio-wrapper">
+												<input type="radio" id="delivery-1" name="delivery" checked>
+												<span class="custom-radio"></span>
+												<span class="custom-label">Самовывоз</span>
+											</label>
+											<div class="form-subtitle">Бесплатно по 5 адресам в Москве показать варианты доставки</div>
+										</div>
+										<div class="uk-width-1-1">
+											<label for="delivery-2" class="custom-radio-wrapper">
+												<input type="radio" id="delivery-2" name="delivery">
+												<span class="custom-radio"></span>
+												<span class="custom-label">Курьером по Москве</span>
+											</label>
+											<div class="form-subtitle">Привезем завтра и бесплатно, потому что сумма вашего заказа больше 5 000 рублей.</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="delivery-map">
+										<div id="map"></div>
+									</div>
+								</div>
+							</fieldset>
+						
+							<fieldset>
+								<div class="form-row">
+									<div class="medium-title">Спосб оплаты</div>
+									<div class="uk-grid">
+										<div class="uk-width-1-1">
+											<label for="pay-type-1" class="custom-radio-wrapper">
+												<input type="radio" id="pay-type-1" name="pay-type" checked>
+												<span class="custom-radio"></span>
+												<span class="custom-label">Наличными или картой при получении</span>
+											</label>
+										</div>
+										<div class="uk-width-1-1">
+											<label for="pay-type-2" class="custom-radio-wrapper">
+												<input type="radio" id="pay-type-2" name="pay-type">
+												<span class="custom-radio"></span>
+												<span class="custom-label">Картой на сайте</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							
+							<fieldset>
+								<div class="form-row">
+									<div class="medium-title">Комментарии к заказу</div>
+									<textarea name="" id="" placeholder="Введите комментарий"></textarea>
+								</div>
+							</fieldset>
+							<fieldset class="uk-visible@m">
+								<div class="form-row">
+									<div class="total-section">
+										<ul class="total-list">
+											<li>
+												<span class="text">Итого 3 товара на сумму:</span>
+												<span class="separate"></span>
+												<span class="val">17 550 Р.</span>
+											</li>
+											<li>
+												<span class="text">Скидка:</span>
+												<span class="separate"></span>
+												<span class="val">4 050 Р.</span>
+											</li>
+											<li>
+												<span class="text">Скидка по промокоду:</span>
+												<span class="separate"></span>
+												<span class="val">2 050 Р.</span>
+											</li>
+											<li>
+												<span class="text">К оплате:</span>
+												<span class="separate"></span>
+												<span class="val">13 500 р.</span>
+											</li>
+										</ul>
+								</div>
+								<button type="submit" class="btn btn--modal-btn-black">Отправить заказ</button>
+								<div class="oferta-text uk-text-center">
+									Нажимая на кнопку «Отправить заказ», вы принимаете условия <a href="" class="tooltip-link">Публичной оферты</a>
+								</div>
+							</fieldset>
 						</form>
 
 					</div>
@@ -100,7 +188,7 @@
 						<div class="medium-title">Состав заказа</div>
 						
 						<div class="order-list">
-							<div class="product-order">
+							<div id="1" class="product-order">
 								<div class="product-order__img">
 									<a href=""><img data-src="img/media/basket-img-1.png" alt="" uk-img></a>
 								</div>
@@ -108,24 +196,58 @@
 									<div class="product-order__name"><a href="">Рюкзак Herschel Little America | Middle-Volume</a></div>
 									<div class="product-order__article">Код товара: 10501-03071-OS</div>
 									<div class="product-order__settings">
-										<div class="calc">
-											<span class="minus">-</span>
-											<input type="text" value="1">
-											<span class="plus">+</span>
+										<div class="settings-wrapper">
+											<div class="calc">
+												<span class="minus">-</span>
+												<input type="text" value="1">
+												<span class="plus">+</span>
+											</div>
 										</div>
 
-										<!-- <div class="product-order__sizes">Размер: <span class="val">XS</span></div> -->
-
-										<div class="product-order__prices">
-											<div class="old-price">7 980 р.</div>
-											<div class="current-price">3 470 Р.</div>
+										<div class="settings-wrapper">
+											<div class="product-order__prices">
+												<div class="old-price">7 980 р.</div>
+												<div class="current-price">3 470 Р.</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<a href="" class="remove-product js__remove-product icon-close"></a>
 							</div>
 
-							<div class="product-order">
+							<div id="2" class="product-order">
+								<div class="product-order__img">
+									<a href=""><img data-src="img/media/basket-img-2.png" alt="" uk-img></a>
+								</div>
+								<div class="product-order__desc">
+									<div class="product-order__name"><a href="">Спортивная куртка Herschel Voyage</a></div>
+									<div class="product-order__article">Код товара: 10501-03071-OS</div>
+									<div class="product-order__settings">
+										<div class="settings-wrapper">
+											<div class="calc">
+												<span class="minus">-</span>
+												<input type="text" value="1">
+												<span class="plus">+</span>
+											</div>
+										</div>
+
+										<div class="settings-wrapper">
+											<div class="product-order__sizes">Размер: <span class="val">XS</span></div>
+										</div>
+
+										<div class="settings-wrapper">
+											<div class="product-order__prices">
+												<div class="old-price">7 980 р.</div>
+												<div class="current-price">2 090 Р.</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<a href="" class="remove-product js__remove-product icon-close"></a>
+							</div>
+
+							<div id="3" class="product-order">
 								<div class="product-order__img">
 									<a href=""><img data-src="img/media/basket-img-2.png" alt="" uk-img></a>
 								</div>
@@ -134,24 +256,29 @@
 									<div class="product-order__article">Код товара: 10501-03071-OS</div>
 									<div class="product-order__settings">
 
-										<div class="calc">
-											<span class="minus">-</span>
-											<input type="text" value="1">
-											<span class="plus">+</span>
+										<div class="settings-wrapper">
+											<div class="calc">
+												<span class="minus">-</span>
+												<input type="text" value="1">
+												<span class="plus">+</span>
+											</div>
 										</div>
 
-										<div class="product-order__sizes">Размер: <span class="val">XS</span></div>
+										<div class="settings-wrapper">
+											<div class="product-order__sizes">Размер: <span class="val">XS</span></div>
+										</div>
 
-										<div class="product-order__prices">
-											<div class="old-price">4 690 Р.</div>
-											<div class="current-price">2 090 Р.</div>
+										<div class="settings-wrapper">
+											<div class="product-order__prices">
+												<div class="old-price"></div>
+												<div class="current-price">2 090 Р.</div>
+											</div>
 										</div>
 
 									</div>
 								</div>
 								<a href="" class="remove-product js__remove-product icon-close"></a>
 							</div>
-
 						</div>
 
 						<form action="" class="send-form default-form">
@@ -181,6 +308,13 @@
 								<span class="val">13 500 р.</span>
 							</li>
 						</ul>
+						
+						<div class="uk-hidden@m">
+							<button type="submit" class="btn btn--modal-btn-black">Отправить заказ</button>
+							<div class="oferta-text uk-text-center">
+								Нажимая на кнопку «Отправить заказ», вы принимаете условия <a href="" class="tooltip-link">Публичной оферты</a>
+							</div>
+						</div>
 
 					</div>
 

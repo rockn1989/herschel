@@ -773,6 +773,30 @@
 	padding: 30px 4% 30px 6%;
 	border-top: 1px solid $bgUIGray;
 	background-color: #f5f6f6;
+	&.two-colums {
+		.attantion-block__text {
+			@media (min-width: $mob-xs) {
+				margin-bottom: 20px;
+				width: 100%;
+			};
+			@media (min-width: $mob-s) {
+				margin-bottom: 0;
+				width: 48%;
+			};
+		}
+		.attantion-block__add-info {
+			@media (min-width: $mob-xs) {
+				width: 100%;
+			};
+			@media (min-width: $mob-s) {
+				width: 52%;
+				padding-left: 4%;
+			};
+			@media (min-width: $tablet-w) {
+				padding-left: 3%;	
+			};
+		}
+	}
 	@media (min-width: $mob-xs) {
 		padding-left: 10%;
 	};
@@ -793,9 +817,7 @@
 		border-radius: 50%;
 		background: $textColor;
 		font-style: normal;
-		@media (min-width: $mob-xs) {
-			//top: 8px;
-		};
+		@media (min-width: $mob-xs) {}
 	}
 	&__inner {
 		display: flex;
@@ -803,37 +825,16 @@
 		flex-wrap: wrap;
 	}
 	&__text {
-		
-		width: 48%;
-		@media (min-width: $mob-xs) {
-			margin-bottom: 20px;
-			width: 100%;
-		};
-		@media (min-width: $mob-s) {
-			margin-bottom: 0;
-			width: 48%;
-		};
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: .2px;
 		.price-text {
 			margin-bottom: 16px;
 			font-size: 18px;
 			line-height: 19px;
 		}
-		font-size: 14px;
-		line-height: 16px;
-		letter-spacing: .2px;
 	}
-	&__add-info {
-		@media (min-width: $mob-xs) {
-			width: 100%;
-		};
-		@media (min-width: $mob-s) {
-			width: 52%;
-			padding-left: 4%;
-		};
-		@media (min-width: $tablet-w) {
-			padding-left: 3%;	
-		};
-	}
+
 	a {
 		&:hover {
 			color: $textHColor;

@@ -5,11 +5,16 @@
 	input[type="email"],
 	input[type="password"],
 	input[type="tel"], {
-		padding: 17px;
+		padding: 17px 30px 17px 17px;
 		height: 48px;
 		font-size: 14px;
 		letter-spacing: .1px;
 		border: 1px solid $bgUIGray;
+		&.valid {
+			border-color: $textColor;
+			background: url('../img/ui/check-black.png') right 15px center no-repeat;
+			background-size: 9px 6px;
+		}
 	}
 	label.error {
 		display: block;
@@ -155,6 +160,65 @@ label.color-checkbox {
 			background-repeat: no-repeat;
 			background-position: center;
 		}
+	}
+}
+
+
+label.custom-radio-wrapper {
+	position: relative;
+	margin-bottom: 12px;
+	display: block;
+	cursor: pointer;
+	@include clearfix;
+	input[type="radio"] {
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		visibility: hidden;
+		&:checked {
+			~.custom-radio {
+				background: $bgUIBlack;
+				&:after {
+					background: url('../img/ui/check.png') center no-repeat;
+				}
+			}
+			~.custom-label {
+				color: $textHColor;
+			}
+		}
+	}
+	.custom-radio {
+		position: relative;
+		margin-right: 11px;
+		float: left;
+		display: block;
+		width: 16px;
+		height: 16px;
+		border: 2px solid $bgUIBlack;
+		border-radius: 50%;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 9px;
+			height: 6px;
+			background-size: 9px 6px;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.custom-label {
+		display: block;
+		overflow: hidden;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: .09px;
+		color: $textColor;
+		transition: color .3s ease;
 	}
 }
 
@@ -465,6 +529,89 @@ label.color-checkbox {
 }
 
 /*______ End Filter form ______*/
+
+
+
+
+/*______ Order Form ______*/
+
+.order-form {
+	.form-row {
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.attantion-block {
+		margin-bottom: 30px !important;
+	}
+	input {
+		width: 100%;
+		max-width: 436px;
+	}
+	.mailing {
+		margin-top: 22px;
+	}
+	fieldset {
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid $bgUIGray;
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+	.section-auth {
+
+	}
+	.custom-radio-wrapper {
+		margin-top: 30px;
+	}
+	textarea {
+		max-width: 436px;
+		border-color: $bgUIGray;
+	}
+}
+
+.form-subtitle {
+	margin-top: 15px;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: .09px;
+	@media (min-width: $mob-xs) {
+		margin-top: 10px;
+		margin-bottom: 15px !important;
+	};
+}
+
+.oferta-text {
+	margin-top: 30px;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.delivery-map {
+	border: 1px solid $bgUIGray;
+	@media (min-width: $mob-xs) {
+		height: 300px;
+	};
+	@media (min-width: $desk-w) {
+		width: 100%;
+		height: 400px;	
+	};
+	#map {
+		position: relative;
+		height: 100%;
+		max-width: 100%;
+		width: 100%;
+		&>* {
+			filter: grayscale(100%);
+		}
+	}
+}
+
+/*______ End Order Form ______*/
 
 
 /*______ END FORMS ______*/

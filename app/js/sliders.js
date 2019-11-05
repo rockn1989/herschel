@@ -190,7 +190,7 @@ $(function () {
 				breakpoint: 767,
 				settings: {
 					slidesToShow: 4,
-					vertical: false,
+					vertical: false
 				}
 			},
 		]

@@ -320,6 +320,11 @@
 		position: relative;
 		margin-left: auto;
 		width: 100%;
+		z-index: 110;
+		@media (min-width: $tablet-w) {
+			max-width: 520px;
+			margin: 0 auto;
+		};
 		&:after {
 			content: '';
 	    position: absolute;

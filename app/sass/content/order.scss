@@ -131,8 +131,9 @@
 .product-order {
 	position: relative;
 	margin-bottom: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 	border-bottom: 1px solid $bgUIGray;
+	font-size: 0;
 	@include clearfix;
 	.remove-product {
 		position: absolute;
@@ -190,7 +191,6 @@
 		align-items: center;
 		.calc {
 			margin-right: 12%;
-			//margin-bottom: 15px;
 		}
 	}
 	&__sizes {
@@ -205,15 +205,21 @@
 			letter-spacing: .1px;
 			color: $textColor;
 		}
-		&~ .product-order__prices {
-			margin-top: 15px;
-		}
 	}
 	&__prices {
 		font-size: 14px;
 		line-height: 15px;
 		.current-price {
 			font-weight: 500;
+		}
+	}
+	.settings-wrapper {
+		padding: 0 15px 15px 0;
+		@media (min-width: $tablet-w) {
+			padding: 0 22px 15px 0;
+		};
+		&:last-child {
+			padding-right: 0;
 		}
 	}
 }
