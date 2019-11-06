@@ -8,6 +8,7 @@
 	line-height: 14px;
 	letter-spacing: .1px;
 	color: #ffffff;
+	z-index: 690;
 	&>div {
 		margin-bottom: 5px;
 		padding: 2px 7px 4px 5px;
@@ -114,8 +115,10 @@
 		}
 		a {
 			position: relative;
-			display: block;
-			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 423px;
 			&:after {
 				content: '';
 		    position: absolute;

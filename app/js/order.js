@@ -7,7 +7,7 @@ $(function () {
 
 	$('.js__remove-product').on('click', function (e) {
 		e.preventDefault();
-		var $elementId = $(this).closest('.product-order').attr('id');
+		var $elementId = $(this).closest('.product-order, .product').attr('id');
 		
 		// Отправка запроса на удаление
 		$orderList.addClass('preload');

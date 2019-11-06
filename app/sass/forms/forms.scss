@@ -486,6 +486,7 @@ label.custom-radio-wrapper {
 	font-size: 0;
 	input[type="email"] {
 		border-right: none;
+		width: 100%;
 	}
 }
 
@@ -501,6 +502,16 @@ label.custom-radio-wrapper {
 		padding: 0;
 		border: none;
 		margin-bottom: 5px;
+		&:first-child {
+			.group-title {
+				@media (min-width: $mob-xs) {
+					padding-top: 0;
+				};
+				@media (min-width: $tablet-w) {
+					padding-top: 21px;
+				};
+			}
+		}
 	}
 	.btn-wrapper {
 		margin-top: 40px;

@@ -22,12 +22,14 @@
 	display: none;
 	background: #ffffff;
 	z-index: 980;
+	transform: translateY(-30px);
 	@media (min-width: $tablet-w) {
 		position: static;
 		padding: 0;
 		height: 100%;
 		border: none;
 		display: block !important;
+		transform: translateY(0);
 	};
 }
 
@@ -84,7 +86,7 @@
 		padding-right: 12%;
 	};
 	&-btn {
-		margin-bottom: 20px;
+		//margin-bottom: 20px;
 	}
 }
 
@@ -198,23 +200,15 @@
 
 /*______ Filter Menu ______*/
 
-/* .icon-triangle {
-	width: 0;
-	height: 0;
-	display: inline-block;
-	border-left: 6px solid $bgUIBlack;
-	border-bottom: 4px solid transparent;
-	border-top: 4px solid transparent;
-	transition: all .3s ease;
-	&.turn-on {
-		transform: rotate(90deg);
-	}
-} */
 
 .filter-menu {
-	@media (min-width: $desk-w) {
+	@media (min-width: $mob-xs) {
+		display: none;
+	};
+	@media (min-width: $tablet-w) {
 		padding-top: 29px;
 		padding-right: 12%;
+		display: block;
 	};
 	&__title-section {
 		position: relative;

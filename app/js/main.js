@@ -80,7 +80,7 @@ $(function() {
 
 	/*______ Валидация формы ______*/
 
-	if($('form').is('.default-form')) {
+/*	if($('form').is('.default-form')) {
 
 		$('.default-form').validate({
 			rules: {
@@ -93,7 +93,7 @@ $(function() {
 				email: "Некорректное имя почты",
 			},
 		});
-	};
+	};*/
 
 	if($('form').is('.review-form')) {
 		console.log(123123);

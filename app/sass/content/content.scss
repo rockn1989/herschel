@@ -228,6 +228,9 @@ main.main {
 			margin-bottom: 86px !important;
 		};
 		&__img {
+			a {
+				height: 309px;
+			}
 			img[data-src] {
 				overflow: hidden;
 				@media (min-width: $tablet-w) {
