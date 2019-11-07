@@ -17,7 +17,7 @@ $fontWeight: 400;
 $containerWidth: 1260px;
 $containerLargeWidth: 1400px;
 
-$textColor: var(--main-text-color);
+/* $textColor: var(--main-text-color);
 $textHColor: var(--main-text-color-hover);
 $textSColor: var(--second-text-color);
 $textSHColor: var(--second-text-color-hover);
@@ -25,3 +25,12 @@ $bgColor: var(--main-bg-color);
 $bgUIRed: var(--main-bg-ui-color);
 $bgUIBlack: var(--second-bg-ui-color);
 $bgUIGray: var(--separate-line-ui-color);
+ */
+$textColor:  #535558;
+$textHColor: #2b2d31;
+$textSColor: #2b2d31;
+$textSHColor: #606265;
+$bgColor: #f5f6f6;
+$bgUIRed: #F95759;
+$bgUIBlack: #2b2d31;
+$bgUIGray: #d5d5d5;

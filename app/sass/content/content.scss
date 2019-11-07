@@ -15,6 +15,19 @@ main.main {
 	};
 }
 
+.search-result-content {
+	.catalog-body {
+		margin-bottom: 0;
+	}
+	.uk-pagination {
+		@media (min-width: $mob-s) {
+			justify-content: center;
+		};
+		@media (min-width: $tablet-w) {
+			justify-content: flex-end;	
+		};
+	}
+}
 
 .products-list {
 	margin-bottom: 104px;

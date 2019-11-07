@@ -1,0 +1,33 @@
+{% extends "layouts/account.twig" %}
+{% set title="Мои данные" %}
+{% set bread = ["Личный кабинет", "Мои данные"] %}
+{% set main = false %}
+{% block content %}
+	<div class="user-form-wrapper">
+		<form action="" class="user-profile-form default-form">
+			<fieldset>
+				<input type="text" placeholder="Имя">
+			</fieldset>
+			<fieldset>
+				<input type="text" placeholder="Дата рождения">
+			</fieldset>
+			<fieldset>
+				<input type="tel" class="js__input-phone" placeholder="Телефон">
+			</fieldset>
+			<fieldset>
+				<input type="email" placeholder="Email">
+			</fieldset>
+		</form>
+
+		<div class="medium-title">Сменить пароль</div>
+		<form action="" class="user-profile-form default-form">
+			<fieldset>
+				<input type="password" placeholder="Новый пароль">
+			</fieldset>
+			<fieldset>
+				<input type="password" placeholder="Старый пароль">
+			</fieldset>
+			<button type="submit" class="btn btn--dark">Сохранить</button>
+		</form>
+	</div>
+{% endblock content %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% include "../includes/head.twig" %}
+<body>
+{% include "../includes/header.twig" %}
+
+{% if main == false %}
+	{% include '../includes/breadcrumbs.twig' %}
+{% endif %}
+
+<main class="main">
+	<div class="uk-container">
+		<div class="uk-grid">
+			<div class="uk-width-1-4@m">
+				{% include '../includes/left-sidebar.twig' %}
+			</div>
+			<div class="uk-width-3-4@m">
+				<!-- begin user-account -->
+				<div class="user-account">
+					<h1 class="title-h1">{{title}}</h1>
+					{% block content %}{% endblock %}
+				</div><!-- end user-account -->
+			</div>
+		</div>
+	</div>
+</main>
+
+{% include "../includes/footer.twig" %}
+
+{% include "../includes/modals.twig" %}
+
+{% include "../includes/scripts.twig" %}
+
+</body>
+</html>

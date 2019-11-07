@@ -1,0 +1,62 @@
+{% extends "layouts/default.twig" %}
+{% set title="Результат поиска" %}
+{% set bread = ["Главная"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+		<div class="uk-container">
+			<div class="title-h1">Результат поиска: <span class="val">Рюкзак</span></div>
+			<div class="search-result-content">
+				<div class="catalog-body">
+					
+					<div class="catalog-body__list">
+						<div class="uk-grid">
+							{% for item in 1..12 %}
+							<div class="uk-width-1-2@s uk-width-1-4@m">
+								<div class="card">
+									<div class="card-wrapper">
+										<div class="card__inner">
+											<div class="card__img">
+												<a href=""><img data-src="img/media/catalog/catalog-img-{{item}}-277x309.png" alt="" class="lazy"></a>
+											</div>
+											<div class="stocks">
+												<div class="new">new</div>
+												<div class="discount">-50%</div>
+											</div>
+											<div class="favorite-icon">
+												<a href="" class="icon-star"></a>
+											</div>
+											<div class="card__product-name"><a href="">Рюкзак Settlement Backpack Settlement Backpack</a></div>
+											<div class="card__price">
+												<div class="old-price">12 889 Р.</div>
+												<div class="current-price">6 890 Р.</div>
+											</div>
+											<a href="" class="card__toggle-btn icon-chevron-right js__show-preview-slider">Посмотреть все цвета</a>
+											<div class="card__bottom">
+												<div class="preview-slider">
+													<div class="slider">
+														{% for slide in 1..5 %}
+														    <div class="slide">
+														    	<img data-lazy="img/sliders/card-preview-img-{{slide}}-72x82.png" alt="">
+														    </div>
+														{% endfor %}
+													</div>
+												</div>
+												<a href="" class="btn btn--medium btn--dark" uk-toggle="target: #modal-fastview">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="separate-title">
+						<a href="" class="btn">Показать еще</a>
+					</div>
+					{% include "includes/pagination.twig" %}
+				</div><!-- end catalog-body -->
+			</div>
+		</div>
+	</main>
+{% endblock content %}

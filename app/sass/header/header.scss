@@ -126,6 +126,16 @@
 			left: 0;
 		}
 	}
+	&__exit {
+		@include icomoon;
+		position: relative;
+		padding-left: 22px;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
 	a {
 		display: block;
 		letter-spacing: .2px;

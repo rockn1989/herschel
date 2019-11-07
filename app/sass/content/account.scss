@@ -1,0 +1,37 @@
+/*______ Account ______*/
+
+.profile-nav {
+	@include list-reset;
+	@media (min-width: $tablet-w) {
+		padding-top: 20px;
+	};
+	li {
+		&.active {
+			a {
+				font-weight: 500;
+			}
+		}
+		a {
+			font-size: 14px;
+			line-height: 16px;
+			color: $textColor;
+			&:hover {
+				color: $textHColor;
+			}
+		}
+	}
+}
+
+.user-profile-form {
+	margin-bottom: 40px;
+	max-width: 550px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	input {
+		width: 100%;
+	}
+}
+
+
+/*______ End Account ______*/

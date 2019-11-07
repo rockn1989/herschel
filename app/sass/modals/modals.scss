@@ -95,4 +95,28 @@
 	}
 }
 
+
+.modal-auth {
+	.uk-modal-dialog {
+		width: 400px;	
+	}
+	.uk-modal-body {
+		@media (min-width: $mob-xs) {
+			padding: 30px 15px;
+		};
+		@media (min-width: $mob-s) {
+			padding: 30px;
+		};
+	}
+}
+
+.form-politics {
+	margin-top: 20px;
+	a {
+		font-size: 14px;
+		line-height: 16px;
+		color: $textColor;
+	}
+}
+
 /*______ END MODALS ______*/
