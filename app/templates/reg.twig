@@ -1,0 +1,44 @@
+{% extends "layouts/default.twig" %}
+{% set title="Регистрация" %}
+{% set bread = ["Личный кабинет", "Регистрация"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+		<div class="uk-container">
+			<h1 class="title-h1">Регистрация</h1>
+			<form action="" class="default-form reg-form uk-margin-auto">
+				<fieldset>
+					<input id="reg-login" type="text" name="reg-login" placeholder="Логин (мин. 3 символа)*">
+				</fieldset>
+				<fieldset>
+					<input id="reg-password" type="password" name="reg-password" placeholder="Пароль (мин. 6 символов)*">
+				</fieldset>
+				<fieldset>
+					<input id="reg-password-2" type="password" name="reg-password-2" placeholder="Повторите пароль*">
+				</fieldset>
+				<fieldset>
+					<input id="email" type="email" name="reg-email" placeholder="E-mail*">
+				</fieldset>
+				<fieldset>
+					<input id="reg-first-name" type="text" name="reg-first-name" placeholder="Имя">
+				</fieldset>
+				<fieldset>
+					<input id="reg-last-name" type="text" name="reg-last-name" placeholder="Фамилия">
+				</fieldset>
+				<fieldset>
+					<label for="politics" class="custom-checkbox-wrapper">
+						<input id="politics" type="checkbox">
+						<span class="custom-checkbox"></span>
+						<span class="custom-label">Я принимаю <a href="/politics" class="uk-text-bold">Политику конфиденциальности</a></span>
+					</label>
+					<label for="mailing" class="custom-checkbox-wrapper">
+						<input id="mailing" type="checkbox">
+						<span class="custom-checkbox"></span>
+						<span class="custom-label">Я хочу получать E-mail рассылку</span>
+					</label>
+				</fieldset>
+				<input type="submit" class="btn btn--dark" value="Зарегистрироваться">
+			</form>
+		</div>
+	</main>
+{% endblock content %}

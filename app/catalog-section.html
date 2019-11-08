@@ -1504,9 +1504,75 @@
 				<input type="submit" class="btn btn--dark" value="Войти">
 			</form>
 			<div class="form-politics">
-				<a href="" class="uk-float-left">Забыли пароль?</a>
-				<a href="" class="uk-float-right">Зарегистрироваться</a>
+				<a href="" class="uk-float-left" uk-toggle="#forgot-password">Забыли пароль?</a>
+				<a href="" class="uk-float-right" uk-toggle="#modal-reg">Зарегистрироваться</a>
 			</div>
+  	</div> 
+  </div>
+</div>
+
+<div id="modal-reg" class="modal-reg default-modal" uk-modal>
+	<div class="uk-modal-dialog">
+  	<button class="uk-modal-close" type="button" uk-close></button>
+  	<div class="uk-modal-body">
+  		<div class="title-h3">Регистрация</div>
+			<form action="" class="default-form reg-form">
+				<fieldset>
+					<input id="reg-login" type="text" name="reg-login" placeholder="Логин (мин. 3 символа)*">
+				</fieldset>
+				<fieldset>
+					<input id="reg-password" type="password" name="reg-password" placeholder="Пароль (мин. 6 символов)*">
+				</fieldset>
+				<fieldset>
+					<input id="reg-password-2" type="password" name="reg-password-2" placeholder="Повторите пароль*">
+				</fieldset>
+				<fieldset>
+					<input id="email" type="email" name="reg-email" placeholder="E-mail*">
+				</fieldset>
+				<fieldset>
+					<input id="reg-first-name" type="text" name="reg-first-name" placeholder="Имя">
+				</fieldset>
+				<fieldset>
+					<input id="reg-last-name" type="text" name="reg-last-name" placeholder="Фамилия">
+				</fieldset>
+				<fieldset>
+					<label for="politics" class="custom-checkbox-wrapper">
+						<input id="politics" type="checkbox">
+						<span class="custom-checkbox"></span>
+						<span class="custom-label">Я принимаю <a href="/politics" class="uk-text-bold">Политику конфиденциальности</a></span>
+					</label>
+					<label for="mailing" class="custom-checkbox-wrapper">
+						<input id="mailing" type="checkbox">
+						<span class="custom-checkbox"></span>
+						<span class="custom-label">Я хочу получать E-mail рассылку</span>
+					</label>
+				</fieldset>
+				<input type="submit" class="btn btn--dark" value="Зарегистрироваться">
+			</form>
+  	</div> 
+  </div>
+</div>
+
+<div id="forgot-password" class="modal-password default-modal" uk-modal>
+	<div class="uk-modal-dialog">
+  	<button class="uk-modal-close" type="button" uk-close></button>
+  	<div class="uk-modal-body">
+  		<div class="title-h3">Запрос пароля</div>
+  		<!-- текст взят с kozha.ru , есди что,можно заменить-->
+  		<div class="text">
+  			Если вы забыли пароль, введите логин или E-Mail.
+				Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
+  		</div>
+			<form action="" class="default-form password-form">
+				<fieldset>
+					<input id="forgot-login" type="text" name="forgot-login" placeholder="Логин">
+				</fieldset>
+				<fieldset><span class="separate-text">или</span></fieldset>
+				<fieldset>
+					<input id="forgot-email" type="email" name="forgot-email" placeholder="E-mail*">
+				</fieldset>
+				<input type="submit" class="btn btn--dark" value="Выслать">
+			</form>
   	</div> 
   </div>
 </div>

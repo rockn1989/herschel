@@ -228,6 +228,11 @@ $bgUIGray: var(--separate-line-ui-color);
   color: #535558;
 }
 
+.tooltip-link--medium {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .separate-title {
   position: relative;
   color: #535558;
@@ -291,6 +296,7 @@ $bgUIGray: var(--separate-line-ui-color);
   text-align: center;
   outline: none;
   border: 1px solid #2b2d31;
+  border-radius: 0;
   cursor: pointer;
   background-color: #ffffff;
   -webkit-transition: all .45s ease;
@@ -2373,6 +2379,14 @@ p:last-child {
 /*______ MAIN CONTENT ______*/
 
 .search-result-content .catalog-body {
+  margin-bottom: 0;
+}
+
+.not-found-page__text {
+  margin-bottom: 30px;
+}
+
+.not-found-page .catalog-body {
   margin-bottom: 0;
 }
 
@@ -5165,13 +5179,13 @@ main .basket {
   color: #2b2d31;
 }
 
+.user-form-wrapper:last-child .user-profile-form {
+  margin-bottom: 0;
+}
+
 .user-profile-form {
   margin-bottom: 40px;
   max-width: 550px;
-}
-
-.user-profile-form:last-child {
-  margin-bottom: 0;
 }
 
 .user-profile-form input {
@@ -5960,6 +5974,27 @@ main .basket {
   color: #535558;
 }
 
+.default-modal .text {
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.default-modal .default-form {
+  max-width: 550px;
+}
+
+.default-modal .default-form input[type="text"],
+.default-modal .default-form input[type="email"],
+.default-modal .default-form input[type="password"],
+.default-modal .default-form input[type="tel"] {
+  width: 100%;
+}
+
+.default-modal .default-form .btn {
+  max-width: 100%;
+}
+
 .modal-fastview .uk-modal-dialog {
   margin: 0 auto;
   width: 100%;
@@ -6014,6 +6049,10 @@ main .basket {
 }
 
 .modal-auth .uk-modal-dialog {
+  width: 400px;
+}
+
+.modal-password .uk-modal-dialog {
   width: 400px;
 }
 
@@ -6072,6 +6111,19 @@ main .basket {
   border: none;
   margin-bottom: 24px;
   line-height: 14px;
+}
+
+.default-form a {
+  color: #535558;
+}
+
+.default-form a:hover {
+  color: #2b2d31;
+}
+
+.default-form .separate-text {
+  font-size: 14px;
+  line-height: 16px;
 }
 
 label.custom-checkbox-wrapper {
@@ -6724,6 +6776,37 @@ label.custom-radio-wrapper .custom-label {
 
 /*______ End Auth form ______*/
 
+/*______ Reg form ______*/
+
+.reg-form,
+.password-form,
+.auth-form {
+  max-width: 550px;
+}
+
+.reg-form input[type="text"],
+.reg-form input[type="email"],
+.reg-form input[type="password"],
+.reg-form input[type="tel"],
+.password-form input[type="text"],
+.password-form input[type="email"],
+.password-form input[type="password"],
+.password-form input[type="tel"],
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="tel"] {
+  width: 100%;
+}
+
+.reg-form .btn,
+.password-form .btn,
+.auth-form .btn {
+  max-width: 100%;
+}
+
+/*______ End Reg form ______*/
+
 /*______ END FORMS ______*/
 
 @media (min-width: 0px) {
@@ -7214,6 +7297,10 @@ label.custom-radio-wrapper .custom-label {
     padding: 30px 15px;
   }
 
+  .modal-password .uk-modal-body {
+    padding: 30px 15px;
+  }
+
   .horizontal-form {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -7398,6 +7485,14 @@ label.custom-radio-wrapper .custom-label {
     justify-content: center;
   }
 
+  .not-found-page .uk-pagination {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
   .catalog .uk-pagination {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -7546,6 +7641,10 @@ label.custom-radio-wrapper .custom-label {
     padding: 30px;
   }
 
+  .modal-password .uk-modal-body {
+    padding: 30px;
+  }
+
   .review-form .rating-wrapper {
     height: 48px;
     border: none;
@@ -7674,6 +7773,14 @@ label.custom-radio-wrapper .custom-label {
   }
 
   .search-result-content .uk-pagination {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .not-found-page .uk-pagination {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -moz-box-pack: end;

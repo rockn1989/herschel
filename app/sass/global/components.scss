@@ -47,6 +47,10 @@
 	&:hover {
 		color: $textColor;
 	}
+	&--medium {
+		font-size: 16px;
+		line-height: 24px;
+	}
 }
 
 .separate-title {
@@ -127,6 +131,7 @@
 	text-align: center;
 	outline: none;
 	border: 1px solid $bgUIBlack;
+	border-radius: 0;
 	cursor: pointer;
 	background-color: #ffffff;
 	transition: all .45s ease;

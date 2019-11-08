@@ -14,6 +14,23 @@
 	    }
     }
 	}
+	.text {
+		margin-bottom: 15px;
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.default-form {
+		max-width: 550px;
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"] {
+			width: 100%;
+		}
+		.btn {
+			max-width: 100%;
+		}
+	}
 }
 
 .modal-fastview {
@@ -97,6 +114,20 @@
 
 
 .modal-auth {
+	.uk-modal-dialog {
+		width: 400px;	
+	}
+	.uk-modal-body {
+		@media (min-width: $mob-xs) {
+			padding: 30px 15px;
+		};
+		@media (min-width: $mob-s) {
+			padding: 30px;
+		};
+	}
+}
+
+.modal-password {
 	.uk-modal-dialog {
 		width: 400px;	
 	}

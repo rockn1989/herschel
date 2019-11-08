@@ -1,0 +1,26 @@
+{% extends "layouts/default.twig" %}
+{% set title="Вход" %}
+{% set bread = ["Личный кабинет", "Вход"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+		<div class="uk-container">
+		<h1 class="title-h1">Вход на сайт</h1>
+			<div class="user-profile-form uk-margin-auto">
+				<form action="" class="default-form auth-form">
+					<fieldset>
+						<input id="auth-name" type="text" name="auth-name" placeholder="Логин">
+					</fieldset>
+					<fieldset>
+						<input id="auth-password" type="password" name="auth-password" placeholder="Пароль">
+					</fieldset>
+					<input type="submit" class="btn btn--dark" value="Войти">
+				</form>
+				<div class="form-politics">
+					<a href="" class="uk-float-left" uk-toggle="#forgot-password">Забыли пароль?</a>
+					<a href="" class="uk-float-right" uk-toggle="#modal-reg">Зарегистрироваться</a>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock content %}

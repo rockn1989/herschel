@@ -22,12 +22,17 @@
 	}
 }
 
+.user-form-wrapper {
+	&:last-child {
+		.user-profile-form {
+			margin-bottom: 0;
+		}
+	}
+}
+
 .user-profile-form {
 	margin-bottom: 40px;
 	max-width: 550px;
-	&:last-child {
-		margin-bottom: 0;
-	}
 	input {
 		width: 100%;
 	}
