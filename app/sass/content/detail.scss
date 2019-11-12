@@ -518,6 +518,13 @@
 	.review__target {
 		display: none;
 	}
+	.review__text-wrapper {
+		max-height: 96px;
+		overflow: hidden;
+	}
+	.reivew__read-more {
+		margin-top: 15px;
+	}
 }
 
 /*______ End Product detail ______*/

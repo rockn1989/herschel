@@ -494,6 +494,8 @@ label.custom-radio-wrapper {
 
 .promo-form {
 	font-size: 0;
+	flex-basis: 350px;
+	max-width: 350px;
 	input[type="email"] {
 		border-right: none;
 		width: 100%;

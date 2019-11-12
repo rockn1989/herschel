@@ -59,7 +59,7 @@ $(function () {
 
 	function initSlickDesktop () {
 		$('.card').on('mouseenter', function () {
-			$(this).find('.card__bottom').slideDown('150');
+			$(this).find('.card__bottom').stop(true, true).slideDown('150');
 			var slider = $(this).find('.preview-slider .slider');
 			slider.slick({
 			infinite: false,
@@ -78,7 +78,7 @@ $(function () {
 		}).on('mouseleave', function () {
 			var slider = $(this).find('.preview-slider .slider');
 			slider.slick('destroy');
-			$(this).find('.card__bottom').slideUp('150');
+			$(this).find('.card__bottom').stop(true, true).slideUp('150');
 		});
 	};
 

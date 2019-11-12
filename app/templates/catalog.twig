@@ -236,7 +236,13 @@
 											<div class="card-wrapper">
 												<div class="card__inner">
 													<div class="card__img">
-														<a href=""><img data-src="img/media/catalog/catalog-img-{{item}}-277x309.png" alt="" class="lazy"></a>
+														<a href="">
+															<picture>
+																<source srcset="img/media/test-webp.webp" type="image/webp">
+																<source srcset="img/media/catalog/catalog-img-{{item}}-277x309.png" type="image/png">
+																<img src="img/media/catalog/catalog-img-{{item}}-277x309.png" alt="">
+															</picture>
+														</a>
 													</div>
 													<div class="stocks">
 														<div class="new">new</div>

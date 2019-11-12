@@ -43,6 +43,27 @@ $(function () {
 	});
 
 
+	/*______ Открытие/закрытие текста топ-комментария ______*/
+
+	var reviewWrapper = $('.top-review .review__text-wrapper'),
+		reviewWrapperHeight = $('.top-review .review__text-wrapper').outerHeight(),
+			reviewTextHeight = $('.top-review .review__text').outerHeight();
+
+	$('.js__toggle-text').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('open');
+
+		if(!reviewWrapper.hasClass('open')) {
+			reviewWrapper.css('maxHeight','100%');
+			reviewWrapper.addClass('open');
+
+		} else {
+			reviewWrapper.css('maxHeight', reviewTextHeight+'px');
+			reviewWrapper.removeClass('open');
+		}
+	});
+
 	/*______ Вывод кол-ва цветов ______*/
 
 	if($('.color').length >=5) {
@@ -106,4 +127,12 @@ $(function () {
 		$('.review-form-wrapper').stop(true, true).slideToggle('250');
 	});
 
+	function add(num) {
+		return function (num2) {
+			return function (num3) {
+				return num + num2 + num3;
+			}
+		}
+	}
+	console.log(add(3)(5)(5));
 });

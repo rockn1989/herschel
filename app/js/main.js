@@ -156,7 +156,7 @@ $(function() {
 		effectTime: 1000,
 		threshold: 0,
 		visibleOnly: true,
-		placeholder: "../img/preloader.gif",
+		placeholder: "../img/ui/preloader.gif",
 		onError: function(element) {
 				console.log('error loading ' + element.data('src'));
 		}
@@ -167,6 +167,10 @@ $(function() {
 	
 	objectFitImages();
 
+
+	/*______ Полифил для Picture ______*/
+
+	document.createElement("picture");
 
 	/*______ Полифил для SVG ______*/
 
