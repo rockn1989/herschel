@@ -78,7 +78,7 @@ $(function () {
 		}).on('mouseleave', function () {
 			var slider = $(this).find('.preview-slider .slider');
 			slider.slick('destroy');
-			$(this).find('.card__bottom').stop(true, true).slideUp('150');
+			$(this).find('.card__bottom').css('display', 'none');
 		});
 	};
 
@@ -169,6 +169,7 @@ $(function () {
 		infinity: true,
 		centerMode: false,
 		lazyLoad: 'ondemand',
+		focusOnSelect: true,
 		vertical: true,
 		prevArrow: '<div class="btn-slide slick-prev"><i class="icon-chevron-left"></i></div>',
 		nextArrow: '<div class="btn-slide slick-next"><i class="icon-chevron-right"></i></div>',

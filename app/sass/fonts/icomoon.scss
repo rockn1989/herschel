@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('../fonts/icomoon/icomoon.ttf?hbsssu') format('truetype'),
-    url('../fonts/icomoon/icomoon.woff?hbsssu') format('woff'),
-    url('../fonts/icomoon/icomoon.svg?hbsssu#icomoon') format('svg');
+    url('../fonts/icomoon/icomoon.ttf?ivailk') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?ivailk') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?ivailk#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -107,4 +107,7 @@
 }
 .icon-ok:before {
   content: "\e919";
+}
+.icon-telegram:before {
+  content: "\e91a";
 }
