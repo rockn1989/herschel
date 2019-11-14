@@ -24,7 +24,7 @@ body {
 		height: 100vh;
 		&:after {
 			content: '';
-			position: absolute;
+			position: fixed;
 			top: 0;
 			left: 0;
 			right: 0;
@@ -39,6 +39,103 @@ body {
 		}
 	}
 }
+
+.preloader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: #ffffff;
+	transition: all .3s ease;
+	.preloader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		max-width: 600px;
+		max-height: 600px;
+		svg {
+			transform: scale(0.9);
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			transition: transform .7s, opacity .7s ease-in;
+			path#logo-name {
+				 stroke: #000000;
+				 stroke-width: 0;
+				 fill: #000000;
+				 opacity: 1;
+			}
+		}
+	}
+	&.loading {
+		svg {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	&.loaded {
+		z-index: -1;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@supports (stroke-dasharray: 1800) {
+	.preloader-wrapper {
+		.preloader {
+			svg {
+				path#logo-name {
+					 stroke-width: 0;
+					 fill: transparent;
+					 stroke-dasharray: 1800;
+					 opacity: 0;
+				}
+			}
+		}
+		&.loading {
+			svg {
+				opacity: 1;
+				transform: scale(1);
+				path#logo-name {
+					fill: rgba(0, 0, 0, 1);
+					stroke-width: 0;
+					animation: preloader 3s cubic-bezier(0, 0.23, 1, .1) forwards;
+				}
+			}
+		}
+	}
+
+	@keyframes preloader {
+		0% {
+			opacity: 0;
+			fill: none;
+			stroke-dashoffset: 1800; 
+			stroke-width: 1;
+		}
+		30% {
+			opacity: 1;
+			fill: none;
+			stroke-dashoffset: 1800;
+		}
+		90% {
+			fill: rgba(0, 0, 0, 0);
+		}
+		100% {
+			opacity: 1;
+			fill: rgba(0, 0, 0, 1);
+			stroke-dashoffset: 0;
+			stroke-width: 0; 
+		}
+	}
+
+}
+
+
 
 * {
   box-sizing: border-box;

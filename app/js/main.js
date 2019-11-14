@@ -2,6 +2,12 @@
 
 $(function() {	
 
+	$('.preloader-wrapper').addClass('loading');
+	let timer = setTimeout(function () {
+		$('.preloader-wrapper').addClass('loaded')
+		clearInterval(timer);
+	}, 3500);
+
 	/*______ Форма поиска декстоп ______*/
 
 	$('.js__toggle-search').on('click', function (e) {

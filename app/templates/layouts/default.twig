@@ -2,6 +2,9 @@
 <html lang="ru">
 {% include "../includes/head.twig" %}
 <body>
+{% if main == true %}
+	{% include '../includes/preloader.twig' %}
+{% endif %}
 {% include "../includes/header.twig" %}
 
 {% if main == false %}

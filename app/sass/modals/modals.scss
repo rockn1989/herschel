@@ -31,9 +31,32 @@
 			max-width: 100%;
 		}
 	}
+	.uk-modal-body {
+		@media (min-width: $mob-xs) {
+			padding: 30px 15px;
+		};
+		@media (min-width: $mob-s) {
+			padding: 30px;
+		};
+	}
+	.uk-modal-title {
+		margin-bottom: 20px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+
+.small-modal {
+	.uk-modal-dialog {
+		width: 400px;
+	}
 }
 
 .modal-fastview {
+	.product-detail {
+		margin-top: 0;
+		border-bottom: none;
+	}
 	.uk-modal-dialog {
 		margin: 0 auto;
 		width: 100%;
@@ -42,7 +65,7 @@
 			max-width: 100%;
 		}
 		.uk-close {
-	    top: -30px;
+	    top: 30px;
 	    right: 30px;
 		}
 	}
@@ -143,6 +166,8 @@
 
 .form-politics {
 	margin-top: 20px;
+	font-size: 14px;
+	line-height: 16px;
 	a {
 		font-size: 14px;
 		line-height: 16px;
