@@ -238,6 +238,8 @@ main.main {
 	&-body {
 		margin-bottom: 89px;
 		&__list {
+			position: relative;
+			z-index: 300;
 			@media (min-width: $mob-xs) {
 				margin-bottom: 40px;
 			};
@@ -250,7 +252,7 @@ main.main {
 		}
 	}
 	.card {
-		max-height: 390px;
+		max-height: 380px;
 		@media (min-width: $mob-xs) {
 			margin-bottom: 115px !important;
 		};
@@ -285,7 +287,10 @@ main.main {
 	}
 }
 
-
+.js__ajax-pagination {
+	position: relative;
+	z-index: 200;
+}
 
 /*______ Subcategories ______*/
 

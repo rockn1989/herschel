@@ -62,6 +62,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 1px;
+	z-index: 200;
 	@media (min-width: $mob-xs) {
 		margin-bottom: 30px !important;
 	};
@@ -415,12 +416,20 @@
 
 .uk-pagination {
 	&>* {
-		padding-left: 30px;
+		@media (min-width: $mob-xs) {
+			padding-left: 15px;
+		};
+		@media (min-width: $mob-s) {
+			padding-left: 20px;
+		};
+		@media (min-width: $tablet-w) {
+			padding-left: 30px;
+		};
 	}
 	li {
 		&.uk-active {
 			&>* {
-				color: $textColor;
+				color: $bgUIGray;
 			}
 		}
 		span, a {
@@ -605,6 +614,7 @@
 }
 
 .rating {
+	width: 100%;
 	max-width: 75px;
 	input[type="radio"] {
 		position: absolute;

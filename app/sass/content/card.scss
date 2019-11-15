@@ -38,10 +38,18 @@
 	@media (min-width: $tablet-w) {
 		margin-bottom: 86px !important;
 		padding: 0;
-		max-height: 520px;
+		max-height: 500px;
 	};
 	&:hover {
 		z-index: 800;
+		.card-wrapper {
+			@media (min-width: $tablet-w) {
+				outline-offset: 10px;
+				outline-width: 1px;
+				outline-color: $bgUIGray;
+				outline-style: solid;
+			};
+		}
 	}
 	&-wrapper {
 		position: relative;

@@ -15,8 +15,15 @@
 			background: url('../img/ui/check-black.png') right 15px center no-repeat;
 			background-size: 9px 6px;
 		}
+		&.error {
+			border-color: red;
+			background: url('../img/ui/close-red.svg') right 15px center no-repeat;
+			background-size: 9px 6px;
+		}
 	}
 	label.error {
+		margin-top: 10px;
+		color: red;
 		display: block;
 		font-size: 12px;
 	}

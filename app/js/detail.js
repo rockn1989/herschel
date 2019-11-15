@@ -127,12 +127,4 @@ $(function () {
 		$('.review-form-wrapper').stop(true, true).slideToggle('250');
 	});
 
-	function add(num) {
-		return function (num2) {
-			return function (num3) {
-				return num + num2 + num3;
-			}
-		}
-	}
-	console.log(add(3)(5)(5));
 });

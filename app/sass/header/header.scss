@@ -532,6 +532,16 @@
 			}
 		}
 	}
+	a.icon-pack {
+		@include icomoon;
+		position: relative;
+		padding-left: 31px;
+		&:before {
+	    position: absolute;
+	    top: 5px;
+	    left: 0;
+		}
+	}
 }
 
 .uk-panel__bottom {

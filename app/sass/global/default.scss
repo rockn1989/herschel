@@ -49,6 +49,9 @@ body {
 	z-index: 999;
 	background: #ffffff;
 	transition: all .3s ease;
+	@media (max-width: 959px) {
+		display: none;
+	};
 	.preloader {
 		position: absolute;
 		top: 50%;
