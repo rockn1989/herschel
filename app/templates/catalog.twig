@@ -195,34 +195,59 @@
 						<!-- begin catalog-header -->
 						<div class="catalog-header">
 							<h1 class="title-h1">Мужские рюкзаки</h1>
+								<div class="catalog-bar">
+									<div class="uk-grid">
+										<div class="uk-width-3-5 uk-visible@m">
+											<div class="tags-list-wrapper">
+												<ul class="tags-list"><!-- Start tags-list -->
+													{% for item in 0..5 %}
+													<li>
+														<a href="">Для ноутбука <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													<li>
+														<a href="">Ранцы <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													<li>
+														<a href="">Городской <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													<li>
+														<a href="">С ремнями <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													<li>
+														<a href="">Little America <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													<li class="active">
+														<a href="">Для путешествий <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													<li>
+														<a href="">С пряжками <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													<li>
+														<a href="">Все теги <i class="icon-close js__toggle-activity"></i></a>
+													</li>
+													{% endfor %}
+												</ul><!-- end tags-list -->
+											</div>
+										</div>
+										<div class="uk-width-2-5@m">
+											<!-- begin sort-panel -->
+											<div class="sort-panel">
+												<div class="custom-select">
+													<div class="custom-select__label">Сортировать по:</div>
+													<select name="" id="" class="js__custom-select" data-theme="default">
+														<option value="">Популярное</option>
+														<option value="">По возрастанию цены</option>
+														<option value="">По убыванию цены</option>
+														<option value="">По новинкам</option>
+														<option value="">По скидке</option>
+													</select>
+												</div>
+											</div><!-- end sort-panel -->
+										</div>
+									</div>
+								</div>
+							</div>
 							
-							<!-- begin tags-list -->
-							<ul class="tags-list">
-								<li>
-									<a href="">Для ноутбука <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-								<li>
-									<a href="">Ранцы <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-								<li>
-									<a href="">Городской <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-								<li>
-									<a href="">С ремнями <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-								<li>
-									<a href="">Little America <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-								<li class="active">
-									<a href="">Для путешествий <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-								<li>
-									<a href="">С пряжками <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-								<li>
-									<a href="">Все теги <i class="icon-close js__toggle-activity"></i></a>
-								</li>
-							</ul><!-- end tags-list -->
 						</div><!-- begin catalog-header -->
 						
 						<!-- begin catalog-body -->

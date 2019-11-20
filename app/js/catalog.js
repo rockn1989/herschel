@@ -1,5 +1,58 @@
 $(function () {
 
+	/*______ Показать/скрыть список тегов ______*/
+
+	var targetBlockHeight = $('.js__target-tag-list').height(),
+			tagListHeight = $('.tags-list').outerHeight();
+
+	var DEFAULT_HEIGHT  = 34;
+
+	if(tagListHeight > DEFAULT_HEIGHT) {
+		$('.js__toggle-tag-list').css('display', 'inline-block')
+		$('.js__toggle-tag-list').on('click', function (e) {
+			e.preventDefault();
+			if(!$(this).hasClass('open')) {
+				$(this)
+					.addClass('open')
+					.text('Скрыть')
+					.prev('.js__target-tag-list')
+					.css('height', 'auto');
+			} else {
+				$(this)
+					.removeClass('open')
+					.text('Показать еще')
+					.prev('.js__target-tag-list')
+					.css('height' , targetBlockHeight+'px');
+			};
+
+		});
+	};
+
+
+	
+	/*______ Tags scrollbar ______*/
+
+	$('.tags-list-wrapper').mCustomScrollbar({
+			axis:"x",
+			autoExpandScrollbar:true,
+			theme: "light-3",
+			advanced:{autoExpandHorizontalScroll:true}
+		});
+
+	/*______ End Tags scrollbar ______*/
+
+
+	/*______ Custom select ______*/
+
+	$.each($('.js__custom-select'), function (i, el) {
+		$(el).select2({
+			minimumResultsForSearch: -1,
+			dropdownPosition: 'below',
+			theme: $(el).attr('theme')
+		});
+	});	
+
+	/*______ End Custom select ______*/
 
 	$('#ui-slider').slider({
 		range: true,

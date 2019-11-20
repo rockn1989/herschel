@@ -70,6 +70,16 @@
 			max-width: 100%;
 		}
 	}
+	&__number {
+		margin-bottom: 5px;
+		padding: 2px 4px;
+		display: inline-block;
+		vertical-align: top;
+		color: #ffffff;
+		font-size: 12px;
+		line-height: 14px;
+		background: $bgUIRed;
+	}
 	&__desc {
 		overflow: hidden;
 	}

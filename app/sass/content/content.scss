@@ -186,11 +186,44 @@ main.main {
 
 /*______ Catalog ______*/
 
+.catalog-bar {
+	margin-bottom: 15px;
+}
+
+.sort-panel {
+	display: flex;
+	width: 100%;
+	@media (min-width: $tablet-w) {
+		justify-content: flex-end;
+	};
+	.custom-select {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+.tags-list-wrapper {
+	margin-bottom: 35px;
+	max-width: 600px;
+	height: 34px;
+	overflow: hidden;
+	&.mCustomScrollbar {
+		height: auto;
+		overflow: auto;
+	}
+	@media (min-width: $mob-xs) {
+		display: none;
+	};
+	@media (min-width: $tablet-w) {
+		display: block;
+	};
+}
+
 .tags-list {
 	@include list-reset;
-	margin-bottom: 35px;
 	font-size: 0;
 	line-height: 0;
+	width: 100%;
 	li {
 		margin-right: 10px;
 		margin-bottom: 10px;
@@ -232,6 +265,11 @@ main.main {
 }
 
 .catalog {
+	.show-more {
+		margin-top: 10px;
+		margin-left: 12px;
+		display: none;
+	}
 	.separate-title {
 		margin-bottom: 30px;
 	}
