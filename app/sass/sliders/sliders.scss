@@ -225,6 +225,9 @@
 			width: 71px;
 			text-align: center;
 			outline: none;
+			&:hover {
+				cursor: pointer;
+			}
 			&:focus {
 				outline: none;
 			}
@@ -380,6 +383,9 @@
 		}
 		.slide {
 			outline: none;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 	.slider__arrows {
@@ -514,6 +520,9 @@
 		outline: none;
 		&:focus {
 			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
 		}
 		@media (min-width: $mob-xs) {
 			margin: 0 5px;

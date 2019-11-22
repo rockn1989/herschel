@@ -58,12 +58,14 @@
 	&__img {
 		margin-right: 30px;
 		width: 72px;
-		height: 81px;
 		float: left;
 		a {
 			position: relative;
-			display: block;
-			text-align: center;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 81px;
 			@include img-gradient;
 		}
 		img {
@@ -164,9 +166,12 @@
 		margin-right: 20px;
 		float: left;
 		width: 72px;
-		height: 81px;
 		a {
-			display: block;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 81px;
 			@include img-gradient;
 			img {
 				max-width: 100%;
@@ -240,7 +245,35 @@
 	}
 }
 
+.bx-sls .bx-ui-sls-container {
+	height: 48px;
+}
 
+.bx-sls .dropdown-icon {
+	top: 17px;
+}
+
+.bx-sls .bx-ui-sls-clear {
+	top: 8px;
+}
+
+.bx-sls .bx-ui-sls-pane {
+	border-top: none;
+	top: 49px;
+}
+
+#boxberry-map {
+	a {
+		&:hover {
+			color: #ffffff;
+		}
+	}
+}
+
+.full-width {
+	width: 100% !important;
+	max-width: 100% !important;
+}
 
 /*______ Events ______*/
 

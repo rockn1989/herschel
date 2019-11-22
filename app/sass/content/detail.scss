@@ -439,8 +439,10 @@
 			position: relative;
 			margin-right: 10px;
 			margin-bottom: 10px;
-			display: inline-block;
-			vertical-align: top;
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+			height: 90px;
 			border: 1px solid transparent;
 			cursor: pointer;
 			transition: border-color .3s ease;

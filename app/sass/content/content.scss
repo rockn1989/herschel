@@ -533,6 +533,13 @@ main.main {
 
 /*______ End Delivery Type ______*/
 
-
+.contacts-map {
+	@media (min-width: $mob-xs) {
+		margin-top: 40px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-top: 0;
+	};
+}
 
 /*______ END MAIN CONTENT ______*/

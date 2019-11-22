@@ -184,12 +184,14 @@
 		}
 	}
 	.preview-slider {
-		/* margin-top: 22px; */
-		padding-top: 22px;
-		padding-bottom: 22px;
+		padding: 22px 0;
+		.slide {
+			&:hover {
+				cursor: pointer;
+			}
+		}
 	}
 	.btn {
-		/* margin-top: 15px; */
 		max-width: 100%;
 		@media (min-width: $mob-xs) {
 			display: none;

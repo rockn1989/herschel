@@ -8,8 +8,7 @@
 	flex-wrap: wrap;
 	&>* {
 		padding-left: 30px;
-	}
-	
+	}	
 }
 
 .round-link {
@@ -169,9 +168,7 @@
 	&--big {
 		max-width: 277px;
 		@media (min-width: $tablet-w) {
-			
 			padding: 24px 34px;
-			/* height: 64px; */
 		};
 	}
 	&--favorite {

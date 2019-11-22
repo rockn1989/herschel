@@ -20,6 +20,23 @@
 			background: url('../img/ui/close-red.svg') right 15px center no-repeat;
 			background-size: 9px 6px;
 		}
+		&.disabled {
+			border-color: $bgUIGray;
+			background: #f5f6f6;
+			user-select: none;
+			cursor: default;
+			outline: none;
+			&::placeholder {
+				color: $textColor;
+			}
+		}
+		&.string-input {
+			border: none;
+			background: transparent;
+			user-select: none;
+			cursor: default;
+			outline: none;
+		}
 	}
 	label.error {
 		margin-top: 10px;
@@ -611,6 +628,9 @@ label.custom-radio-wrapper {
 	font-size: 12px;
 	line-height: 14px;
 	letter-spacing: .09px;
+	&:empty {
+		display: none;
+	}
 	@media (min-width: $mob-xs) {
 		margin-top: 10px;
 		margin-bottom: 15px !important;
