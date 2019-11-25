@@ -286,6 +286,11 @@
 														<div class="preview-slider">
 															<div class="slider">
 																{% for slide in 1..5 %}
+																		{% if slide == 3 %}
+																	    <div class="slide disabled">
+																	    	<img data-lazy="img/sliders/card-preview-img-{{slide}}-72x82.png" alt="">
+																	    </div>
+																		{% endif %}
 																    <div class="slide">
 																    	<img data-lazy="img/sliders/card-preview-img-{{slide}}-72x82.png" alt="">
 																    </div>

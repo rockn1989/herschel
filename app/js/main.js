@@ -191,8 +191,9 @@ $(function() {
 
 	document.createElement("picture");
 
-	/*______ Полифил для SVG ______*/
 
-	/*svg4everebody();*/
+	/*______ Timeline ______*/
+
+	$('.timeline').timeline();
 
 });
