@@ -442,6 +442,7 @@
 			display: flex !important;
 			justify-content: center;
 			align-items: center;
+			max-width: 72px;
 			height: 90px;
 			border: 1px solid transparent;
 			cursor: pointer;
@@ -458,8 +459,25 @@
 		    z-index: 999;
 		    transition: background-color .3s ease;
 			}
+			img {
+				max-width: 100%;
+			}
 			&.checked {
 				border-color: $textColor;
+			}
+			&.disabled {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					display: block;
+					width: 15px;
+					height: 15px;
+					background: transparent url('../img/icon-svg/disabled.svg') center no-repeat;
+					background-size: 100%;
+					z-index: 600;
+				}
 			}
 			img[data-src] {
 				width: 72px;

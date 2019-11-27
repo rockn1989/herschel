@@ -1,11 +1,19 @@
 /*______ Typography ______*/
 
 h1, .title-h1 {
-	margin-bottom: 40px;
-	padding-bottom: 20px;
-	font-size: 42px;
-	line-height: 46px;
 	border-bottom: 1px solid $textHColor;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+		font-size: 30px;
+		line-height: 36px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 40px;
+		padding-bottom: 20px;
+		font-size: 42px;
+		line-height: 46px;
+	};
 }
 
 h2, .title-h2 {
@@ -28,12 +36,16 @@ h4, .title-h4 {
 	letter-spacing: .13px;
 }
 
+.underline {
+	padding-bottom: 20px;
+	border-bottom: 1px solid $textHColor;
+}
 
-.small-title {
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 15px;
-  letter-spacing: .1px;
+.big-title {
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	font-size: 64px;
+	line-height: 64px;
 }
 
 .medium-title {
@@ -43,6 +55,14 @@ h4, .title-h4 {
 	line-height: 21px;
 	letter-spacing: .1px;
 }
+
+.small-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: .1px;
+}
+
 
 ul.disc-list {
 	@include list-reset;
@@ -113,5 +133,24 @@ p {
 	line-height: 20px;
 	font-weight: 500;
 }
+
+.italic {
+	font-family: $secondFont;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.text-pd-left {
+	@media (min-width: $tablet-w) {
+		padding-left: 15%;
+	};
+}
+
+.text-pd-right {
+	@media (min-width: $tablet-w) {
+		padding-right: 15%;
+	};
+}
+
 
 /*______ End Typography ______*/

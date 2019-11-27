@@ -552,6 +552,54 @@ main.main {
 	height: 310px;
 }
 
+.history-section {
+	margin-bottom: 60px;
+	@media (min-width: $tablet-w) {
+		margin-bottom: 100px;
+	};
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&__img {
+		position: relative;
+		margin: 10px 0;
+		min-height: 100%;
+		.big-title {
+			position: absolute;
+			top: -44px;
+			margin: 0;
+			padding: 0;
+			@media (min-width: $mob-xs) {
+				position: static;
+				margin-bottom: 20px;
+			};
+			@media (min-width: $tablet-w) {
+				position: absolute;
+				margin-bottom: 0;
+			};
+		}
+	}
+	&__text {
+		@media (min-width: $mob-xs) {
+			margin-top: 30px;
+		};
+		@media (min-width: $tablet-w) {
+			margin-top: 0;
+		};
+		&.border-right {
+			@media (max-width: $tablet-w) {
+				border: none;
+			};
+		}
+	}
+	.title-h1 {
+		@media (max-width: $tablet-w) {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		};
+	}
+}
+
 /*______ End History page ______*/
 
 

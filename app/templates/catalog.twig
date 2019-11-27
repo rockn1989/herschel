@@ -149,7 +149,7 @@
 										<div class="group-title">Цвета</div>
 										<div class="group-list color-list">
 											{% for j in 10..21 %}
-											<label for="{{j}}" class="color-checkbox">
+											<label for="{{j}}" class="color-checkbox" uk-tooltip="title: Название цвета; pos: right">
 												<input id="{{j}}" type="checkbox">
 												<span class="custom-checkbox" style="background-color: #000{{j}}0"></span>
 											</label>

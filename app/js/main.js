@@ -2,17 +2,6 @@
 
 $(function() {	
 
-/*	function camelcase (str) {
-		let newStr = str.split('-').map((item) => {
-			let upperWord = item.replace(item.charAt(0), item.charAt(0).toUpperCase());
-			return upperWord;
-		}).join('');
-		return newStr;
-	};
-
-	console.log(camelcase('very-big-string'));*/
-
-
 	if($(window).outerWidth() >= 960) {
 		$('.preloader-wrapper').addClass('loading');
 		let timer = setTimeout(function () {
