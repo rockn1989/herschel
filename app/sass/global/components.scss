@@ -30,7 +30,7 @@
 
 .tooltip-link {
 	position: relative;
-	font-size: 12px;
+	font-size: 14px;
 	letter-spacing: .2px;
 	color: $textHColor;
 	&:after {
@@ -510,7 +510,7 @@ table.default-table {
 		display: inline-block;
 		vertical-align: top;
 		color: $textColor;
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 14px;
 		letter-spacing: 0.2px;
 		&:hover {
@@ -676,14 +676,14 @@ table.default-table {
 		color: $textHColor;
 	}
 	&__date {
-		font-size: 12px;
-		line-height: 13px;
+		font-size: 14px;
+		line-height: 15px;
 		letter-spacing: .09px;
 	}
 	&__label {
 		margin-right: 17px;
-		font-size: 12px;
-		line-height: 14px;
+		font-size: 14px;
+		line-height: 16px;
 		letter-spacing: .09px;
 	}
 	&__rating {
@@ -1363,6 +1363,36 @@ figure {
 .uk-tooltip {
 	color: $textColor;
 	background: #F6F7F8;
+}
+
+.disabled-element {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: transparent url('../img/icon-svg/disabled.svg') center no-repeat;
+	background-size: 100%;
+	z-index: 600;
+}
+
+.bg-gray {
+	position: relative;
+	padding: 25px 0 !important;
+	background: $bgColor;
+	border: none !important;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 100%;
+		width: 100%;
+		min-width: 100vw;
+		height: 100%;
+		display: block;
+		background: $bgColor;
+	}
 }
 
 /*______ END COMPONENTS ______*/

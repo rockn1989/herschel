@@ -22,8 +22,8 @@
 .order-delivery {
 	margin-bottom: 30px;
 	padding-bottom: 30px;
-	font-size: 12px;
-	line-height: 14px;
+	font-size: 14px;
+	line-height: 16px;
 	letter-spacing: .09px;
 	border-bottom: 1px solid $bgUIGray;
 }
@@ -86,7 +86,7 @@
 		overflow: hidden;
 	}
 	&__title {
-		margin-bottom: 14px;
+		margin-bottom: 16px;
 		line-height: 1px;
 		a {
 			color: $textHColor;
@@ -98,7 +98,7 @@
 	&__info {
 		display: flex;
 		flex-wrap: wrap;
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 14px;
 		&>* {
 			position: relative;
@@ -255,11 +255,20 @@
 
 .bx-sls .bx-ui-sls-clear {
 	top: 8px;
+	background-color: $bgColor;
 }
 
 .bx-sls .bx-ui-sls-pane {
 	border-top: none;
 	top: 49px;
+}
+
+.bx-sls .dropdown-block {
+	max-width: 436px;
+	background-color: $bgColor;
+}
+.bx-sls .dropdown-fade2white {
+	background: $bgColor;	
 }
 
 #boxberry-map {

@@ -288,7 +288,7 @@
 					position: relative;
 					display: block;
 					color: $textColor;
-					font-size: 12px;
+					font-size: 14px;
 					line-height: 22px;
 					letter-spacing: .09px;
 				 }
@@ -307,47 +307,10 @@
 	}
 }
 
-/* 	&>li.parent {
-	padding-bottom: 21px;
-	border-bottom: 1px solid $textHColor;
-	i {
-		position: absolute;
-		top: -2px;
-		right: 0;
-		font-size: 9px;
-		padding: 7px;
-		display: block;
-	}
-	&>a {
-		position: relative;
-		display: block;
-		color: $textHColor;
-		font-size: 14px;
-		line-height: 16px;
-		letter-spacing: .1px;
-		i {
-			top: -px;
-		}
-	}
-	ul {
-		li {
-			margin-bottom: 8px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-			a {
-				position: relative;
-				display: block;
-				color: $textColor;
-				font-size: 12px;
-				letter-spacing: .09px;
-			}
-		}
-	}
+span.kombox-filter-property-name {
+  text-transform: uppercase;
+  font-weight: 500;
 }
-ul.sublist {
-	padding-left: 10px;
-} */
 
 /*______ End Filter Menu ______*/
 

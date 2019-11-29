@@ -26,9 +26,15 @@ $bgUIRed: var(--main-bg-ui-color);
 $bgUIBlack: var(--second-bg-ui-color);
 $bgUIGray: var(--separate-line-ui-color);
  */
-$textColor:  #535558;
-$textHColor: #2b2d31;
-$textSColor: #2b2d31;
+
+
+$textColor: #535558;
+/* $textHColor: #2b2d31;
+$textSColor: #2b2d31; */
+
+
+$textHColor: #000000;
+$textSColor: #000000;
 $textSHColor: #606265;
 $bgColor: #f5f6f6;
 $bgUIRed: #F95759;
