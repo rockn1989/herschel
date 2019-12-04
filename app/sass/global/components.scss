@@ -21,9 +21,10 @@
   text-align: center;
   border-radius: 50%;
   border: 1px solid #ffffff;
+  transition: background-color .3s, border-color .3s, color .3s ease;
   &:hover {
-		background: var(--second-bg-ui-color);
-    border-color: var(--second-bg-ui-color);
+		background: $bgUIBlack;
+    border-color: $bgUIBlack;
     color: #ffffff;
   }
 }
@@ -616,8 +617,8 @@ table.default-table {
 		justify-content: flex-start;
 		&>div {
 			position: relative;
-			margin-right: 3.45%;
-			padding-right: 3.82%;
+			margin-right: 2.45%;
+			padding-right: 2.82%;
 			&:last-child {
 				margin-right: 0;
 				padding-right: 0;
@@ -654,7 +655,7 @@ table.default-table {
 			flex-wrap: nowrap;
 			&>div {
 				width: auto;
-				margin-right: 3.45%;
+				margin-right: 2.45%;
 				margin-bottom: 0;
 				padding-bottom: 0;
 				border: none;

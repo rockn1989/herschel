@@ -205,11 +205,15 @@ $textSColor: #2b2d31; */
   text-align: center;
   border-radius: 50%;
   border: 1px solid #ffffff;
+  -webkit-transition: background-color .3s, border-color .3s, color .3s ease;
+  -o-transition: background-color .3s, border-color .3s, color .3s ease;
+  -moz-transition: background-color .3s, border-color .3s, color .3s ease;
+  transition: background-color .3s, border-color .3s, color .3s ease;
 }
 
 .round-link:hover {
-  background: var(--second-bg-ui-color);
-  border-color: var(--second-bg-ui-color);
+  background: #2b2d31;
+  border-color: #2b2d31;
   color: #ffffff;
 }
 
@@ -782,8 +786,8 @@ table.default-table tbody tr td:last-child {
 
 .review__top > div {
   position: relative;
-  margin-right: 3.45%;
-  padding-right: 3.82%;
+  margin-right: 2.45%;
+  padding-right: 2.82%;
 }
 
 .review__top > div:last-child {
@@ -3219,8 +3223,15 @@ p:last-child {
 
 /*______ Subcategories ______*/
 
+.subcategory:hover .round-link {
+  background: var(--second-bg-ui-color);
+  border-color: var(--second-bg-ui-color);
+  color: #ffffff;
+}
+
 .subcategory .img-wrapper {
   position: relative;
+  display: block;
   z-index: 49;
 }
 
@@ -3231,8 +3242,17 @@ p:last-child {
   right: 15.2%;
 }
 
+.subcategory .img-wrapper-link {
+  display: block;
+}
+
+.subcategory .img-wrapper-link:hover {
+  text-decoration: none;
+}
+
 .subcategory__img {
   margin-bottom: 30px;
+  display: block;
   height: 432px;
 }
 
@@ -3768,12 +3788,8 @@ p:last-child {
 
 .product-detail__settings-list li {
   position: relative;
-  margin-right: 10%;
   margin-bottom: 20px;
   padding-left: 15px;
-  display: inline-block;
-  vertical-align: top;
-  width: 40%;
   font-size: 14px;
   line-height: 15px;
   letter-spacing: .09px;
@@ -4273,6 +4289,28 @@ p:last-child {
 .sidebar-menu ul.sublist {
   padding-left: 15px;
   display: none;
+}
+
+.dostavka-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dostavka-nav li.active a {
+  background: #f5f6f6;
+}
+
+.dostavka-nav li a {
+  padding: 8px;
+  display: inline-block;
+  color: #535558;
+  font-size: 16px !important;
+  line-height: 22px !important;
+}
+
+.dostavka-nav li a:hover {
+  background-color: #f5f6f6;
 }
 
 .filter {
@@ -6023,6 +6061,44 @@ main .basket {
   line-height: 16px;
 }
 
+.orders-history-switch {
+  margin-bottom: 30px;
+}
+
+.orders-history-switch a {
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 174px;
+  color: #535558;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: .1px;
+  text-align: center;
+  outline: none;
+  border: 1px solid #2b2d31;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: #ffffff;
+  -webkit-transition: all .45s ease;
+  -o-transition: all .45s ease;
+  -moz-transition: all .45s ease;
+  transition: all .45s ease;
+}
+
+.orders-history-switch a.active {
+  color: #ffffff;
+  background-color: #2b2d31;
+}
+
+.accout-orders-list .medium-title {
+  font-weight: 700;
+}
+
+.accout-orders-list .accout-orders-item {
+  margin-bottom: 60px;
+}
+
 /*______ End Account ______*/
 
 /*______ FOOTER ______*/
@@ -6599,6 +6675,7 @@ main .basket {
   margin-left: auto;
   width: 100%;
   z-index: 110;
+  background: #ffffff;
 }
 
 .detail-product-slider:after {
@@ -8481,7 +8558,7 @@ label.custom-radio-wrapper .custom-label {
 
   .review__top > div {
     width: auto;
-    margin-right: 3.45%;
+    margin-right: 2.45%;
     margin-bottom: 0;
     padding-bottom: 0;
     border: none;
@@ -9020,10 +9097,10 @@ label.custom-radio-wrapper .custom-label {
     height: 100%;
     border: none;
     display: block !important;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 
   .sidebar-menu {
@@ -9032,6 +9109,10 @@ label.custom-radio-wrapper .custom-label {
     padding-right: 25%;
     height: 100%;
     border-right: 1px solid #d5d5d5;
+  }
+
+  .dostavka-nav {
+    margin-top: 10px;
   }
 
   .filter-menu {
@@ -9272,9 +9353,8 @@ label.custom-radio-wrapper .custom-label {
   }
 
   .detail-product-slider {
-    /* max-width: 520px; */
-    max-width: 440px;
     margin: 0 auto;
+    max-width: 440px;
   }
 
   .detail-product-slider a img {
@@ -9419,6 +9499,10 @@ label.custom-radio-wrapper .custom-label {
 
   .preview-slider .slider .slide {
     height: 80px;
+  }
+
+  .detail-product-slider {
+    min-height: 550px;
   }
 
   .detail-product-slider a img {

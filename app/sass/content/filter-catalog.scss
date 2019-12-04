@@ -29,7 +29,7 @@
 		height: 100%;
 		border: none;
 		display: block !important;
-		transform: translateY(0);
+		transform: none;
 	};
 }
 
@@ -79,15 +79,36 @@
 	}
 }
 
+.dostavka-nav {
+	@include list-reset;
+	@media (min-width: $tablet-w) {
+		margin-top: 10px;
+	};
+	li {
+		&.active {
+			a {
+				background: $bgColor;
+			}
+		}
+		a {
+			padding: 8px;
+			display: inline-block;
+			color: $textColor;
+			font-size: 16px !important;
+			line-height: 22px !important;
+			&:hover {
+				background-color: $bgColor;
+			}
+		}
+	}
+}
+
 .filter {
 	position: relative;
 	@media (min-width: $desk-w) {
 		padding-top: 29px;
 		padding-right: 12%;
 	};
-	&-btn {
-		//margin-bottom: 20px;
-	}
 }
 
 .btn--filter {

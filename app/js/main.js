@@ -2,6 +2,12 @@
 
 $(function() {	
 
+	$('.dostavka-nav').on('click', 'li', function (e) {
+		e.preventDefault()
+		$(this).siblings('li').removeClass('active')
+		$(this).addClass('active');
+	});
+
 /*	let arr1 = [1, 2, 3, 4, 5];
 	let arr2 = [4, 5, 6];
 	let totalArr = [];

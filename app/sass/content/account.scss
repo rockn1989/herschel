@@ -43,5 +43,38 @@
 	}
 }
 
+.orders-history-switch {
+	margin-bottom: 30px;
+	a {
+		margin: 0 10px 10px 0;
+		display: inline-block;
+		width: 100%;
+		max-width: 174px;
+		color: $textColor;
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: .1px;
+		text-align: center;
+		outline: none;
+		border: 1px solid $bgUIBlack;
+		border-radius: 0;
+		cursor: pointer;
+		background-color: #ffffff;
+		transition: all .45s ease;
+		&.active {
+			color: #ffffff;
+			background-color: $bgUIBlack;
+		}
+	}
+}
+
+.accout-orders-list {
+	.medium-title {
+		font-weight: 700;
+	}
+	.accout-orders-item {
+		margin-bottom: 60px;
+	}
+}
 
 /*______ End Account ______*/

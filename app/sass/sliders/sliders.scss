@@ -346,10 +346,13 @@
 		margin-left: auto;
 		width: 100%;
 		z-index: 110;
+		background: #ffffff;
 		@media (min-width: $tablet-w) {
-			/* max-width: 520px; */
-			max-width: 440px;
 			margin: 0 auto;
+			max-width: 440px;
+		};
+		@media (min-width: $desk-w) {
+			min-height: 550px;
 		};
 		&:after {
 			content: '';

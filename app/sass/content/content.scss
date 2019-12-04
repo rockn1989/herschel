@@ -368,8 +368,16 @@ main.main {
 			};
 		}
 	}
+	&:hover {
+		.round-link {
+			background: var(--second-bg-ui-color);
+	    border-color: var(--second-bg-ui-color);
+	    color: #ffffff;
+		}
+	}
 	.img-wrapper {
 		position: relative;
+		display: block;
 		z-index: 49;
 	}
 	.round-link {
@@ -378,8 +386,15 @@ main.main {
 		bottom: 19%;
 		right: 15.2%;
 	}
+	.img-wrapper-link {
+		display: block;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 	&__img {
 		margin-bottom: 30px;
+		display: block;
 		height: 432px;
 		@media (min-width: $mob-xs) {
 			margin-bottom: 15px;
