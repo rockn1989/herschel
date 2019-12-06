@@ -17,6 +17,16 @@
 			display: none;
 		}
 	}
+	.secttion-auth {
+		input[type="email"] {
+			@media (min-width: $mob-xs) {
+				margin-bottom: 10px;
+			};
+			@media (min-width: $mob-s) {
+				margin-bottom: 0;
+			};
+		}
+	}
 }
 
 .order-delivery {

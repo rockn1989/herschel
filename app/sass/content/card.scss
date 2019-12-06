@@ -25,7 +25,10 @@
 .card {
 	position: relative;
 	margin-bottom: 86px !important;
-	
+	z-index: 1;
+	&.active {
+		z-index: 999;
+	}
 	@media (min-width: $mob-xs) {
 		max-height: none;
 		margin-bottom: 30px !important;
@@ -41,7 +44,7 @@
 		max-height: 500px;
 	};
 	&:hover {
-		z-index: 800;
+		z-index: 999;
 		.card-wrapper {
 			@media (min-width: $tablet-w) {
 				outline-offset: 10px;
@@ -101,6 +104,7 @@
 	}
 	&__bottom {
 		display: none;
+		background: #ffffff;
 		@media (min-width: $mob-xs) {
 			padding-bottom: 15px;
 		};

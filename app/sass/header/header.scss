@@ -221,6 +221,14 @@
 			}
 		}
 	}
+	.dropdown-menu {
+		&>.uk-container {
+			padding: 0 30px;
+			@media (min-width: $tablet-w) {
+				padding: 0 30px;
+			};
+		}
+	}
 }
 
 .tool-bar {

@@ -47,7 +47,12 @@ main.main {
 }
 
 .products-list {
+	position: relative;
 	margin-bottom: 104px;
+	z-index: 1;
+	&:hover {
+		z-index: 999;
+	}
 	@media (min-width: $mob-xs) {
 		margin-bottom: 60px;
 	};
@@ -62,6 +67,17 @@ main.main {
 	}
 	&__inner {
 		margin-bottom: 20px;
+		position: relative;
+		z-index: 999;
+		.uk-grid {
+			&>div[class^="uk-width"] {
+				position: relative;
+				z-index: 1;
+				&:hover {
+					z-index: 999;
+				}
+			}
+		}
 	}
 	.separate-title {
 		&:last-child {
@@ -355,6 +371,7 @@ main.main {
 		margin-bottom: 0 !important;
 	};
 	&.push-left {
+		margin-left: 0;
 		.subcategory__img {
 			@media (min-width: $desk-w) {
 				margin-left: -70px;

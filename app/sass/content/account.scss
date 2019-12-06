@@ -61,6 +61,12 @@
 		cursor: pointer;
 		background-color: #ffffff;
 		transition: all .45s ease;
+		@media (min-width: $mob-xs) {
+			padding: 16px 10px
+		};
+		@media (min-width: $mob-s) {
+			padding: 16px 15px;
+		};
 		&.active {
 			color: #ffffff;
 			background-color: $bgUIBlack;
@@ -75,6 +81,12 @@
 	.accout-orders-item {
 		margin-bottom: 60px;
 	}
+}
+
+.review-about {
+	margin-bottom: 5px;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 /*______ End Account ______*/

@@ -744,6 +744,10 @@ table.default-table tbody tr td:last-child {
 
 /*______ Review ______*/
 
+.reviews-list--profile .reviews-list-wrapper {
+  margin: 0;
+}
+
 .reviews-list-wrapper {
   margin: 0 auto;
   max-width: 786px;
@@ -2368,6 +2372,10 @@ html.uk-touch body *.uk-invisible {
   opacity: 1;
 }
 
+.main-nav .dropdown-menu > .uk-container {
+  padding: 0 30px;
+}
+
 .tool-bar {
   width: 26%;
   display: -webkit-box;
@@ -3025,7 +3033,13 @@ p:last-child {
 }
 
 .products-list {
+  position: relative;
   margin-bottom: 104px;
+  z-index: 1;
+}
+
+.products-list:hover {
+  z-index: 999;
 }
 
 .products-list:last-child {
@@ -3034,6 +3048,17 @@ p:last-child {
 
 .products-list__inner {
   margin-bottom: 20px;
+  position: relative;
+  z-index: 999;
+}
+
+.products-list__inner .uk-grid > div[class^="uk-width"] {
+  position: relative;
+  z-index: 1;
+}
+
+.products-list__inner .uk-grid > div[class^="uk-width"]:hover {
+  z-index: 999;
 }
 
 .products-list .separate-title:last-child {
@@ -3222,6 +3247,10 @@ p:last-child {
 }
 
 /*______ Subcategories ______*/
+
+.subcategory.push-left {
+  margin-left: 0;
+}
 
 .subcategory:hover .round-link {
   background: var(--second-bg-ui-color);
@@ -4612,10 +4641,15 @@ span.kombox-filter-property-name {
 .card {
   position: relative;
   margin-bottom: 86px !important;
+  z-index: 1;
+}
+
+.card.active {
+  z-index: 999;
 }
 
 .card:hover {
-  z-index: 800;
+  z-index: 999;
 }
 
 .card-wrapper {
@@ -4655,6 +4689,7 @@ span.kombox-filter-property-name {
 
 .card__bottom {
   display: none;
+  background: #ffffff;
 }
 
 .card__img {
@@ -5320,7 +5355,7 @@ main .basket {
 
 .calc input {
   padding: 0 !important;
-  height: auto !important;
+  height: 36px !important;
   line-height: 36px !important;
   width: 30px;
   outline: none;
@@ -6097,6 +6132,12 @@ main .basket {
 
 .accout-orders-list .accout-orders-item {
   margin-bottom: 60px;
+}
+
+.review-about {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 /*______ End Account ______*/
@@ -8230,6 +8271,10 @@ label.custom-radio-wrapper .custom-label {
     border: none !important;
   }
 
+  .order .secttion-auth input[type="email"] {
+    margin-bottom: 10px;
+  }
+
   .product-buyed__info > * {
     padding: 0;
     width: 100%;
@@ -8237,6 +8282,10 @@ label.custom-radio-wrapper .custom-label {
 
   .product-buyed__info > *:after {
     display: none;
+  }
+
+  .orders-history-switch a {
+    padding: 16px 10px;
   }
 
   .footer__top-inner {
@@ -8696,6 +8745,10 @@ label.custom-radio-wrapper .custom-label {
     margin-top: 0;
   }
 
+  .order .secttion-auth input[type="email"] {
+    margin-bottom: 0;
+  }
+
   .product-buyed__info > * {
     width: auto;
     padding: 0 19px;
@@ -8703,6 +8756,10 @@ label.custom-radio-wrapper .custom-label {
 
   .product-buyed__info > *:after {
     display: block;
+  }
+
+  .orders-history-switch a {
+    padding: 16px 15px;
   }
 
   .footer__top-inner {
@@ -8920,6 +8977,10 @@ label.custom-radio-wrapper .custom-label {
 
   .uk-grid > * {
     padding-left: 30px;
+  }
+
+  .main-nav .dropdown-menu > .uk-container {
+    padding: 0 30px;
   }
 
   h1,

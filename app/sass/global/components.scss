@@ -587,6 +587,11 @@ table.default-table {
 	@media (min-width: $desk-w) {
 		margin-bottom: 106px;
 	};
+	&--profile {
+		.reviews-list-wrapper {
+			margin: 0;
+		}
+	}
 	&-wrapper {
 		margin: 0 auto;
 		max-width: 786px;

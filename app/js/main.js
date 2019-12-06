@@ -8,28 +8,6 @@ $(function() {
 		$(this).addClass('active');
 	});
 
-/*	let arr1 = [1, 2, 3, 4, 5];
-	let arr2 = [4, 5, 6];
-	let totalArr = [];
-	let maxLength = Math.max(arr1.length, arr2.length);
-
-	for(let i = 0; i <= maxLength; i++) {
-		let val1 = arr1[i] != undefined ? arr1[i] : 0;
-		let val2 = arr2[i] != undefined ? arr2[i] : 0;
-		totalArr.push(val1 + val2);
-	};
-	console.log(totalArr);*/
-	let dueDate = 0;
-	console.log(!!dueDate);
-	let arr1 = [1, 2, 2, 3, 5, 5, 7, 4, 5];
-	let hash = {};
-	let total = 0;
-	arr1.forEach((el) => {
-		hash.hasOwnProperty(el) ? hash[el] = {total: ++total} : hash[el] = el;
-	});
-
-	console.log(hash);
-	console.log(Object.keys(hash));
 
 	if($(window).outerWidth() >= 960) {
 		$('.preloader-wrapper').addClass('loading');
@@ -213,5 +191,6 @@ $(function() {
 	/*______ Timeline ______*/
 
 	$('.timeline').timeline();
+
 
 });

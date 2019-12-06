@@ -59,6 +59,10 @@ $(function () {
 
 	function initSlickDesktop () {
 		$('.card').on('mouseenter', function () {
+			var _that = $(this);
+			setTimeout(function() {
+				_that.css('zIndex','9999');
+			}, 100)
 			$(this).find('.card__bottom').stop(true, true).slideDown('150');
 			var slider = $(this).find('.preview-slider .slider');
 			slider.slick({
@@ -76,6 +80,10 @@ $(function () {
 			nextArrow: '<div class="slide-next"><i class="icon-chevron-right"></i></div>',
 			});
 		}).on('mouseleave', function () {
+			var _that = $(this);
+			setTimeout(function() {
+				_that.css('zIndex','1');
+			}, 100);
 			var slider = $(this).find('.preview-slider .slider');
 			slider.slick('destroy');
 			$(this).find('.card__bottom').css('display', 'none');
@@ -84,7 +92,8 @@ $(function () {
 
 	function initSlickMobile(context, isActive) {
 		var slider = $(context).find('.preview-slider .slider'),
-			isActive = isActive || true;
+			//isActive = isActive || true,
+			_that = $(context);
 			if (isActive && !slider.hasClass('slick-initialized')) {
 				slider.slick({
 				infinite: false,
@@ -103,6 +112,9 @@ $(function () {
 			} else {
 				slider.slick('destroy');
 			}
+			setTimeout(function() {
+				_that.css('zIndex', isActive ? '999':'1');
+			}, 100)
 	};
 
 	if($(window).outerWidth()+17 >= 960) {
@@ -115,7 +127,7 @@ $(function () {
 					.addClass('open')
 					.siblings('.card__bottom')
 					.slideDown('350');
-					initSlickMobile($(this).parents('.card'));
+					initSlickMobile($(this).parents('.card'), true);
 			} else {
 				$(this)
 					.removeClass('open')
