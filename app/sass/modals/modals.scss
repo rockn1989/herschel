@@ -89,8 +89,14 @@
 		padding-left: 11%;
 	}
 	.title-h1 {
-		font-size: 33px;
-		line-height: 34px;
+		@media (min-width: $mob-xs) {
+			font-size: 26px;
+			line-height: 28px;
+		};
+		@media (min-width: $tablet-w) {
+			font-size: 33px;
+			line-height: 34px;
+		};
 	}
 }
 

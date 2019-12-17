@@ -1,0 +1,52 @@
+{% extends "layouts/default.twig" %}
+{% set title="Результат поиска" %}
+{% set bread = ["Главная"] %}
+{% set main = false %}
+{% block content %}
+	<main class="main">
+		<div class="uk-container">
+
+			<div class="overflow-container">
+				<table class="big-custom-table">
+					<thead>
+						<tr>
+							<td>Страна производитель рус</td>
+							<td>Закупочная цена</td>
+							<td>РРЦ</td>
+							<td>РРЦ Без НДС</td>
+							<td>ГТД</td>
+							<td>ТН ВЭД</td>
+							<td data-width="75">Вес</td>
+							<td>Кол-во ед. в коробе</td>
+							<td data-width="50">Название Фабрики</td>
+							<td data-width="150">Адрес фабрики</td>
+							<td>Телефон</td>
+							<td>Эл. почта</td>
+							<td data-width="250">Номер и срок действия декларации или сертефиката</td>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in 0..10 %}
+							<tr>
+								<td>Вьетнам</td>
+								<td>пдолуеп длуокп длукод</td>
+								<td>21 950</td>
+								<td>18 292</td>
+								<td></td>
+								<td></td>
+								<td>2.75</td>
+								<td></td>
+								<td>Herschel Supply Co</td>
+								<td>327-611 Alexander St.Vancouver, BC, Canada V6A 1E1 </td>
+								<td></td>
+								<td></td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt officiis, totam ipsa obcaecati nostrum animi voluptatem doloribus aliquam optio eius esse error quos deserunt laboriosam fuga modi rem, mollitia et.</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</main>
+{% endblock content %}

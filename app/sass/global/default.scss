@@ -215,3 +215,36 @@ html.uk-touch {
 		padding-left: 0 !important;
 	}
 }
+
+.custom-table {
+	width: 100%;
+	border: 1px solid $textColor;
+	display: flex;
+	border-bottom: 1px solid $textColor;
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		border-right: 1px solid $textColor;
+		text-overflow: ellipsis;
+		font-size: 14px;
+		line-height: 16px;
+		border-bottom: none;
+		align-content: baseline;
+		&:last-child {
+			border-right: none;
+			border-bottom: none;
+		}
+		.col {
+			padding: 10px 5px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			max-width: 200px;
+			width: 100%;
+			border-bottom: 1px solid $textColor;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}

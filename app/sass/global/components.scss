@@ -1,5 +1,53 @@
 /*______ COMPONENTS ______*/
 
+.overflow-container {
+	overflow-x: auto;
+}
+
+.big-custom-table {
+	position: relative;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid $bgUIGray;
+	overflow: visible;
+	thead {
+		position: relative;
+		transform: translateY(0);
+		td {
+			background: $bgColor;
+			position: sticky;
+			top: 0;
+			border-right: 1px solid $bgUIGray;
+		}
+	}
+	td {
+		padding: 10px 7px;
+		font-size: 14px;
+		line-height: 16px;
+		white-space: nowrap;
+		width: 100%;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	tbody {
+		tr {
+			&:last-child {
+				td {
+					border-bottom: none;
+				}
+			}
+		}
+		td {
+			border-right: 1px solid $bgUIGray;
+			border-bottom: 1px solid $bgUIGray;
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+}
+
+
 .custom-grid {
 	margin-left: -30px;
 	padding: 0;
@@ -181,6 +229,7 @@
 		font-size: 21px;
 		line-height: 21px;
 		border: 1px solid $bgUIBlack;
+		flex-shrink: 0;
 	}
 	&--modal-btn-black {
 		padding: 20px 15px !important;

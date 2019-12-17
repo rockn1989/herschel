@@ -226,15 +226,16 @@
 			outline: none;
 			&.disabled {
 				&:before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background: transparent;
-					background: url('../img/icon-svg/close.svg') center no-repeat;
-					background-size: 75%;
+			    content: '';
+			    position: absolute;
+			    top: 5px;
+			    right: 5px;
+			    display: block;
+			    width: 15px;
+			    height: 15px;
+			    background: transparent url(../img/icon-svg/disabled.svg) center no-repeat;
+			    background-size: 100%;
+			    z-index: 600;
 				}
 			}
 			&:hover {

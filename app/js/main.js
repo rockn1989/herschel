@@ -2,6 +2,37 @@
 
 $(function() {	
 
+	/*______ Большая адаптивная таблица ______*/
+
+	if($('.big-custom-table').length >= 1) {
+		var customTable = $('.big-custom-table');
+		var tHead = customTable.find('thead')
+		var tBodyTr =  customTable.find('tbody tr');
+		var td = tHead.find('td[data-width]');
+		var posArray = [];
+
+		$.each(td, function (i, el) {
+			$(el).css('maxWidth', $(el).data('width')+'px');
+			posArray.push(tHead.find('td').index(el))
+		});
+
+		$.each(tBodyTr, function (i, tr) {
+			$.each(posArray, function (i, el) {
+				$(tr).find('td')[el].style.maxWidth = td[i].getAttribute('data-width')+'px';
+				$(tr).find('td')[el].style.minWidth = td[i].getAttribute('data-width')+'px';
+			});
+		});
+
+		$(window).on('scroll', function () {
+			var positionTop = customTable[0].getBoundingClientRect();
+			if(positionTop.y <= 0 && (positionTop.y * (-1)) <= positionTop.height) {
+				$(tHead).css('transform','translateY('+(positionTop.y * (-1))+'px)');
+			} else {
+				$(tHead).css('transform','translateY(0px)');
+			};
+		});
+	};
+
 	$('.dostavka-nav').on('click', 'li', function (e) {
 		e.preventDefault()
 		$(this).siblings('li').removeClass('active')
