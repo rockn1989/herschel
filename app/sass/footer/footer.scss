@@ -86,8 +86,13 @@
 		color: $textColor;
 		font-size: 14px;
 		letter-spacing: .2px;
+		p {
+			margin: 0;
+			font-size: 14px;
+			line-height: 26px;
+		}
 		a {
-			display: block;
+			display: inline;
 		}
 	}
 	a {

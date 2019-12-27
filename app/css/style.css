@@ -2294,24 +2294,34 @@ html.uk-touch body *.uk-invisible {
   left: 0;
 }
 
-.top-bar__contacts a:first-child {
-  position: relative;
-  padding-right: 15px;
+.top-bar__contacts p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
 }
 
-.top-bar__contacts a:first-child:after {
+.top-bar__contacts a {
+  display: inline;
+}
+
+.top-bar__contacts a:nth-child(2) {
+  position: relative;
+  margin-left: 15px;
+}
+
+.top-bar__contacts a:nth-child(2):after {
   content: '';
   position: absolute;
   top: 1px;
-  right: 0;
+  left: -15px;
   width: 1px;
   height: 12px;
   display: block;
   background: #ffffff;
 }
 
-.top-bar__contacts a:last-child {
-  padding-left: 14px;
+.top-bar__contacts a:first-child {
+  margin-right: 14px;
 }
 
 .auth__enter {
@@ -6345,8 +6355,14 @@ main .basket {
   letter-spacing: .2px;
 }
 
+.footer__contacts p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+}
+
 .footer__contacts a {
-  display: block;
+  display: inline;
 }
 
 .footer a {
