@@ -92,6 +92,11 @@
 		}
 	}
 	&__contacts {
+		display: flex;
+		align-items: center;
+		.timework {
+			margin-left: 15px;
+		}
 		p {
 			margin: 0;
 			font-size: 12px;

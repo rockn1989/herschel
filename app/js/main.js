@@ -41,12 +41,11 @@ $(function() {
 
 
 	if($(window).outerWidth() >= 960) {
-		$('.preloader-wrapper').addClass('loading');
-		let timer = setTimeout(function () {
-			$('.preloader-wrapper').addClass('loaded')
-			clearInterval(timer);
-		}, 3500);
-	}
+		$('.anim-logo').addClass('loading');
+		$('.preloader-wrapper .bottom-side span').on('transitionend', function () {
+			$('.preloader-wrapper').addClass('loaded');
+		});
+	};
 
 	/*______ Форма поиска декстоп ______*/
 
