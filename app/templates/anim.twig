@@ -1,0 +1,36 @@
+{% extends "layouts/default.twig" %}
+{% set title="Анимация" %}
+{% set bread = ["Анимация"] %}
+{% set main = false %}
+{% block content %}
+	<style>
+		.first-section,
+		.second-section {
+			border-bottom: 5px solid red;
+			min-height: 100vh;
+		}
+		.first-section svg {
+			//position: fixed;
+			top: 50%;
+			left: 50%;
+			//transform: translate(-50%, -50%);
+		}
+	</style>
+	<main class="main">
+		<div class="uk-container">
+			<div class="title-h1">Анимация упаковки с яицами</div>
+			<div id="fullpage">
+				
+				<div class="section" id="section0">
+					<h2>Секция 1</h2>
+					{% include "./includes/egg.twig" %}
+				</div>
+				<div class="section" id="section1">
+					<h2>Секция 1</h2>
+					123123
+				</div>
+			</div>
+			<div class="first-section"></div>
+		</div>
+	</main>
+{% endblock content %}

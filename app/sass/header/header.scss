@@ -163,7 +163,10 @@
 
 .main-nav {
 	margin-right: 7%;
-	width: 67%;
+	width: 83%;
+	@media (min-width: 1400px) {
+		width: 71%;
+	}
 	&>ul {
 		@include list-reset;
 		font-size: 0;
@@ -230,6 +233,28 @@
 						}
 					}
 				}
+				&.eco-item {
+					position: relative;
+					&:after {
+						content: '';
+						position: absolute;
+						top: 19px;
+						right: 10px;
+						display: block;
+						width: 10px;
+						height: 10px;
+						background: url('../img/icon-svg/foliage.svg') 0 0 no-repeat;
+						background-size: 100%;
+					}
+					&>a {
+						color: #00DA5F;
+						&:hover {
+							&:after {
+								display: none;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -244,16 +269,25 @@
 }
 
 .tool-bar {
-	width: 26%;
+	width: 10%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media (min-width: 1400px) {
+		width: 22%;
+	}
 	a {
 		position: relative;
 		padding: 4px 0 4px 31px;
 		display: flex;
 		align-items: center;
 		font-family: $mainFont !important;
+		width: 20px;
+		height: 20px;
+		@media (min-width: 1400px) {
+			width: auto;
+			height: auto;
+		}
 		&:before {
 			position: absolute;
 			top: 3px;
@@ -266,6 +300,10 @@
 		font-size: 12px;
 		letter-spacing: .2px;
 		color: $textSColor;
+		display: none;
+		@media (min-width: 1400px) {
+			display: block;
+		}
 	}
 	.search {
 		a {
@@ -322,6 +360,7 @@
 			position: relative;
 			padding-left: 29px;
 			display: block;
+			height: 34px;
 			@include icomoon;
 			&:before {
 				color: $textSColor;
