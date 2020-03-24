@@ -2539,22 +2539,13 @@ html.uk-touch body *.uk-invisible {
 }
 
 .bottom-bar__inner {
+  padding: 22px 0 0;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
 }
 
 .main-nav {
-  margin-right: 7%;
-  width: 83%;
+  width: 100%;
 }
 
 .main-nav > ul {
@@ -2591,7 +2582,7 @@ html.uk-touch body *.uk-invisible {
   content: '';
   position: absolute;
   top: 50%;
-  left: -15px;
+  left: -25px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -2608,7 +2599,8 @@ html.uk-touch body *.uk-invisible {
 
 .main-nav > ul > li.nav-item > a {
   position: relative;
-  padding: 28px 0;
+  /* padding: 28px 0; */
+  padding: 10px 0;
   display: block;
   color: #000000;
   font-size: 13px;
@@ -2653,7 +2645,7 @@ html.uk-touch body *.uk-invisible {
 .main-nav > ul > li.nav-item.eco-item:after {
   content: '';
   position: absolute;
-  top: 19px;
+  top: 1px;
   right: 10px;
   display: block;
   width: 10px;
@@ -2675,7 +2667,8 @@ html.uk-touch body *.uk-invisible {
 }
 
 .tool-bar {
-  width: 10%;
+  margin-bottom: 5px;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -2693,6 +2686,23 @@ html.uk-touch body *.uk-invisible {
   align-items: center;
 }
 
+.tool-bar__btns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tool-bar__btns a {
+  margin-left: 20px;
+}
+
 .tool-bar a {
   position: relative;
   padding: 4px 0 4px 31px;
@@ -2707,8 +2717,6 @@ html.uk-touch body *.uk-invisible {
   -ms-flex-align: center;
   align-items: center;
   font-family: "SF" !important;
-  width: 20px;
-  height: 20px;
 }
 
 .tool-bar a:before {
@@ -2723,11 +2731,19 @@ html.uk-touch body *.uk-invisible {
   font-size: 12px;
   letter-spacing: .2px;
   color: #000000;
-  display: none;
+}
+
+.tool-bar .search {
+  width: 100%;
+  max-width: 300px;
 }
 
 .tool-bar .search a:before {
   top: 1px;
+}
+
+.tool-bar .favorite {
+  padding-top: 2px;
 }
 
 .tool-bar .favorite.is-added a:before {
@@ -3404,6 +3420,7 @@ p:last-child {
   color: #535558;
   font-weight: 500;
   z-index: 15;
+  border-bottom: none;
 }
 
 .company-short__desc {
@@ -3473,8 +3490,8 @@ p:last-child {
 .tags-list-wrapper {
   margin-bottom: 35px;
   max-width: 600px;
-  height: 34px;
-  overflow: hidden;
+  /* 	height: 34px;
+overflow: hidden; */
 }
 
 .tags-list-wrapper.mCustomScrollbar {
@@ -8269,6 +8286,41 @@ label.custom-radio-wrapper .custom-label {
 
 /*______ End Reg form ______*/
 
+.form-search-top {
+  position: relative;
+  max-width: 300px;
+  border: none;
+}
+
+.form-search-top input[type="text"] {
+  padding: 0 35px 0 10px;
+  height: 30px;
+  width: 100%;
+  border: 1px solid #d5d5d5;
+  border-right: none;
+}
+
+.form-search-top button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: #535558;
+  color: #ffffff;
+  -webkit-transition: background-color .3s, color .3s ease;
+  -o-transition: background-color .3s, color .3s ease;
+  -moz-transition: background-color .3s, color .3s ease;
+  transition: background-color .3s, color .3s ease;
+}
+
+.form-search-top button:hover {
+  background: #606265;
+}
+
 /*______ END FORMS ______*/
 
 @media (min-width: 0px) {
@@ -8642,13 +8694,13 @@ label.custom-radio-wrapper .custom-label {
     margin-bottom: 15px !important;
   }
 
+  .footer__title[data-role] ~ .footer__list {
+    display: none;
+  }
+
   .footer__title {
     position: relative;
     margin-bottom: 6px;
-  }
-
-  .footer__list {
-    display: none;
   }
 
   .delivery-point {
@@ -9125,16 +9177,16 @@ label.custom-radio-wrapper .custom-label {
     margin-bottom: 25px !important;
   }
 
+  .footer__title[data-role] ~ .footer__list {
+    display: block !important;
+  }
+
   .footer__title {
     margin-bottom: 15px;
   }
 
   .footer__title i {
     display: none !important;
-  }
-
-  .footer__list {
-    display: block !important;
   }
 
   .delivery-point {
@@ -10043,23 +10095,6 @@ label.custom-radio-wrapper .custom-label {
 
   .uk-container--large {
     max-width: 1400px;
-  }
-
-  .main-nav {
-    width: 71%;
-  }
-
-  .tool-bar {
-    width: 22%;
-  }
-
-  .tool-bar a {
-    width: auto;
-    height: auto;
-  }
-
-  .tool-bar .text {
-    display: block;
   }
 }
 

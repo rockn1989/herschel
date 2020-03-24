@@ -18,7 +18,6 @@
 
 .top-bar {
 	&__info {
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -155,18 +154,14 @@
 
 .bottom-bar {
 	&__inner {
+		padding: 22px 0 0;
 		height: 100%;
-		display: flex;
-		align-items: center;
+		display: block;
 	}
 }
 
 .main-nav {
-	margin-right: 7%;
-	width: 83%;
-	@media (min-width: 1400px) {
-		width: 71%;
-	}
+	width: 100%;
 	&>ul {
 		@include list-reset;
 		font-size: 0;
@@ -186,7 +181,7 @@
 					content: '';
 					position: absolute;
 					top: 50%;
-					left: -15px;
+					left: -25px;
 					width: 4px;
 					height: 4px;
 					border-radius: 50%;
@@ -204,7 +199,8 @@
 			&.nav-item {
 				&>a {
 					position: relative;
-					padding: 28px 0;
+					/* padding: 28px 0; */
+					padding: 10px 0;
 					display: block;
 					color: $textSColor;
 					font-size: 13px;
@@ -238,7 +234,7 @@
 					&:after {
 						content: '';
 						position: absolute;
-						top: 19px;
+						top: 1px;
 						right: 10px;
 						display: block;
 						width: 10px;
@@ -269,12 +265,18 @@
 }
 
 .tool-bar {
-	width: 10%;
+	margin-bottom: 5px;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	@media (min-width: 1400px) {
-		width: 22%;
+
+	&__btns {
+		display: flex;
+		align-items: center;
+		a {
+			margin-left: 20px;
+		}
 	}
 	a {
 		position: relative;
@@ -282,12 +284,8 @@
 		display: flex;
 		align-items: center;
 		font-family: $mainFont !important;
-		width: 20px;
-		height: 20px;
-		@media (min-width: 1400px) {
-			width: auto;
-			height: auto;
-		}
+		//width: 20px;
+		//height: 20px;
 		&:before {
 			position: absolute;
 			top: 3px;
@@ -300,12 +298,10 @@
 		font-size: 12px;
 		letter-spacing: .2px;
 		color: $textSColor;
-		display: none;
-		@media (min-width: 1400px) {
-			display: block;
-		}
 	}
 	.search {
+		width: 100%;
+		max-width: 300px;
 		a {
 			&:before {
 				top: 1px;
@@ -313,6 +309,7 @@
 		}
 	}
 	.favorite {
+		padding-top: 2px;
 		&.is-added {
 			a {
 				&:before {

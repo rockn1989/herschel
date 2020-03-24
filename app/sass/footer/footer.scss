@@ -39,6 +39,16 @@
 		font-weight: 500;
 		letter-spacing: .5px;
 		text-transform: uppercase;
+		&[data-role] {
+			~ .footer__list {
+				@media (min-width: $mob-xs) {
+					display: none;
+				};
+				@media (min-width: $mob-s) {
+					display: block !important;
+				};
+			}
+		}
 		@media (min-width: $mob-xs) {
 			position: relative;
 			margin-bottom: 6px;
@@ -69,12 +79,7 @@
 	}
 	&__list {
 		@include list-reset;
-		@media (min-width: $mob-xs) {
-			display: none;
-		};
-		@media (min-width: $mob-s) {
-			display: block !important;
-		};
+
 		li {
 			a {
 				font-size: 14px;

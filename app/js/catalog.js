@@ -32,12 +32,12 @@ $(function () {
 	
 	/*______ Tags scrollbar ______*/
 
-	$('.tags-list-wrapper').mCustomScrollbar({
+/*	$('.tags-list-wrapper').mCustomScrollbar({
 			axis:"x",
 			autoExpandScrollbar:true,
 			theme: "light-3",
 			advanced:{autoExpandHorizontalScroll:true}
-		});
+		});*/
 
 	/*______ End Tags scrollbar ______*/
 

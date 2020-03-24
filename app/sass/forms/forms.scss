@@ -732,4 +732,33 @@ label.custom-radio-wrapper {
 /*______ End Reg form ______*/
 
 
+.form-search-top {
+	position: relative;
+	max-width: 300px;
+	border: none;
+	input[type="text"] {
+		padding: 0 35px 0 10px;
+		height: 30px;
+		width: 100%;
+		border: 1px solid $bgUIGray;
+		border-right: none;
+	}
+	button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		border: none;
+		cursor: pointer;
+		background: $textColor;
+		color: #ffffff;
+		transition: background-color .3s, color .3s ease;
+		&:hover {
+			background: $textSHColor;
+		}
+	}
+}
+
 /*______ END FORMS ______*/

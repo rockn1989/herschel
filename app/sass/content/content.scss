@@ -107,6 +107,7 @@ main.main {
 
 		font-weight: 500;
 		z-index: 15;
+		border-bottom: none;
 		@media (min-width: $mob-xs) {
 			margin-bottom: 0;
 			font-size: 26px;
@@ -221,8 +222,8 @@ main.main {
 .tags-list-wrapper {
 	margin-bottom: 35px;
 	max-width: 600px;
-	height: 34px;
-	overflow: hidden;
+/* 	height: 34px;
+overflow: hidden; */
 	&.mCustomScrollbar {
 		height: auto;
 		overflow: auto;
