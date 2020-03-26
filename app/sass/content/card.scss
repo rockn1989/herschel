@@ -13,12 +13,21 @@
 		margin-bottom: 5px;
 		padding: 2px 7px 4px 5px;
 		text-align: center;
+		min-width: 47px;
 	}
 	.discount {
 		background: url('../img/ui/discount-bg.png') 0 0 no-repeat;
 	}
 	.new {
 		background: url('../img/ui/new-bg.png') 0 0 no-repeat;
+	}
+	.zero {
+		height: 20px;
+		background:url('../img/ui/green.svg') center no-repeat, url('../img/ui/zero-waste-bg.svg') 0 0 no-repeat;
+		background-size: 15px 15px, 100%;
+	}
+	.delivery {
+		background: url('../img/ui/blue.svg') 0 0 no-repeat;
 	}
 }
 

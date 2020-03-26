@@ -647,4 +647,69 @@
 
 
 
+/*______ Brands Slider ______*/
+
+.brands-slider {
+	margin-bottom: 40px;
+	.slider {
+		height: 300px;
+		overflow: hidden;
+		&.slick-initialized  {
+			height: auto;
+			overflow: visible;
+		}
+		.slick-list {
+			margin: 0 -10px;
+		}
+		.slide {
+			margin: 0 10px;
+			text-align: center;
+			img {
+				display: inline-block;
+			}
+		}
+	}
+	.slick-prev,
+	.slick-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		color: red;
+		border-radius: 50%;
+		z-index: 650;
+		background: #ffffff;
+		transition: background .3s ease;
+		&:hover {
+			background: $textColor;
+			i {
+				&:before {
+					color: #ffffff;
+				}
+			}
+		}
+		i {
+			font-size: 10px;
+			line-height: 10px;
+			&:before {
+				color: $textColor;
+				transition: color .3s ease;
+			}
+		}
+		&:before {
+			display: none;
+		}
+	}
+	.slick-prev {
+		left: 25px;
+	}
+	.slick-next {
+		right: 25px;
+	}
+}
+
+/*______ End Brands Slider ______*/
+
+
 /*______ END SLIDERS ______*/

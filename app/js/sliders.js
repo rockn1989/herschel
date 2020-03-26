@@ -210,6 +210,25 @@ $(function () {
 	});
 
 
+	
+	/*______ Brands Slider ______*/
+
+	$('.brands-slider .slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		infinity: true,
+		centerMode: false,
+		lazyLoad: 'ondemand',
+		focusOnSelect: true,
+		prevArrow: '<div class="btn-slide slick-prev"><i class="icon-small-arrow-left"></i></div>',
+		nextArrow: '<div class="btn-slide slick-next"><i class="icon-small-arrow-right"></i></div>'
+	});	
+
+	/*______ End Brands Slider ______*/
+
+
 	/*______ Добавить в избранное ______*/
 
 	$('.favorite-icon').on('click', function (e) {

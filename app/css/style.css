@@ -4977,6 +4977,7 @@ span.kombox-filter-property-name {
   margin-bottom: 5px;
   padding: 2px 7px 4px 5px;
   text-align: center;
+  min-width: 47px;
 }
 
 .stocks .discount {
@@ -4985,6 +4986,16 @@ span.kombox-filter-property-name {
 
 .stocks .new {
   background: url("../img/ui/new-bg.png") 0 0 no-repeat;
+}
+
+.stocks .zero {
+  height: 20px;
+  background: url("../img/ui/green.svg") center no-repeat, url("../img/ui/zero-waste-bg.svg") 0 0 no-repeat;
+  background-size: 15px 15px, 100%;
+}
+
+.stocks .delivery {
+  background: url("../img/ui/blue.svg") 0 0 no-repeat;
 }
 
 .card {
@@ -7282,6 +7293,104 @@ main .basket {
 }
 
 /*______ End Detail slider ______*/
+
+/*______ Brands Slider ______*/
+
+.brands-slider {
+  margin-bottom: 40px;
+}
+
+.brands-slider .slider {
+  height: 300px;
+  overflow: hidden;
+}
+
+.brands-slider .slider.slick-initialized {
+  height: auto;
+  overflow: visible;
+}
+
+.brands-slider .slider .slick-list {
+  margin: 0 -10px;
+}
+
+.brands-slider .slider .slide {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.brands-slider .slider .slide img {
+  display: inline-block;
+}
+
+.brands-slider .slick-prev,
+.brands-slider .slick-next {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: red;
+  border-radius: 50%;
+  z-index: 650;
+  background: #ffffff;
+  -webkit-transition: background .3s ease;
+  -o-transition: background .3s ease;
+  -moz-transition: background .3s ease;
+  transition: background .3s ease;
+}
+
+.brands-slider .slick-prev:hover,
+.brands-slider .slick-next:hover {
+  background: #535558;
+}
+
+.brands-slider .slick-prev:hover i:before,
+.brands-slider .slick-next:hover i:before {
+  color: #ffffff;
+}
+
+.brands-slider .slick-prev i,
+.brands-slider .slick-next i {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.brands-slider .slick-prev i:before,
+.brands-slider .slick-next i:before {
+  color: #535558;
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.brands-slider .slick-prev:before,
+.brands-slider .slick-next:before {
+  display: none;
+}
+
+.brands-slider .slick-prev {
+  left: 25px;
+}
+
+.brands-slider .slick-next {
+  right: 25px;
+}
+
+/*______ End Brands Slider ______*/
 
 /*______ END SLIDERS ______*/
 
