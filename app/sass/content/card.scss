@@ -12,8 +12,12 @@
 	&>div {
 		margin-bottom: 5px;
 		padding: 2px 7px 4px 5px;
+		display: block;
+		height: 20px;
+		max-width: 50px;
 		text-align: center;
 		min-width: 47px;
+		background-repeat: no-repeat;
 	}
 	.discount {
 		background: url('../img/ui/discount-bg.png') 0 0 no-repeat;
@@ -22,12 +26,37 @@
 		background: url('../img/ui/new-bg.png') 0 0 no-repeat;
 	}
 	.zero {
-		height: 20px;
-		background:url('../img/ui/green.svg') center no-repeat, url('../img/ui/zero-waste-bg.svg') 0 0 no-repeat;
-		background-size: 15px 15px, 100%;
+		padding-right: 20px;
+		background-image: linear-gradient(to right, #00DA5F 0%,#00DA5F 90%, transparent 90%), url('../img/ui/zero-waste-bg.svg');
+		background-position: 0 0, 100% 0;
+		background-size: contain;
+		display: flex;
+		align-items: center;
+		max-width: 120px;
+		span {
+			display: block;
+		}
+		img {
+			margin: 0 5px;
+			max-width: 100%;
+			max-height: 100%;
+		}
 	}
 	.delivery {
-		background: url('../img/ui/blue.svg') 0 0 no-repeat;
+		padding: 4px 20px 4px 5px;
+		background-image: linear-gradient(to right, #000180 0%,#000180 80%, transparent 80%), url('../img/ui/blue.svg');
+		background-position: 0 0, 100% 0;
+		background-size: contain;
+		display: flex;
+		align-items: center;
+		max-width: 60px;
+		span {
+			display: block;
+			&.icon-truck {
+				margin-left: 5px;
+				transform: rotateY(180deg);
+			}
+		}
 	}
 }
 

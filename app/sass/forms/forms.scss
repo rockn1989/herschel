@@ -488,7 +488,6 @@ label.custom-radio-wrapper {
 
 .mobile-form {
 	margin: 15px 0 15px;
-	display: none;
 	form {
 		position: relative;
 		input[type="text"] {
@@ -507,7 +506,9 @@ label.custom-radio-wrapper {
 			border: none;
 			background: none;
 			text-align: center;
+			background: $textColor;
 			&:before {
+				color: #ffffff;
 				font-size: 16px;
 			}
 		}
