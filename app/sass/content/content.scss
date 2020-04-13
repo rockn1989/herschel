@@ -219,11 +219,34 @@ main.main {
 	}
 }
 
+.reset-tags {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	font-family: $mainFont !important;
+	color: $textColor;
+	font-size: 14px;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	height: 0;
+	transition: all .3s ease;
+	&:before {
+		margin-right: 10px;
+		font-family: 'icomoon' !important;
+		color: inherit;
+	}
+	&.show {
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
 .tags-list-wrapper {
+	position: relative;
 	margin-bottom: 35px;
 	max-width: 600px;
-/* 	height: 34px;
-overflow: hidden; */
 	&.mCustomScrollbar {
 		height: auto;
 		overflow: auto;

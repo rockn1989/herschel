@@ -125,10 +125,12 @@ $(function () {
 
 	/*______  ______*/
 
+	const resetTagsBtn = $('.reset-tags');
 
 	$('.tags-list').on('click', 'li', function (e) {
 		e.preventDefault();
 		$(this).toggleClass('active');
+		resetTagsBtn.addClass('show');
 	});
 
 
