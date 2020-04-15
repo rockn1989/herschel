@@ -2883,7 +2883,15 @@ html.uk-touch body *.uk-invisible {
 }
 
 .menu-section__title a {
+  position: relative;
+  padding-right: 35px;
   color: #000000;
+}
+
+.menu-section__title a img {
+  position: absolute;
+  top: -5px;
+  right: 0;
 }
 
 .menu-section__title a:hover {

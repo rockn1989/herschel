@@ -430,7 +430,14 @@
 		text-transform: uppercase;
 		
 		a {
+			position: relative;
+			padding-right: 35px;
 			color: $textSColor;
+			img {
+				position: absolute;
+				top: -5px;
+				right: 0;
+			}
 			&:hover {
 				color: $textSHColor;
 			}
